@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <motor.h>
 
 #include "ch.h"
 #include "hal.h"
