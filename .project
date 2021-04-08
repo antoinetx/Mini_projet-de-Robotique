@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>TP5_Noisy</name>
+	<name>Mini_projet-de-Robotique</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -24,14 +24,4 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
-<<<<<<< HEAD
-	<linkedResources>
-		<link>
-			<name>projet/lib</name>
-			<type>2</type>
-			<location>/Users/antoine/Desktop/EPFL/Ba6/robotique/projet-robotique-git/lib</location>
-		</link>
-	</linkedResources>
-=======
->>>>>>> origin/master
 </projectDescription>
