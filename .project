@@ -24,4 +24,11 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>projet/e-puck2_main-processor</name>
+			<type>2</type>
+			<location>/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_projet-de-Robotique/lib/e-puck2_main-processor</location>
+		</link>
+	</linkedResources>
 </projectDescription>
