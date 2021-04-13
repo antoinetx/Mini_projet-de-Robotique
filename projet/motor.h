@@ -9,9 +9,9 @@
 #define PROJET_MOTOR_H_
 
 
-void go_forward(void);
-void turn(void);
-void go_backward(void);
+void go_forward(int speed);
+void turn(int speed_right, int speed_left);
+void go_backward(int speed);
 
 
 

@@ -6,18 +6,18 @@
 #include <motors.h>
 
 
-void go_forward(void){
-		left_motor_set_speed(600);
-		right_motor_set_speed(600);
+void go_forward(int speed){
+		left_motor_set_speed(speed);
+		right_motor_set_speed(speed);
 }
 
-void turn(void){
-		left_motor_set_speed(-600);
-		right_motor_set_speed(600);
+void turn(int speed_right, int speed_left){
+		left_motor_set_speed(speed_left);
+		right_motor_set_speed(speed_right);
 }
 
-void go_backward(void){
-		left_motor_set_speed(-600);
-		right_motor_set_speed(-600);
+void go_backward(int speed){
+		left_motor_set_speed(-speed);
+		right_motor_set_speed(-speed);
 }
 
