@@ -11,6 +11,9 @@ GLOBAL_PATH = ../projet/e-puck2_main-processor
 #Source files to include
 CSRC += ./main.c \
 		./motor.c \
+		./optical_detection.c \
+		
+		
 
 
 #Header folders to include
