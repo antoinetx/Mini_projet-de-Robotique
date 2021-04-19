@@ -12,7 +12,7 @@ GLOBAL_PATH = ../projet/e-puck2_main-processor
 CSRC += ./main.c \
 		./motor.c \
 		./optical_detection.c \
-		
+		./pi_regulato.c\
 		
 
 

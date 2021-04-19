@@ -9,6 +9,7 @@
 #include "memory_protection.h"
 #include <main.h>
 
+#include <camera/po8030.h>
 
 int main(void)
 {
@@ -17,6 +18,9 @@ int main(void)
     chSysInit();
     mpu_init();
 
+    //starts the camera
+    dcmi_start();
+    po8030_start();
 
     /* Infinite loop. */
     while (1) {

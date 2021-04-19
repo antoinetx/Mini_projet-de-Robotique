@@ -9,10 +9,7 @@
 #define MINI_PROJET_ROBOTIQUE_PROJET_OPTICAL_DETECTION_H_
 
 
-
-
-
-
+void process_image_start(void);
 
 
 #endif /* MINI_PROJET_ROBOTIQUE_PROJET_OPTICAL_DETECTION_H_ */
