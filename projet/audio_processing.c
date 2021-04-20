@@ -42,11 +42,14 @@ static float micBack_output[FFT_SIZE];
 #define FREQ_BACKWARD_L (FREQ_BACKWARD-1)
 #define FREQ_BACKWARD_H (FREQ_BACKWARD+1)
 
+static int angle = 0;
+
 /*
 * Simple function used to detect the highest value in a buffer
 * and to execute a motor command depending on it
 */
 
+/* Fonction pour faire avancer moteur suivant le son émi
 void sound_remote(float* data){
 	float max_norm = MIN_VALUE_THRESHOLD;
 	int16_t max_norm_index = -1;
@@ -87,6 +90,48 @@ void sound_remote(float* data){
 		right_motor_set_speed(0);
 	}
 }
+*/
+
+void triangulation(float* data_left, float* data_right, float* data_front ){
+
+	float max_norm_left = MIN_VALUE_THRESHOLD;
+	float max_norm_right = MIN_VALUE_THRESHOLD;
+	float max_norm_front = MIN_VALUE_THRESHOLD;
+
+	int16_t max_norm_index_left = -1;
+	int16_t max_norm_index_right = -1;
+	int16_t max_norm_index_front = -1;
+
+	//search for the highest peak
+
+	for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++){
+		if(data_left[i] > max_norm_left){
+			max_norm_left = data_left[i];
+			max_norm_index_left = i;
+		}
+	}
+	for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++){
+		if(data_right[i] > max_norm_right){
+			max_norm_right = data_right[i];
+			max_norm_index_right = i;
+		}
+	}
+	for(uint16_t i = MIN_FREQ ; i <= MAX_FREQ ; i++){
+		if(data_front[i] > max_norm_front){
+			max_norm_front = data_front[i];
+			max_norm_index_front = i;
+		}
+	}
+
+	// Code pour modifier l'angle
+	//
+	//
+	//
+	//
+
+
+}
+
 
 /*
 * Callback called when the demodulation of the four microphones is done.
@@ -161,8 +206,12 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		}
 		nb_samples = 0;
 		mustSend++;
-		sound_remote(micLeft_output);
+		//sound_remote(micLeft_output);
+
+		//fonction de triangulation -----------------
+		triangulation(micLeft_output, micRight_output, micFront_output);
 	}
+
 }
 
 
@@ -198,4 +247,8 @@ float* get_audio_buffer_ptr(BUFFER_NAME_t name){
 	else{
 		return NULL;
 	}
+}
+
+int16_t get_angle(void){
+	return angle;
 }

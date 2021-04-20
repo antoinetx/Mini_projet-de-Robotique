@@ -35,6 +35,6 @@ void wait_send_to_computer(void);
 *	Returns the pointer to the BUFFER_NAME_t buffer asked
 */
 float* get_audio_buffer_ptr(BUFFER_NAME_t name);
-
+int16_t get_angle(void);
 
 #endif /* PROJET_AUDIO_PROCESSING_H_ */
