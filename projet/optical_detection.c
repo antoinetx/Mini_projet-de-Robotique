@@ -17,19 +17,20 @@ static uint16_t line_position = IMAGE_BUFFER_SIZE/2; //middle
 
 
 /*
-* Returns the line width extracted from the image buffer given
+* Returns the error from the center of the line extracted from the image buffer given
 * Returns 0 if line not found
 */
-uint16_t extract_line_width(uint8_t *buffer){
+uint16_t extract_error_line_position(uint8_t *buffer){
 
-	uint16_t i = 0, begin = 0, end = 0, width = 0;
+	uint16_t i = 0, begin = 0, end = 0;
 	uint8_t stop = 0, wrong_line = 0, line_not_found = 0;
 	uint32_t mean = 0;
+	int16_t new_err_pos = 0;
+	static uint16_t last_err_pos = 0;
 
-	static uint16_t last_width = PXTOCM/GOAL_DISTANCE;
 
 	//performs an average
-	for(uint32_t i = 0 ; i < IMAGE_BUFFER_SIZE ; i++){
+	for(uint16_t i = 0 ; i < IMAGE_BUFFER_SIZE ; i++){
 		mean += buffer[i];
 	}
 	mean /= IMAGE_BUFFER_SIZE;
@@ -84,21 +85,16 @@ uint16_t extract_line_width(uint8_t *buffer){
 		}
 	}while(wrong_line);
 
+	//return the error of the position, or return the last error if no line was found
 	if(line_not_found){
 		begin = 0;
 		end = 0;
-		width = last_width;
+		new_err_pos = last_err_pos;
 	}else{
-		last_width = width = (end - begin);
-		line_position = (begin + end)/2; //gives the line position.
+		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFFER_SIZE/2; // gives the error from the center of the picture
 	}
 
-	//sets a maximum width or returns the measured width
-	if((PXTOCM/width) > MAX_DISTANCE){
-		return PXTOCM/MAX_DISTANCE;
-	}else{
-		return width;
-	}
+	return new_err_pos;
 }
 
 /*
