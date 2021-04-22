@@ -73,9 +73,9 @@ int main(void)
 
         //waits until a result must be sent to the computer
         wait_triangulation_data();
-        float a= get_angle();
-        printf(" \n angle :");
-        printf("%f", a);
+        float a = 3.2;
+        chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , a);
+
     }
 }
 
