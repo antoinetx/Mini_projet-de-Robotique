@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <motor.h>
 
 #include "ch.h"
 #include "hal.h"
@@ -59,7 +58,7 @@ int main(void)
 	 serial_start();
 	 usb_start();
 	 timer12_start();
-	 motors_init();
+	 //motors_init();
 
 
 	 //starts the microphones processing thread.
@@ -73,7 +72,10 @@ int main(void)
         chThdSleepMilliseconds(1000);
 
         //waits until a result must be sent to the computer
-        wait_send_to_computer();
+        wait_triangulation_data();
+        float a= get_angle();
+        printf(" \n angle :");
+        printf("%f", a);
     }
 }
 

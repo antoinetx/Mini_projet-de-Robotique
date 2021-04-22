@@ -29,12 +29,12 @@ void processAudioData(int16_t *data, uint16_t num_samples);
 /*
 *	put the invoking thread into sleep until it can process the audio datas
 */
-void wait_send_to_computer(void);
+void wait_triangulation_data(void);
 
-/*
-*	Returns the pointer to the BUFFER_NAME_t buffer asked
-*/
-float* get_audio_buffer_ptr(BUFFER_NAME_t name);
-int16_t get_angle(void);
+float get_angle(void);
+
+float get_freq(void);
+
+float get_amp(void);
 
 #endif /* PROJET_AUDIO_PROCESSING_H_ */
