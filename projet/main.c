@@ -58,7 +58,7 @@ int main(void)
 	 serial_start();
 	 usb_start();
 	 timer12_start();
-	 //motors_init();
+	 motors_init();
 
 
 	 //starts the microphones processing thread.
@@ -68,13 +68,16 @@ int main(void)
 
     /* Infinite loop. */
     while (1) {
-    	//waits 1 second
-        chThdSleepMilliseconds(1000);
+    	//waits 0.1 second
+        chThdSleepMilliseconds(100);
 
         //waits until a result must be sent to the computer
-        wait_triangulation_data();
-        float a = 3.2;
-        chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , a);
+        //wait_triangulation_data();
+
+        chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , get_angle());
+        chprintf((BaseSequentialStream *)&SDU1, " \n fréquence : %f" , get_freq());
+
+        set_tracking_leds(get_angle());
 
     }
 }
