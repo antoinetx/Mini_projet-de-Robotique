@@ -172,8 +172,6 @@ static THD_FUNCTION(ProcessImage, arg) {
 		send_to_computer = !send_to_computer;
 
 	    last_err_pos = extract_error_line_position(image);
-	    suivre_ligne();
-
     }
 }
 
@@ -195,7 +193,7 @@ int16_t get_begin(void){
 	return end;
 }
 
-
+/*
 void suivre_ligne(void){
 
 	int coef = last_err_pos*0.5;
@@ -216,8 +214,7 @@ void suivre_ligne(void){
 	}
 
 
-}
-
+}*/
 
 
 
