@@ -69,16 +69,13 @@ int main(void)
     /* Infinite loop. */
     while (1) {
     	//waits 0.1 second
-        chThdSleepMilliseconds(100);
+        chThdSleepMilliseconds(1000);
 
         //waits until a result must be sent to the computer
         //wait_triangulation_data();
 
         chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , get_angle());
         chprintf((BaseSequentialStream *)&SDU1, " \n fréquence : %f" , get_freq());
-
-        set_tracking_leds(get_angle());
-
     }
 }
 

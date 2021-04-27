@@ -48,18 +48,21 @@ static float micBack_output[FFT_SIZE];
 // SIGNAL_CONST=340/(2*PI*lx)
 #define SIGNAL_CONST			128.112 // 59.21 avec résolution audio
 
-//PID
-#define ERROR_THRESHOLD  0.5
+
+/*//PID
+#define ERROR_THRESHOLD  0.2
 #define MAX_SUM_ERROR  1
 #define KP 800
 #define KI 3.5
 #define ROTATION_THRESHOLD 0
 #define COEFF_SPEED 0.4
-static float speed = 0;
+//static float error = 0, speed = 0;		// Pour mouvement
 
 //------
+ */
 
 static float angle=0., amp=0., freq=0.;
+
 
 typedef enum {
 	MIC_RIGHT_I = 0,
@@ -75,14 +78,16 @@ void epuck_angle(float angle_x,float angle_y){
 	}
 	if (angle_x>0 && angle_y<0){
 		angle=PI/2+(-angle_y+(PI/2-angle_x))/2;
+
 	}
 	if (angle_x<0 && angle_y<0){
 		angle=PI+(-angle_x+(PI/2+angle_y))/2;
+		angle = angle-2*PI;
 	}
 	if (angle_x<0 && angle_y>0){
 		angle=3*PI/2+(PI/2+angle_x+angle_y)/2;
+		angle = angle-2*PI ;
 	}
-	//angle = angle*180/PI;
 	if (freq <= 0) angle=0;
 }
 
@@ -149,7 +154,7 @@ void triangulation_data(void){
 		phase_shift_diff_y=(phase_shift_front-phase_shift_back);
 		if ((-PI < phase_shift_diff_y) && (phase_shift_diff_y<PI)){
 			mean_phase_shift_y = mean_coeff_A*mean_phase_shift_y+mean_coeff_B*phase_shift_diff_y;
-			cos_phi = SIGNAL_CONST	*mean_phase_shift_y/(max_norm_index[MIC_LEFT_I]);
+			cos_phi = SIGNAL_CONST*mean_phase_shift_y/(max_norm_index[MIC_LEFT_I]);
 			if (cos_phi > 1) cos_phi=1;
 			if (cos_phi < -1) cos_phi=-1;
 			angle_y = asin(cos_phi);
@@ -163,6 +168,36 @@ void triangulation_data(void){
 }
 
 
+//-------------- PI pour mouvement -----------------------------
+/*
+void controller(void){
+		//float error
+		static float sum_error = 0;
+		int16_t goal = 0;
+		error = angle - goal;
+		//disables the PI regulator if the error is to small
+		//this avoids to always move as we cannot exactly be where we want and
+		//the camera is a bit noisy
+		sum_error += error;
+		//we set a maximum and a minimum for the sum to avoid an uncontrolled growth
+		if(sum_error > MAX_SUM_ERROR){
+			sum_error = MAX_SUM_ERROR;
+		}else if(sum_error < -MAX_SUM_ERROR){
+			sum_error = -MAX_SUM_ERROR;
+		}
+
+		speed = KP * error + KI * sum_error;
+		speed = COEFF_SPEED*speed;
+
+		if(fabs(error) < ERROR_THRESHOLD){
+			speed = 0;
+		}
+
+}
+*/
+//-------------- Fin PI pour mouvement -----------------------------
+
+
 /*
 * Callback called when the demodulation of the four microphones is done.
 * We get 160 samples per mic every 10ms (16kHz)
@@ -172,42 +207,6 @@ void triangulation_data(void){
 * so we have [micRight1, micLeft1, micBack1, micFront1, micRight2, etc...]
 * uint16_t num_samples Tells how many data we get in total (should always be 640)
 */
-
-void controller(void){
-		float error = 0;
-
-		static float sum_error = 0;
-		int16_t goal = 0;
-		error = angle - goal;
-
-		//disables the PI regulator if the error is to small
-		//this avoids to always move as we cannot exactly be where we want and
-		//the camera is a bit noisy
-
-		sum_error += error;
-
-		//we set a maximum and a minimum for the sum to avoid an uncontrolled growth
-		if(sum_error > MAX_SUM_ERROR){
-			sum_error = MAX_SUM_ERROR;
-		}else if(sum_error < -MAX_SUM_ERROR){
-			sum_error = -MAX_SUM_ERROR;
-		}
-
-		speed = KP * error + KI * sum_error;
-
-
-		if(fabs(error) < ERROR_THRESHOLD){
-			speed = 0;
-		}
-
-		if(error<PI){
-			speed = COEFF_SPEED*speed;
-		}
-		if(error>PI){
-			speed = -COEFF_SPEED*speed;
-		}
-}
-
 
 void processAudioData(int16_t *data, uint16_t num_samples){
 /*
@@ -270,8 +269,6 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		nb_samples = 0;
 		chBSemSignal(&triangulation);
 		triangulation_data();
-		controller();
-		mouvement();
 		//sound_remote(micLeft_output);
 
 	}
@@ -281,51 +278,15 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 
 //------------------ mouvement------------------
 
-
+/*
 void mouvement(void){
-
 	right_motor_set_speed(speed);
 	left_motor_set_speed(-speed);
-    		/*
-		if( (0<angle) & (angle<1)){
-			right_motor_set_speed(0);
-			left_motor_set_speed(0);
-		}
-
-		if(angle>PI){
-			//applies the speed from the PI regulator and the correction for the rotation
-        		//right_motor_set_speed(speed - ROTATION_COEFF * speed_correction);
-        		//left_motor_set_speed(speed + ROTATION_COEFF * speed_correction);
-			right_motor_set_speed(-speed);
-			left_motor_set_speed(speed);
-		}
-		if(angle<PI){
-        			//applies the speed from the PI regulator and the correction for the rotation
-        			right_motor_set_speed(speed);
-        			left_motor_set_speed(-speed);
-        	}
-        	*/
-
 }
-
+*/
 
 //---------------------------------- fin mouvement
 
-
-void set_tracking_leds(float angle){
-	clear_leds();
-
-	if ((angle<2*PI/8)  || (angle>14*PI/8))   	set_led(LED1,1);
-	if ((PI/8<angle)    && (3*PI/8>angle))		set_rgb_led(LED8,255,0,0);
-	if ((2*PI/8<angle)  && (6*PI/8>angle))   	set_led(LED7,1);
-	if ((5*PI/8<angle)  && (7*PI/8>angle))		set_rgb_led(LED6,255,0,0);
-	if ((6*PI/8<angle)  && (10*PI/8>angle))		set_led(LED5,1);
-	if ((9*PI/8<angle)  && (11*PI/8>angle))		set_rgb_led(LED4,255,0,0);
-	if ((10*PI/8<angle) && (14*PI/8>angle)) 	set_led(LED3,1);
-	if ((13*PI/8<angle) && (15*PI/8>angle))		set_rgb_led(LED2,255,0,0);
-
-	set_front_led(1);
-}
 
 
 void wait_triangulation_data(void){
@@ -343,3 +304,13 @@ float get_freq(void){
 float get_amp(void){
 	return amp;
 }
+
+/*
+float get_speed(void){
+	return speed;
+}
+
+float get_error(void){
+	return error;
+}
+*/

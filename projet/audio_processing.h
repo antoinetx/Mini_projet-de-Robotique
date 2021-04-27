@@ -39,6 +39,10 @@ float get_amp(void);
 
 void mouvement(void);
 
-void set_tracking_leds(float angle);
+/*   Pour mouvement
+float get_error(void);
+
+float get_speed(void);
+*/
 
 #endif /* PROJET_AUDIO_PROCESSING_H_ */
