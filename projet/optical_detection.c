@@ -170,7 +170,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 		//invert the bool
 		send_to_computer = !send_to_computer;
-
+		 chprintf((BaseSequentialStream *)&SDU1, " \n angle : %d" , last_err_pos);
 	    last_err_pos = extract_error_line_position(image);
     }
 }

@@ -91,6 +91,7 @@ int main(void)
     while (1) {
     	//waits 0.1 second
         chThdSleepMilliseconds(1000);
+        chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , get_angle());
     }
 
 }
