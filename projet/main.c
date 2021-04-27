@@ -3,27 +3,21 @@
 #include <string.h>
 #include <math.h>
 #include <motors.h>
-<<<<<<< HEAD
 
 #include "ch.h"
 #include "hal.h"
 #include <main.h>
 #include <usbcfg.h>
 #include <chprintf.h>
-
 #include <camera/po8030.h>
-
-=======
->>>>>>> Antoine_triangulation
-
-#include "ch.h"
-#include "hal.h"
 #include "memory_protection.h"
-
-
 #include <main.h>
+#include <audio/microphone.h>
 
-#include <camera/po8030.h>
+#include <audio_processing.h>
+#include <fft.h>
+#include <communications.h>
+#include <arm_math.h>
 
 void SendUint8ToComputer(uint8_t* data, uint16_t size)
 {
@@ -31,29 +25,6 @@ void SendUint8ToComputer(uint8_t* data, uint16_t size)
 	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)&size, sizeof(uint16_t));
 	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, size);
 }
-
-
-static void serial_start(void)
-{
-	static SerialConfig ser_cfg = {
-	    115200,
-	    0,
-	    0,
-	    0,
-	};
-
-	sdStart(&SD3, &ser_cfg); // UART3.
-}
-
-
-#include <usbcfg.h>
-#include <chprintf.h>
-#include <audio/microphone.h>
-
-#include <audio_processing.h>
-#include <fft.h>
-#include <communications.h>
-#include <arm_math.h>
 
 
 static void serial_start(void)
@@ -91,26 +62,18 @@ int main(void)
 	 chSysInit();
 	 mpu_init();
 
-	 //starts the serial communication / the USB communication / timer 12 / inits the motors
+
+	 //starts the serial communication
 	 serial_start();
+	 //start the USB communication
 	 usb_start();
 	 timer12_start();
 	 motors_init();
 
-
-<<<<<<< HEAD
     //starts the camera
     dcmi_start();
     po8030_start();
 
-
-    //starts the serial communication
-    serial_start();
-    //start the USB communication
-    usb_start();
-
-   //inits the motors
-   motors_init();
 	//starts ToF sensor
 	VL53L0X_start();
 
@@ -119,11 +82,10 @@ int main(void)
 
    process_image_start();
 
-=======
+
 	 //starts the microphones processing thread.
 	 //it calls the callback given in parameter when samples are ready
 	 mic_start(&processAudioData);
->>>>>>> Antoine_triangulation
 
     /* Infinite loop. */
     while (1) {

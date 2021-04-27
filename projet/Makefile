@@ -10,16 +10,12 @@ GLOBAL_PATH = ../projet/e-puck2_main-processor
 
 #Source files to include
 CSRC += ./main.c \
-<<<<<<< HEAD
 		./optical_detection.c \
 		./pi_regulato.c \
-		
-
-=======
 		./audio_processing.c \
 		./communications.c \
 		./fft.c \
->>>>>>> Antoine_triangulation
+
 		
 
 
