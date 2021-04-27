@@ -92,7 +92,7 @@ int16_t extract_error_line_position(uint8_t *buffer){
 		end = 0;
 		new_err_pos = last_err_pos;
 	}else{
-		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFER_MIDDLE - 5000; // gives the error from the center of the picture
+		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFER_MIDDLE; // gives the error from the center of the picture
 	}
 
 	return new_err_pos;
@@ -172,6 +172,7 @@ static THD_FUNCTION(ProcessImage, arg) {
 		send_to_computer = !send_to_computer;
 
 	    last_err_pos = extract_error_line_position(image);
+	    suivre_ligne();
 
     }
 }
@@ -184,7 +185,7 @@ void process_image_start(void){
 
 
 int16_t get_extract_error_line_position(void){
-	return extract_error_line_position;
+	return last_err_pos;
 }
 
 int16_t get_begin(void){
@@ -194,26 +195,28 @@ int16_t get_begin(void){
 	return end;
 }
 
-/*
+
 void suivre_ligne(void){
 
-	int speed = get_extract_error_line_position()*0.025;
+	int coef = last_err_pos*0.5;
+	int speed = 400;
+
 
 	if(get_extract_error_line_position() > 2){
-		right_motor_set_speed(-speed);
-		left_motor_set_speed(speed);
+		right_motor_set_speed(200 - speed);
+		left_motor_set_speed(200 + speed);
 	}
-	else if(get_extract_error_line_position() < -2){
-		right_motor_set_speed(speed);
-		left_motor_set_speed(-speed);
+	else if(get_extract_error_line_position() < 2){
+		right_motor_set_speed(200 + speed);
+		left_motor_set_speed(200 - speed);
 	}
 	else{
-		right_motor_set_speed(0);
-		left_motor_set_speed(0);
+		right_motor_set_speed(200);
+		left_motor_set_speed(200);
 	}
 
 
-}*/
+}
 
 
 

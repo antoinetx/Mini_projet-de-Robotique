@@ -70,7 +70,6 @@ int main(void)
 
    process_image_start();
 
-   //suivre_ligne();
 
     /* Infinite loop. */
     while (1) {
