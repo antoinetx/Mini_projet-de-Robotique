@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <motors.h>
+<<<<<<< HEAD
 
 #include "ch.h"
 #include "hal.h"
@@ -12,6 +13,8 @@
 
 #include <camera/po8030.h>
 
+=======
+>>>>>>> Antoine_triangulation
 
 #include "ch.h"
 #include "hal.h"
@@ -43,13 +46,59 @@ static void serial_start(void)
 }
 
 
+#include <usbcfg.h>
+#include <chprintf.h>
+#include <audio/microphone.h>
+
+#include <audio_processing.h>
+#include <fft.h>
+#include <communications.h>
+#include <arm_math.h>
+
+
+static void serial_start(void)
+{
+	static SerialConfig ser_cfg = {
+	    115200,
+	    0,
+	    0,
+	    0,
+	};
+
+	sdStart(&SD3, &ser_cfg); // UART3.
+}
+
+static void timer12_start(void){
+    //General Purpose Timer configuration
+    //timer 12 is a 16 bit timer so we can measure time
+    //to about 65ms with a 1Mhz counter
+    static const GPTConfig gpt12cfg = {
+        1000000,        /* 1MHz timer clock in order to measure uS.*/
+        NULL,           /* Timer callback.*/
+        0,
+        0
+    };
+
+    gptStart(&GPTD12, &gpt12cfg);
+    //let the timer count to max value
+    gptStartContinuous(&GPTD12, 0xFFFF);
+}
+
 int main(void)
 {
 
-    halInit();
-    chSysInit();
-    mpu_init();
+	 halInit();
+	 chSysInit();
+	 mpu_init();
 
+	 //starts the serial communication / the USB communication / timer 12 / inits the motors
+	 serial_start();
+	 usb_start();
+	 timer12_start();
+	 motors_init();
+
+
+<<<<<<< HEAD
     //starts the camera
     dcmi_start();
     po8030_start();
@@ -70,10 +119,15 @@ int main(void)
 
    process_image_start();
 
+=======
+	 //starts the microphones processing thread.
+	 //it calls the callback given in parameter when samples are ready
+	 mic_start(&processAudioData);
+>>>>>>> Antoine_triangulation
 
     /* Infinite loop. */
     while (1) {
-    	//waits 1 second
+    	//waits 0.1 second
         chThdSleepMilliseconds(1000);
     }
 
