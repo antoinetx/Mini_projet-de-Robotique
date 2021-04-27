@@ -5,33 +5,33 @@
 #include <chprintf.h>
 #include <optical_detection.h>
 
-#include <main.h>
 #include <camera/po8030.h>
+
 
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
 
 static float distance_cm = 0;
-static uint16_t line_position = IMAGE_BUFFER_SIZE/2; //middle
+static uint16_t begin = 0, end = 0;
+static int16_t last_err_pos = 0;
 
 
 /*
-* Returns the error from the center of the line extracted from the image buffer given
+* Returns the error between the center of the line and the current position, extracted from the image buffer given
 * Returns 0 if line not found
 */
-uint16_t extract_error_line_position(uint8_t *buffer){
+int16_t extract_error_line_position(uint8_t *buffer){
 
-	uint16_t i = 0, begin = 0, end = 0;
+	uint16_t i = 0;
 	uint8_t stop = 0, wrong_line = 0, line_not_found = 0;
 	uint32_t mean = 0;
 	int16_t new_err_pos = 0;
-	static uint16_t last_err_pos = 0;
 
 
 	//performs an average
-	for(uint16_t i = 0 ; i < IMAGE_BUFFER_SIZE ; i++){
-		mean += buffer[i];
+	for(uint16_t j = 0 ; j < IMAGE_BUFFER_SIZE ; j++){
+		mean += buffer[j];
 	}
 	mean /= IMAGE_BUFFER_SIZE;
 
@@ -77,6 +77,7 @@ uint16_t extract_error_line_position(uint8_t *buffer){
 
 		//if a line too small has been detected, continues the search
 		if(!line_not_found && (end-begin) < MIN_LINE_WIDTH){
+
 			i = end;
 			begin = 0;
 			end = 0;
@@ -91,7 +92,7 @@ uint16_t extract_error_line_position(uint8_t *buffer){
 		end = 0;
 		new_err_pos = last_err_pos;
 	}else{
-		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFFER_SIZE/2; // gives the error from the center of the picture
+		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFER_MIDDLE - 5000; // gives the error from the center of the picture
 	}
 
 	return new_err_pos;
@@ -115,7 +116,11 @@ static THD_FUNCTION(CaptureImage, arg) {
 
 
 	//Takes pixels 0 to IMAGE_BUFFER_SIZE of the line 10 + 11 (minimum 2 lines because reasons)
-	po8030_advanced_config(FORMAT_RGB565, 0, 10, IMAGE_BUFFER_SIZE, 2, SUBSAMPLING_X1, SUBSAMPLING_X1);
+	po8030_advanced_config(FORMAT_RGB565, 0, 475, IMAGE_BUFFER_SIZE, 2, SUBSAMPLING_X1, SUBSAMPLING_X1);
+
+	///code blanchte pour derniere igne, essaye
+    //po8030_advanced_config(FORMAT_RGB565, 0, 2, IMAGE_BUFFER_SIZE, 2, SUBSAMPLING_X1, SUBSAMPLING_X1);
+
 	dcmi_enable_double_buffering();
 	dcmi_set_capture_mode(CAPTURE_ONE_SHOT);
 	dcmi_prepare();
@@ -166,6 +171,8 @@ static THD_FUNCTION(ProcessImage, arg) {
 		//invert the bool
 		send_to_computer = !send_to_computer;
 
+	    last_err_pos = extract_error_line_position(image);
+
     }
 }
 
@@ -174,5 +181,91 @@ void process_image_start(void){
 	chThdCreateStatic(waProcessImage, sizeof(waProcessImage), NORMALPRIO, ProcessImage, NULL);
 	chThdCreateStatic(waCaptureImage, sizeof(waCaptureImage), NORMALPRIO, CaptureImage, NULL);
 }
+
+
+int16_t get_extract_error_line_position(void){
+	return extract_error_line_position;
+}
+
+int16_t get_begin(void){
+	return begin;
+
+}int16_t get_end(void){
+	return end;
+}
+
+/*
+void suivre_ligne(void){
+
+	int speed = get_extract_error_line_position()*0.025;
+
+	if(get_extract_error_line_position() > 2){
+		right_motor_set_speed(-speed);
+		left_motor_set_speed(speed);
+	}
+	else if(get_extract_error_line_position() < -2){
+		right_motor_set_speed(speed);
+		left_motor_set_speed(-speed);
+	}
+	else{
+		right_motor_set_speed(0);
+		left_motor_set_speed(0);
+	}
+
+
+}*/
+
+
+
+
+
+/*
+/////////////////////////test de la fonction suivre ligne////////////////////////////
+
+int16_t pd_regulator_ligne(int16_t error){
+
+	float speed = 0;
+	static int16_t alt_error_pd =0;
+
+	//disables the PD regulator if the error is to small
+	//this avoids to always move as we cannot exactly be where we want and
+	//the camera is a bit noisy
+	if(fabs(error) < ROTATION_THRESHOLD){
+		return 0;
+	}
+
+	speed = KP*error + KD * ((error - alt_error_pd)/PI_CLOCK);
+	alt_error_pd = error;
+
+    return (int16_t)speed;
+}
+
+
+static THD_WORKING_AREA(waRegulators, 1024);
+static THD_FUNCTION(Regulators, arg) {
+
+    chRegSetThreadName(__FUNCTION__);
+    (void)arg;
+
+    systime_t time;
+    int16_t speed , speed_correction = 0;
+    float distance = 0;
+
+    while(1){
+        time = chVTGetSystemTime();
+
+
+        //computes a correction factor to let the robot rotate to face the line
+        speed_correction = pd_regulator_ligne(get_extract_error_line_position());
+
+        //applies the speed from the PD regulators and the correction for the rotation
+        right_motor_set_speed(speed - speed_correction);
+        left_motor_set_speed(speed + speed_correction);
+
+        //100Hz
+        chThdSleepUntilWindowed(time, time + MS2ST(10));
+    }
+}
+*/
 
 

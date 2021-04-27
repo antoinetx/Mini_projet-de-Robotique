@@ -150,6 +150,7 @@ void _port_irq_epilogue(void) {
        required or not.*/
     if (chSchIsPreemptionRequired()) {
       /* Preemption is required we need to enforce a context switch.*/
+
       ctxp->pc = (regarm_t)_port_switch_from_isr;
     }
     else {

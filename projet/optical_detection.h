@@ -10,6 +10,7 @@
 
 
 void process_image_start(void);
+//void suivre_ligne(void);
 
 
 #endif /* MINI_PROJET_ROBOTIQUE_PROJET_OPTICAL_DETECTION_H_ */

@@ -6,9 +6,9 @@
 
 
 #include <main.h>
-#include <motor.h>
 #include <pi_regulato.h>
 #include <optical_detection.h>
+
 
 
 //simple PI regulator implementation
@@ -21,7 +21,19 @@ int16_t pi_regulator(float distance, float goal){
 
 	error = distance - goal;
 
+	//due to the noisy camera we set a minimal error for movement
+	if(fabs(error) < ERROR_THRESHOLD){
+		return 0;
+	}
+
 	sum_error += error;
+
+	//we set a maximum and a minimum for the sum to avoid an uncontrolled growth
+	if(sum_error > MAX_SUM_ERROR){
+		sum_error = MAX_SUM_ERROR;
+	}else if(sum_error < -MAX_SUM_ERROR){
+		sum_error = -MAX_SUM_ERROR;
+	}
 
 	speed = KP * error + KI * sum_error;
 
@@ -41,6 +53,7 @@ static THD_FUNCTION(PiRegulator, arg) {
 
 	while(1){
 		time = chVTGetSystemTime();
+
 
 		//computes the speed to give to the motors
 		//distance_cm is modified by the image processing thread
