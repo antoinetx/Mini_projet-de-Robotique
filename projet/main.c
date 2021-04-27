@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <motors.h>
 
 #include "ch.h"
 #include "hal.h"
@@ -63,19 +64,12 @@ int main(void)
 
 	 //starts the microphones processing thread.
 	 //it calls the callback given in parameter when samples are ready
-
 	 mic_start(&processAudioData);
 
     /* Infinite loop. */
     while (1) {
     	//waits 0.1 second
         chThdSleepMilliseconds(1000);
-
-        //waits until a result must be sent to the computer
-        //wait_triangulation_data();
-
-        chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , get_angle());
-        chprintf((BaseSequentialStream *)&SDU1, " \n fréquence : %f" , get_freq());
     }
 }
 

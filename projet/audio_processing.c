@@ -3,13 +3,13 @@
 #include <main.h>
 #include <usbcfg.h>
 #include <chprintf.h>
-#include <motors.h>     // Garde pour tests
+
 #include <audio/microphone.h>
 #include <audio_processing.h>
 #include <communications.h>
 #include <fft.h>
 #include <arm_math.h>
-#include <leds.h>
+
 
 //semaphore
 static BSEMAPHORE_DECL(triangulation, TRUE);
@@ -30,12 +30,8 @@ static float micBack_output[FFT_SIZE];
 
 // Garde pour tests
 #define MIN_FREQ 10 //we don’t analyze before this index to not use resources for nothing
-#define FREQ_FORWARD 13 //250Hz
-#define FREQ_LEFT 19 //296Hz
-#define FREQ_RIGHT 23 //359HZ
-#define FREQ_BACKWARD 26 //406Hz
+// 1 = 19,23 HZ
 #define MAX_FREQ 30 //we don’t analyze after this index to not use resources for nothing
-
 
 //minimal intensity so that we don't compute the noise
 #define MIN_NORM_VALUE 10000
@@ -48,21 +44,7 @@ static float micBack_output[FFT_SIZE];
 // SIGNAL_CONST=340/(2*PI*lx)
 #define SIGNAL_CONST			128.112 // 59.21 avec résolution audio
 
-
-/*//PID
-#define ERROR_THRESHOLD  0.2
-#define MAX_SUM_ERROR  1
-#define KP 800
-#define KI 3.5
-#define ROTATION_THRESHOLD 0
-#define COEFF_SPEED 0.4
-//static float error = 0, speed = 0;		// Pour mouvement
-
-//------
- */
-
 static float angle=0., amp=0., freq=0.;
-
 
 typedef enum {
 	MIC_RIGHT_I = 0,
@@ -92,7 +74,6 @@ void epuck_angle(float angle_x,float angle_y){
 }
 
 void triangulation_data(void){
-
 
 	float max_norm[4] = {MIN_NORM_VALUE,MIN_NORM_VALUE,MIN_NORM_VALUE,MIN_NORM_VALUE};
 	int16_t max_norm_index[4] = {-1,-1,-1,-1};
@@ -167,37 +148,6 @@ void triangulation_data(void){
 	epuck_angle(angle_x,angle_y);
 }
 
-
-//-------------- PI pour mouvement -----------------------------
-/*
-void controller(void){
-		//float error
-		static float sum_error = 0;
-		int16_t goal = 0;
-		error = angle - goal;
-		//disables the PI regulator if the error is to small
-		//this avoids to always move as we cannot exactly be where we want and
-		//the camera is a bit noisy
-		sum_error += error;
-		//we set a maximum and a minimum for the sum to avoid an uncontrolled growth
-		if(sum_error > MAX_SUM_ERROR){
-			sum_error = MAX_SUM_ERROR;
-		}else if(sum_error < -MAX_SUM_ERROR){
-			sum_error = -MAX_SUM_ERROR;
-		}
-
-		speed = KP * error + KI * sum_error;
-		speed = COEFF_SPEED*speed;
-
-		if(fabs(error) < ERROR_THRESHOLD){
-			speed = 0;
-		}
-
-}
-*/
-//-------------- Fin PI pour mouvement -----------------------------
-
-
 /*
 * Callback called when the demodulation of the four microphones is done.
 * We get 160 samples per mic every 10ms (16kHz)
@@ -269,23 +219,9 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		nb_samples = 0;
 		chBSemSignal(&triangulation);
 		triangulation_data();
-		//sound_remote(micLeft_output);
 
 	}
-
 }
-
-
-//------------------ mouvement------------------
-
-/*
-void mouvement(void){
-	right_motor_set_speed(speed);
-	left_motor_set_speed(-speed);
-}
-*/
-
-//---------------------------------- fin mouvement
 
 
 
@@ -305,12 +241,3 @@ float get_amp(void){
 	return amp;
 }
 
-/*
-float get_speed(void){
-	return speed;
-}
-
-float get_error(void){
-	return error;
-}
-*/
