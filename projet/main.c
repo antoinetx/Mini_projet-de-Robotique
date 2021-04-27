@@ -75,10 +75,6 @@ int main(void)
     while (1) {
     	//waits 1 second
         chThdSleepMilliseconds(1000);
-        chprintf((BaseSequentialStream *)&SDU1, " \n erreur ligne : %d" , get_extract_error_line_position());
-        chprintf((BaseSequentialStream *)&SDU1, " \n begin ligne : %d" , get_begin());
-        chprintf((BaseSequentialStream *)&SDU1, " \n end ligne : %d" , get_end());
-
     }
 
 }
