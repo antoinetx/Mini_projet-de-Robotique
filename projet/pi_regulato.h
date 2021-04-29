@@ -8,10 +8,28 @@
 #ifndef MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_
 #define MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_
 
+#define SYS_SPEED 200
+#define ERROR_THRESHOLD			5   //[cm] because of the noise of the camera
+#define	MAX_SUM_ERROR  (SYS_SPEED/KI)
+#define KP						2
+#define KI						0.1f
+#define KD						2
+#define D_T				10   // dt of derivativ term. correspond to PI clock
+#define CORNER_DIST  6 	// 6cm = distance between what epuck see and epuck
+#define NB_MOTOR_STEP
+#define WHEEL_DIAMETER
+#define NB_STEPS_TO_DO    9
+#define NB_STEPS_TO_TURN    9
+
+enum side {RIGHT, LEFT};
+
 
 //start the PI regulator thread
-void pi_regulator_start(void);
+void pid_regulator_start(void);
 
 
 
 #endif /* MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_ */
+
+//3.5f
+//#define KD						0.01f

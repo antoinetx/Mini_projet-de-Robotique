@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -28,7 +28,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
   25              		.type	ReadEE, %function
   26              	ReadEE:
   27              	.LFB0:
-  28              		.file 1 "../projet/e-puck2_main-processor/src/epuck1x/DataEEPROM.c"
+  28              		.file 1 "/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_projet-de-Robotique/e-puck2_main-processor
   29              		.loc 1 3 0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 8
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
   55              		.loc 1 12 0
   56 0012 019A     		ldr	r2, [sp, #4]
   57              	.LVL4:
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 2
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 2
 
 
   58 0014 1B68     		ldr	r3, [r3]
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  112 0004 83B0     		sub	sp, sp, #12
  113              		.cfi_def_cfa_offset 16
  114              		.loc 1 14 0
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 3
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 3
 
 
  115 0006 1A68     		ldr	r2, [r3]
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  169              		.loc 1 27 0
  170 000a 019A     		ldr	r2, [sp, #4]
  171 000c 1B68     		ldr	r3, [r3]
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 4
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 4
 
 
  172 000e 9A42     		cmp	r2, r3
@@ -211,15 +211,15 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  199 0006 00000000 		.4byte	.Ldebug_abbrev0
  200 000a 04       		.byte	0x4
  201 000b 01       		.uleb128 0x1
- 202 000c 08000000 		.4byte	.LASF8
+ 202 000c 00000000 		.4byte	.LASF8
  203 0010 0C       		.byte	0xc
- 204 0011 D6010000 		.4byte	.LASF9
- 205 0015 61010000 		.4byte	.LASF10
+ 204 0011 B1010000 		.4byte	.LASF9
+ 205 0015 59010000 		.4byte	.LASF10
  206 0019 00000000 		.4byte	.Ldebug_ranges0+0
  207 001d 00000000 		.4byte	0
  208 0021 00000000 		.4byte	.Ldebug_line0
  209 0025 02       		.uleb128 0x2
- 210 0026 51010000 		.4byte	.LASF4
+ 210 0026 49010000 		.4byte	.LASF4
  211 002a 01       		.byte	0x1
  212 002b 15       		.byte	0x15
  213 002c 84000000 		.4byte	0x84
@@ -229,28 +229,28 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  217 0039 9C       		.byte	0x9c
  218 003a 84000000 		.4byte	0x84
  219 003e 03       		.uleb128 0x3
- 220 003f B2010000 		.4byte	.LASF0
+ 220 003f A3010000 		.4byte	.LASF0
  221 0043 01       		.byte	0x1
  222 0044 15       		.byte	0x15
  223 0045 8B000000 		.4byte	0x8b
  224 0049 00000000 		.4byte	.LLST7
  225 004d 03       		.uleb128 0x3
- 226 004e 4C010000 		.4byte	.LASF1
+ 226 004e 44010000 		.4byte	.LASF1
  227 0052 01       		.byte	0x1
  228 0053 15       		.byte	0x15
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 5
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 5
 
 
  229 0054 84000000 		.4byte	0x84
  230 0058 3A000000 		.4byte	.LLST8
  231 005c 03       		.uleb128 0x3
- 232 005d AB010000 		.4byte	.LASF2
+ 232 005d AA010000 		.4byte	.LASF2
  233 0061 01       		.byte	0x1
  234 0062 15       		.byte	0x15
  235 0063 84000000 		.4byte	0x84
  236 0067 5B000000 		.4byte	.LLST9
  237 006b 03       		.uleb128 0x3
- 238 006c B9010000 		.4byte	.LASF3
+ 238 006c 24020000 		.4byte	.LASF3
  239 0070 01       		.byte	0x1
  240 0071 15       		.byte	0x15
  241 0072 84000000 		.4byte	0x84
@@ -267,7 +267,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  252 008c 04       		.byte	0x4
  253 008d 84000000 		.4byte	0x84
  254 0091 02       		.uleb128 0x2
- 255 0092 59010000 		.4byte	.LASF5
+ 255 0092 51010000 		.4byte	.LASF5
  256 0096 01       		.byte	0x1
  257 0097 0E       		.byte	0xe
  258 0098 84000000 		.4byte	0x84
@@ -277,19 +277,19 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  262 00a5 9C       		.byte	0x9c
  263 00a6 E1000000 		.4byte	0xe1
  264 00aa 03       		.uleb128 0x3
- 265 00ab 4C010000 		.4byte	.LASF1
+ 265 00ab 44010000 		.4byte	.LASF1
  266 00af 01       		.byte	0x1
  267 00b0 0E       		.byte	0xe
  268 00b1 84000000 		.4byte	0x84
  269 00b5 9D000000 		.4byte	.LLST4
  270 00b9 03       		.uleb128 0x3
- 271 00ba AB010000 		.4byte	.LASF2
+ 271 00ba AA010000 		.4byte	.LASF2
  272 00be 01       		.byte	0x1
  273 00bf 0E       		.byte	0xe
  274 00c0 84000000 		.4byte	0x84
  275 00c4 D7000000 		.4byte	.LLST5
  276 00c8 03       		.uleb128 0x3
- 277 00c9 B9010000 		.4byte	.LASF3
+ 277 00c9 24020000 		.4byte	.LASF3
  278 00cd 01       		.byte	0x1
  279 00ce 0E       		.byte	0xe
  280 00cf 84000000 		.4byte	0x84
@@ -298,11 +298,11 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  283 00d8 1E000000 		.4byte	.LVL14
  284 00dc 40010000 		.4byte	0x140
  285 00e0 00       		.byte	0
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 6
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 6
 
 
  286 00e1 02       		.uleb128 0x2
- 287 00e2 BE010000 		.4byte	.LASF6
+ 287 00e2 29020000 		.4byte	.LASF6
  288 00e6 01       		.byte	0x1
  289 00e7 03       		.byte	0x3
  290 00e8 84000000 		.4byte	0x84
@@ -312,25 +312,25 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  294 00f5 9C       		.byte	0x9c
  295 00f6 40010000 		.4byte	0x140
  296 00fa 03       		.uleb128 0x3
- 297 00fb 4C010000 		.4byte	.LASF1
+ 297 00fb 44010000 		.4byte	.LASF1
  298 00ff 01       		.byte	0x1
  299 0100 03       		.byte	0x3
  300 0101 84000000 		.4byte	0x84
  301 0105 19010000 		.4byte	.LLST0
  302 0109 03       		.uleb128 0x3
- 303 010a AB010000 		.4byte	.LASF2
+ 303 010a AA010000 		.4byte	.LASF2
  304 010e 01       		.byte	0x1
  305 010f 03       		.byte	0x3
  306 0110 84000000 		.4byte	0x84
  307 0114 53010000 		.4byte	.LLST1
  308 0118 03       		.uleb128 0x3
- 309 0119 00000000 		.4byte	.LASF7
+ 309 0119 41020000 		.4byte	.LASF7
  310 011d 01       		.byte	0x1
  311 011e 03       		.byte	0x3
  312 011f 8B000000 		.4byte	0x8b
  313 0123 8D010000 		.4byte	.LLST2
  314 0127 03       		.uleb128 0x3
- 315 0128 B9010000 		.4byte	.LASF3
+ 315 0128 24020000 		.4byte	.LASF3
  316 012c 01       		.byte	0x1
  317 012d 03       		.byte	0x3
  318 012e 84000000 		.4byte	0x84
@@ -340,8 +340,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  322 013b 40010000 		.4byte	0x140
  323 013f 00       		.byte	0
  324 0140 07       		.uleb128 0x7
- 325 0141 C5010000 		.4byte	.LASF11
- 326 0145 C5010000 		.4byte	.LASF11
+ 325 0141 30020000 		.4byte	.LASF11
+ 326 0145 30020000 		.4byte	.LASF11
  327 0149 00       		.byte	0
  328              		.section	.debug_abbrev,"",%progbits
  329              	.Ldebug_abbrev0:
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  340 000a 0E       		.uleb128 0xe
  341 000b 55       		.uleb128 0x55
  342 000c 17       		.uleb128 0x17
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 7
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 7
 
 
  343 000d 11       		.uleb128 0x11
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  397 0046 13       		.uleb128 0x13
  398 0047 00       		.byte	0
  399 0048 00       		.byte	0
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 8
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 8
 
 
  400 0049 05       		.uleb128 0x5
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  454 002c 0400     		.2byte	0x4
  455 002e F3       		.byte	0xf3
  456 002f 01       		.uleb128 0x1
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 9
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 9
 
 
  457 0030 50       		.byte	0x50
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  511 00b2 F3       		.byte	0xf3
  512 00b3 01       		.uleb128 0x1
  513 00b4 50       		.byte	0x50
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 10
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 10
 
 
  514 00b5 9F       		.byte	0x9f
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  568 0132 22000000 		.4byte	.LVL5
  569 0136 26000000 		.4byte	.LVL6
  570 013a 0100     		.2byte	0x1
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 11
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 11
 
 
  571 013c 50       		.byte	0x50
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  625 01bb F3       		.byte	0xf3
  626 01bc 01       		.uleb128 0x1
  627 01bd 52       		.byte	0x52
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 12
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 12
 
 
  628 01be 9F       		.byte	0x9f
@@ -706,117 +706,124 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 1
  670 001c 00000000 		.4byte	0
  671              		.section	.debug_line,"",%progbits
  672              	.Ldebug_line0:
- 673 0000 92000000 		.section	.debug_str,"MS",%progbits,1
- 673      02005000 
+ 673 0000 CB000000 		.section	.debug_str,"MS",%progbits,1
+ 673      02008900 
  673      00000201 
  673      FB0E0D00 
  673      01010101 
- 674              	.LASF7:
- 675 0000 44617461 		.ascii	"DataOut\000"
- 675      4F757400 
- 676              	.LASF8:
- 677 0008 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 677      43313120 
- 677      372E322E 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 13
+ 674              	.LASF8:
+ 675 0000 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 675      43313120 
+ 675      372E322E 
+ 675      31203230 
+ 675      31373039 
+ 676 0033 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 13
 
 
- 677      31203230 
- 677      31373039 
- 678 003b 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 678      20726576 
- 678      6973696F 
- 678      6E203235 
- 678      35323034 
- 679 006e 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
- 679      2D6D6670 
- 679      753D6670 
- 679      76342D73 
- 679      702D6431 
- 680 00a1 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 680      62202D4F 
- 680      32202D66 
- 680      6F6D6974 
- 680      2D667261 
- 681 00d4 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 681      6F2D7374 
- 681      72696374 
- 681      2D616C69 
- 681      6173696E 
- 682 0107 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 682      73656374 
- 682      696F6E73 
- 682      202D6664 
- 682      6174612D 
- 683 013a 72656369 		.ascii	"recision-constant\000"
- 683      73696F6E 
- 683      2D636F6E 
- 683      7374616E 
- 683      7400
- 684              	.LASF1:
- 685 014c 50616765 		.ascii	"Page\000"
- 685      00
- 686              	.LASF4:
- 687 0151 57726974 		.ascii	"WriteEE\000"
+ 676      20726576 
+ 676      6973696F 
+ 676      6E203235 
+ 676      35323034 
+ 677 0066 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 677      2D6D6670 
+ 677      753D6670 
+ 677      76342D73 
+ 677      702D6431 
+ 678 0099 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 678      62202D4F 
+ 678      32202D66 
+ 678      6F6D6974 
+ 678      2D667261 
+ 679 00cc 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 679      6F2D7374 
+ 679      72696374 
+ 679      2D616C69 
+ 679      6173696E 
+ 680 00ff 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 680      73656374 
+ 680      696F6E73 
+ 680      202D6664 
+ 680      6174612D 
+ 681 0132 72656369 		.ascii	"recision-constant\000"
+ 681      73696F6E 
+ 681      2D636F6E 
+ 681      7374616E 
+ 681      7400
+ 682              	.LASF1:
+ 683 0144 50616765 		.ascii	"Page\000"
+ 683      00
+ 684              	.LASF4:
+ 685 0149 57726974 		.ascii	"WriteEE\000"
+ 685      65454500 
+ 686              	.LASF5:
+ 687 0151 45726173 		.ascii	"EraseEE\000"
  687      65454500 
- 688              	.LASF5:
- 689 0159 45726173 		.ascii	"EraseEE\000"
- 689      65454500 
- 690              	.LASF10:
- 691 0161 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
- 691      72732F61 
- 691      6E746F69 
- 691      6E652F44 
- 691      65736B74 
- 692 0194 65742D64 		.ascii	"et-de-Robotique/projet\000"
- 692      652D526F 
- 692      626F7469 
- 692      7175652F 
- 692      70726F6A 
+ 688              	.LASF10:
+ 689 0159 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
+ 689      72732F61 
+ 689      6E746F69 
+ 689      6E652F44 
+ 689      65736B74 
+ 690 018c 65742D64 		.ascii	"et-de-Robotique/projet\000"
+ 690      652D526F 
+ 690      626F7469 
+ 690      7175652F 
+ 690      70726F6A 
+ 691              	.LASF0:
+ 692 01a3 44617461 		.ascii	"DataIn\000"
+ 692      496E00
  693              	.LASF2:
- 694 01ab 4F666673 		.ascii	"Offset\000"
+ 694 01aa 4F666673 		.ascii	"Offset\000"
  694      657400
- 695              	.LASF0:
- 696 01b2 44617461 		.ascii	"DataIn\000"
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 14
+ 695              	.LASF9:
+ 696 01b1 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 14
 
 
- 696      496E00
- 697              	.LASF3:
- 698 01b9 53697A65 		.ascii	"Size\000"
+ 696      72732F61 
+ 696      6E746F69 
+ 696      6E652F44 
+ 696      65736B74 
+ 697 01e4 65742D64 		.ascii	"et-de-Robotique/e-puck2_main-processor/src/epuck1x/"
+ 697      652D526F 
+ 697      626F7469 
+ 697      7175652F 
+ 697      652D7075 
+ 698 0217 44617461 		.ascii	"DataEEPROM.c\000"
+ 698      45455052 
+ 698      4F4D2E63 
  698      00
- 699              	.LASF6:
- 700 01be 52656164 		.ascii	"ReadEE\000"
- 700      454500
- 701              	.LASF11:
- 702 01c5 5F5F7374 		.ascii	"__stack_chk_fail\000"
- 702      61636B5F 
- 702      63686B5F 
- 702      6661696C 
- 702      00
- 703              	.LASF9:
- 704 01d6 2E2E2F70 		.ascii	"../projet/e-puck2_main-processor/src/epuck1x/DataEE"
- 704      726F6A65 
- 704      742F652D 
- 704      7075636B 
- 704      325F6D61 
- 705 0209 50524F4D 		.ascii	"PROM.c\000"
- 705      2E6300
- 706              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s 			page 15
+ 699              	.LASF3:
+ 700 0224 53697A65 		.ascii	"Size\000"
+ 700      00
+ 701              	.LASF6:
+ 702 0229 52656164 		.ascii	"ReadEE\000"
+ 702      454500
+ 703              	.LASF11:
+ 704 0230 5F5F7374 		.ascii	"__stack_chk_fail\000"
+ 704      61636B5F 
+ 704      63686B5F 
+ 704      6661696C 
+ 704      00
+ 705              	.LASF7:
+ 706 0241 44617461 		.ascii	"DataOut\000"
+ 706      4F757400 
+ 707              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 DataEEPROM.c
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:18     .text.ReadEE:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:26     .text.ReadEE:0000000000000000 ReadEE
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:88     .text.ReadEE:0000000000000038 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:93     .text.EraseEE:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:101    .text.EraseEE:0000000000000000 EraseEE
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:138    .text.EraseEE:0000000000000020 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:143    .text.WriteEE:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:151    .text.WriteEE:0000000000000000 WriteEE
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccu6Tpao.s:189    .text.WriteEE:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:18     .text.ReadEE:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:26     .text.ReadEE:0000000000000000 ReadEE
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:88     .text.ReadEE:0000000000000038 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:93     .text.EraseEE:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:101    .text.EraseEE:0000000000000000 EraseEE
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:138    .text.EraseEE:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:143    .text.WriteEE:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:151    .text.WriteEE:0000000000000000 WriteEE
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccHSKibd.s:189    .text.WriteEE:0000000000000020 $d
 
 UNDEFINED SYMBOLS
 __stack_chk_fail
