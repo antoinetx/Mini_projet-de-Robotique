@@ -12,7 +12,6 @@
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
 
-static float distance_cm = 0;
 static uint16_t begin = 0, end = 0;
 static int16_t last_err_pos = 0;
 
@@ -215,57 +214,5 @@ void suivre_ligne(void){
 
 
 }*/
-
-
-
-
-/*
-/////////////////////////test de la fonction suivre ligne////////////////////////////
-
-int16_t pd_regulator_ligne(int16_t error){
-
-	float speed = 0;
-	static int16_t alt_error_pd =0;
-
-	//disables the PD regulator if the error is to small
-	//this avoids to always move as we cannot exactly be where we want and
-	//the camera is a bit noisy
-	if(fabs(error) < ROTATION_THRESHOLD){
-		return 0;
-	}
-
-	speed = KP*error + KD * ((error - alt_error_pd)/PI_CLOCK);
-	alt_error_pd = error;
-
-    return (int16_t)speed;
-}
-
-
-static THD_WORKING_AREA(waRegulators, 1024);
-static THD_FUNCTION(Regulators, arg) {
-
-    chRegSetThreadName(__FUNCTION__);
-    (void)arg;
-
-    systime_t time;
-    int16_t speed , speed_correction = 0;
-    float distance = 0;
-
-    while(1){
-        time = chVTGetSystemTime();
-
-
-        //computes a correction factor to let the robot rotate to face the line
-        speed_correction = pd_regulator_ligne(get_extract_error_line_position());
-
-        //applies the speed from the PD regulators and the correction for the rotation
-        right_motor_set_speed(speed - speed_correction);
-        left_motor_set_speed(speed + speed_correction);
-
-        //100Hz
-        chThdSleepUntilWindowed(time, time + MS2ST(10));
-    }
-}
-*/
 
 

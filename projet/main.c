@@ -62,6 +62,9 @@ int main(void)
 	 chSysInit();
 	 mpu_init();
 
+    //starts the camera
+    dcmi_start();
+    po8030_start();
 
 	 //starts the serial communication
 	 serial_start();
@@ -70,9 +73,6 @@ int main(void)
 	 timer12_start();
 	 motors_init();
 
-    //starts the camera
-    dcmi_start();
-    po8030_start();
 
 	//starts ToF sensor
 	VL53L0X_start();
@@ -91,7 +91,6 @@ int main(void)
     while (1) {
     	//waits 0.1 second
         chThdSleepMilliseconds(1000);
-        chprintf((BaseSequentialStream *)&SDU1, " \n angle : %f" , get_angle());
     }
 
 }
