@@ -24,9 +24,10 @@ static int16_t last_err_pos = 0;
 int16_t extract_error_line_position(uint8_t *buffer){
 
 	uint16_t i = 0;
-	uint8_t stop = 0, wrong_line = 0, line_not_found = 0;
-	uint32_t mean = 0;
+	uint8_t stop = 0, wrong_line = 0;
 	int16_t new_err_pos = 0;
+	uint32_t mean = 0;
+	uint8_t line_not_found = 0;
 
 
 	//performs an average
@@ -94,7 +95,6 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	}else{
 		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFER_MIDDLE; // gives the error from the center of the picture
 	}
-
 	return new_err_pos;
 }
 
@@ -165,12 +165,13 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 		if(send_to_computer){
 			//sends to the computer the image
-			SendUint8ToComputer(image, IMAGE_BUFFER_SIZE);
+			SendUint8ToComputer(image, IMAGE_BUFFER_SIZE); //Utile que pour voir l'image à l'ordi
 		}
 
 		//invert the bool
 		send_to_computer = !send_to_computer;
 	    last_err_pos = extract_error_line_position(image);
+
     }
 }
 
@@ -187,10 +188,14 @@ int16_t get_error_line(void){
 
 int16_t get_begin(void){
 	return begin;
-
-}int16_t get_end(void){
+}
+int16_t get_end(void){
 	return end;
 }
+int16_t get_line_width(void){
+	return (end - begin);
+}
+
 
 /*
 void suivre_ligne(void){

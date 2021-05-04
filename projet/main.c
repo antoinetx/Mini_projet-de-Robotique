@@ -21,6 +21,8 @@
 #include <communications.h>
 #include <arm_math.h>
 
+#include <sensors/VL53L0X/VL53L0X.h>
+
 void SendUint8ToComputer(uint8_t* data, uint16_t size)
 {
 	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)"START", 5);
@@ -93,6 +95,11 @@ int main(void)
     while (1) {
     	//waits 0.1 second
         chThdSleepMilliseconds(1000);
+        //chprintf((BaseSequentialStream *)&SDU1, " \n begin %d", get_begin());
+        //chprintf((BaseSequentialStream *)&SDU1, " \n end %d", get_end());
+        //chprintf((BaseSequentialStream *)&SDU1, " \n corner %d", get_corner());
+        //chprintf((BaseSequentialStream *)&SDU1, " \n distance %d",(VL53L0X_get_dist_mm()-40));
+        chprintf((BaseSequentialStream *)&SDU1, " \n line width %d", get_line_width());
     }
 
 }

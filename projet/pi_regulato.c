@@ -10,6 +10,7 @@
 #include <pi_regulato.h>
 #include <optical_detection.h>
 
+
 /*
 //simple PI regulator implementation
 int16_t pi_regulator(float distance, float goal){
@@ -49,17 +50,14 @@ void corner_approch(void){
 	right_motor_set_pos(0);
 
 	while(steps_traveled<NB_STEPS_TO_DO){
-		// go on slower than before when approching
-		if(steps_traveled > NB_STEPS_TO_DO/2){
-			right_motor_set_speed(SYS_SPEED*((steps_traveled/NB_STEPS_TO_DO)+0.3));
-			left_motor_set_speed(SYS_SPEED*((steps_traveled/NB_STEPS_TO_DO)+0.3));
-		}
-		else{
-			right_motor_set_speed(SYS_SPEED);
-			left_motor_set_speed(SYS_SPEED);
-		}
-		steps_traveled = left_motor_get_pos();
+
+		right_motor_set_speed(SYS_SPEED);
+		left_motor_set_speed(SYS_SPEED);
+		steps_traveled = (left_motor_get_pos()+right_motor_get_pos())/2;
+		//chprintf((BaseSequentialStream *)&SDU1, " \n AVANCE");
 	}
+	//chprintf((BaseSequentialStream *)&SDU1, " \n STOP");
+
 	right_motor_set_speed(0);
 	left_motor_set_speed(0);
 }
@@ -71,7 +69,7 @@ void motor_turn(int16_t speed_left, int16_t speed_right){
 	left_motor_set_pos(0);
 	right_motor_set_pos(0);
 
-	while((steps_traveled_left != NB_STEPS_TO_TURN) || (steps_traveled_right != NB_STEPS_TO_TURN)){
+	while((steps_traveled_left < NB_STEPS_TO_TURN) && (steps_traveled_right < NB_STEPS_TO_TURN)){
 
 		right_motor_set_speed(speed_right);
 		left_motor_set_speed(speed_left);
@@ -88,10 +86,10 @@ void corner_turn(int16_t side){
 	switch (side)
 	{
 	case RIGHT:
-		motor_turn(SYS_SPEED, 0);
+		motor_turn(SYS_SPEED, 50);
 		break;
 	case LEFT:
-		motor_turn(0, SYS_SPEED);
+		motor_turn(50, SYS_SPEED);
 		break;
 
 	}
@@ -146,9 +144,18 @@ static THD_FUNCTION(PidRegulator, arg) {
 		//computes a correction factor to let the robot rotate to be in front of the line
 
 
-		//applies the speed from the PI regulator and the correction for the rotation
-		right_motor_set_speed(SYS_SPEED - rotation_speed);
-		left_motor_set_speed(SYS_SPEED + rotation_speed);
+
+		//Vérifie si il y a un corner
+		if(get_line_width() > LINE_WIDTH_TRESH ){
+			corner_approch();
+			corner_turn(RIGHT);
+		}
+
+		else{
+			//applies the speed from the PI regulator and the correction for the rotation
+			right_motor_set_speed(SYS_SPEED - rotation_speed);
+			left_motor_set_speed(SYS_SPEED + rotation_speed);
+		}
 
 		//100Hz
 		chThdSleepUntilWindowed(time, time + MS2ST(10));
@@ -159,8 +166,4 @@ static THD_FUNCTION(PidRegulator, arg) {
 void pid_regulator_start(void){
 	chThdCreateStatic(waPidRegulator, sizeof(waPidRegulator), NORMALPRIO, PidRegulator, NULL);
 }
-
-
-
-
 

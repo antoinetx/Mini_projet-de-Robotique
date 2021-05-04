@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -28,7 +28,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
   25              		.type	e_calibrate_ir, %function
   26              	e_calibrate_ir:
   27              	.LFB0:
-  28              		.file 1 "/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_projet-de-Robotique/e-puck2_main-processor
+  28              		.file 1 "../e-puck2_main-processor/src/epuck1x/a_d/advance_ad_scan/e_prox.c"
   29              		.loc 1 5 0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 8
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
   55              		.loc 1 6 0
   56 0018 FFF7FEBF 		b	calibrate_ir
   57              	.LVL0:
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 2
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 2
 
 
   58              	.L6:
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  112              	.L15:
  113              		.cfi_restore_state
  114              		.loc 1 14 0
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 3
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 3
 
 
  115 0020 9A42     		cmp	r2, r3
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  169 000e 1B68     		ldr	r3, [r3]
  170              		.loc 1 20 0
  171 0010 06D9     		bls	.L24
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 4
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 4
 
 
  172              		.loc 1 25 0
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  226              	.LVL12:
  227 0000 00B5     		push	{lr}
  228              		.cfi_def_cfa_offset 4
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 5
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 5
 
 
  229              		.cfi_offset 14, -4
@@ -296,9 +296,9 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  281              		.size	e_get_ambient_light, .-e_get_ambient_light
  282              		.text
  283              	.Letext0:
- 284              		.file 2 "/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_projet-de-Robotique/e-puck2_main-processor
+ 284              		.file 2 "../e-puck2_main-processor/src/epuck1x/../sensors/proximity.h"
  285              		.section	.debug_info,"",%progbits
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 6
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 6
 
 
  286              	.Ldebug_info0:
@@ -307,17 +307,17 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  289 0006 00000000 		.4byte	.Ldebug_abbrev0
  290 000a 04       		.byte	0x4
  291 000b 01       		.uleb128 0x1
- 292 000c 31010000 		.4byte	.LASF17
+ 292 000c AE000000 		.4byte	.LASF17
  293 0010 0C       		.byte	0xc
- 294 0011 AE000000 		.4byte	.LASF18
- 295 0015 B0020000 		.4byte	.LASF19
+ 294 0011 A4020000 		.4byte	.LASF18
+ 295 0015 2D020000 		.4byte	.LASF19
  296 0019 00000000 		.4byte	.Ldebug_ranges0+0
  297 001d 00000000 		.4byte	0
  298 0021 00000000 		.4byte	.Ldebug_line0
  299 0025 02       		.uleb128 0x2
  300 0026 01       		.byte	0x1
  301 0027 06       		.byte	0x6
- 302 0028 1B030000 		.4byte	.LASF0
+ 302 0028 98020000 		.4byte	.LASF0
  303 002c 02       		.uleb128 0x2
  304 002d 01       		.byte	0x1
  305 002e 08       		.byte	0x8
@@ -325,7 +325,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  307 0033 02       		.uleb128 0x2
  308 0034 02       		.byte	0x2
  309 0035 05       		.byte	0x5
- 310 0036 FA020000 		.4byte	.LASF2
+ 310 0036 77020000 		.4byte	.LASF2
  311 003a 02       		.uleb128 0x2
  312 003b 02       		.byte	0x2
  313 003c 07       		.byte	0x7
@@ -333,7 +333,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  315 0041 02       		.uleb128 0x2
  316 0042 04       		.byte	0x4
  317 0043 05       		.byte	0x5
- 318 0044 12030000 		.4byte	.LASF4
+ 318 0044 8F020000 		.4byte	.LASF4
  319 0048 02       		.uleb128 0x2
  320 0049 04       		.byte	0x4
  321 004a 07       		.byte	0x7
@@ -341,11 +341,11 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  323 004f 02       		.uleb128 0x2
  324 0050 08       		.byte	0x8
  325 0051 05       		.byte	0x5
- 326 0052 A2020000 		.4byte	.LASF6
+ 326 0052 1F020000 		.4byte	.LASF6
  327 0056 02       		.uleb128 0x2
  328 0057 08       		.byte	0x8
  329 0058 07       		.byte	0x7
- 330 0059 82020000 		.4byte	.LASF7
+ 330 0059 FF010000 		.4byte	.LASF7
  331 005d 03       		.uleb128 0x3
  332 005e 04       		.byte	0x4
  333 005f 05       		.byte	0x5
@@ -353,12 +353,12 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  335 0064 02       		.uleb128 0x2
  336 0065 04       		.byte	0x4
  337 0066 07       		.byte	0x7
- 338 0067 75020000 		.4byte	.LASF8
+ 338 0067 F2010000 		.4byte	.LASF8
  339 006b 04       		.uleb128 0x4
  340 006c 00000000 		.4byte	.LASF9
  341 0070 01       		.byte	0x1
  342 0071 1B       		.byte	0x1b
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 7
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 7
 
 
  343 0072 5D000000 		.4byte	0x5d
@@ -368,7 +368,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  347 007f 9C       		.byte	0x9c
  348 0080 A6000000 		.4byte	0xa6
  349 0084 05       		.uleb128 0x5
- 350 0085 04030000 		.4byte	.LASF11
+ 350 0085 81020000 		.4byte	.LASF11
  351 0089 01       		.byte	0x1
  352 008a 1B       		.byte	0x1b
  353 008b 64000000 		.4byte	0x64
@@ -391,7 +391,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  370 00ba 9C       		.byte	0x9c
  371 00bb E1000000 		.4byte	0xe1
  372 00bf 05       		.uleb128 0x5
- 373 00c0 04030000 		.4byte	.LASF11
+ 373 00c0 81020000 		.4byte	.LASF11
  374 00c4 01       		.byte	0x1
  375 00c5 12       		.byte	0x12
  376 00c6 64000000 		.4byte	0x64
@@ -414,11 +414,11 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  393 00f5 9C       		.byte	0x9c
  394 00f6 1C010000 		.4byte	0x11c
  395 00fa 05       		.uleb128 0x5
- 396 00fb 04030000 		.4byte	.LASF11
+ 396 00fb 81020000 		.4byte	.LASF11
  397 00ff 01       		.byte	0x1
  398 0100 09       		.byte	0x9
  399 0101 64000000 		.4byte	0x64
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 8
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 8
 
 
  400 0105 74000000 		.4byte	.LLST0
@@ -459,13 +459,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  435 0161 02       		.byte	0x2
  436 0162 37       		.byte	0x37
  437 0163 09       		.uleb128 0x9
- 438 0164 99020000 		.4byte	.LASF15
- 439 0168 99020000 		.4byte	.LASF15
+ 438 0164 16020000 		.4byte	.LASF15
+ 439 0168 16020000 		.4byte	.LASF15
  440 016c 02       		.byte	0x2
  441 016d 2E       		.byte	0x2e
  442 016e 09       		.uleb128 0x9
- 443 016f 27030000 		.4byte	.LASF16
- 444 0173 27030000 		.4byte	.LASF16
+ 443 016f E7020000 		.4byte	.LASF16
+ 444 0173 E7020000 		.4byte	.LASF16
  445 0177 02       		.byte	0x2
  446 0178 25       		.byte	0x25
  447 0179 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  454 0004 0E       		.uleb128 0xe
  455 0005 13       		.uleb128 0x13
  456 0006 0B       		.uleb128 0xb
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 9
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 9
 
 
  457 0007 03       		.uleb128 0x3
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  511 003d 18       		.uleb128 0x18
  512 003e 9742     		.uleb128 0x2117
  513 0040 19       		.uleb128 0x19
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 10
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 10
 
 
  514 0041 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  568 007c 12       		.uleb128 0x12
  569 007d 06       		.uleb128 0x6
  570 007e 40       		.uleb128 0x40
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 11
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 11
 
 
  571 007f 18       		.uleb128 0x18
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  625 0021 0100     		.2byte	0x1
  626 0023 50       		.byte	0x50
  627 0024 2D000000 		.4byte	.LVL15-1
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 12
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 12
 
 
  628 0028 38000000 		.4byte	.LFE3
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  682 00a4 50       		.byte	0x50
  683 00a5 9F       		.byte	0x9f
  684 00a6 00000000 		.4byte	0
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 13
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 13
 
 
  685 00aa 00000000 		.4byte	0
@@ -754,8 +754,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  715 0024 00000000 		.4byte	0
  716              		.section	.debug_line,"",%progbits
  717              	.Ldebug_line0:
- 718 0000 78010000 		.section	.debug_str,"MS",%progbits,1
- 718      02001901 
+ 718 0000 F8000000 		.section	.debug_str,"MS",%progbits,1
+ 718      02009900 
  718      00000201 
  718      FB0E0D00 
  718      01010101 
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  725              	.LASF5:
  726 0031 6C6F6E67 		.ascii	"long unsigned int\000"
  726      20756E73 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 14
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 14
 
 
  726      69676E65 
@@ -818,135 +818,129 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 1
  738      656E745F 
  738      6C696768 
  738      7400
- 739              	.LASF18:
- 740 00ae 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
- 740      72732F61 
- 740      6E746F69 
- 740      6E652F44 
- 740      65736B74 
- 741 00e1 65742D64 		.ascii	"et-de-Robotique/e-puck2_main-processor/src/epuck1x/"
- 741      652D526F 
- 741      626F7469 
- 741      7175652F 
- 741      652D7075 
- 742 0114 615F642F 		.ascii	"a_d/advance_ad_scan/e_prox.c\000"
- 742      61647661 
- 742      6E63655F 
- 742      61645F73 
- 742      63616E2F 
- 743              	.LASF17:
- 744 0131 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 744      43313120 
- 744      372E322E 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 15
+ 739              	.LASF17:
+ 740 00ae 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
+ 740      43313120 
+ 740      372E322E 
+ 740      31203230 
+ 740      31373039 
+ 741 00e1 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
+ 741      20726576 
+ 741      6973696F 
+ 741      6E203235 
+ 741      35323034 
+ 742 0114 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
+ 742      2D6D6670 
+ 742      753D6670 
+ 742      76342D73 
+ 742      702D6431 
+ 743 0147 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
+ 743      62202D4F 
+ 743      32202D66 
+ 743      6F6D6974 
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 15
 
 
- 744      31203230 
- 744      31373039 
- 745 0164 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 745      20726576 
- 745      6973696F 
- 745      6E203235 
- 745      35323034 
- 746 0197 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
- 746      2D6D6670 
- 746      753D6670 
- 746      76342D73 
- 746      702D6431 
- 747 01ca 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 747      62202D4F 
- 747      32202D66 
- 747      6F6D6974 
- 747      2D667261 
- 748 01fd 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 748      6F2D7374 
- 748      72696374 
- 748      2D616C69 
- 748      6173696E 
- 749 0230 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 749      73656374 
- 749      696F6E73 
- 749      202D6664 
- 749      6174612D 
- 750 0263 72656369 		.ascii	"recision-constant\000"
- 750      73696F6E 
- 750      2D636F6E 
- 750      7374616E 
- 750      7400
- 751              	.LASF8:
- 752 0275 756E7369 		.ascii	"unsigned int\000"
- 752      676E6564 
- 752      20696E74 
+ 743      2D667261 
+ 744 017a 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
+ 744      6F2D7374 
+ 744      72696374 
+ 744      2D616C69 
+ 744      6173696E 
+ 745 01ad 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
+ 745      73656374 
+ 745      696F6E73 
+ 745      202D6664 
+ 745      6174612D 
+ 746 01e0 72656369 		.ascii	"recision-constant\000"
+ 746      73696F6E 
+ 746      2D636F6E 
+ 746      7374616E 
+ 746      7400
+ 747              	.LASF8:
+ 748 01f2 756E7369 		.ascii	"unsigned int\000"
+ 748      676E6564 
+ 748      20696E74 
+ 748      00
+ 749              	.LASF7:
+ 750 01ff 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 750      206C6F6E 
+ 750      6720756E 
+ 750      7369676E 
+ 750      65642069 
+ 751              	.LASF15:
+ 752 0216 6765745F 		.ascii	"get_prox\000"
+ 752      70726F78 
  752      00
- 753              	.LASF7:
- 754 0282 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 753              	.LASF6:
+ 754 021f 6C6F6E67 		.ascii	"long long int\000"
  754      206C6F6E 
- 754      6720756E 
- 754      7369676E 
- 754      65642069 
- 755              	.LASF15:
- 756 0299 6765745F 		.ascii	"get_prox\000"
- 756      70726F78 
- 756      00
- 757              	.LASF6:
- 758 02a2 6C6F6E67 		.ascii	"long long int\000"
- 758      206C6F6E 
- 758      6720696E 
- 758      7400
- 759              	.LASF19:
- 760 02b0 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
- 760      72732F61 
- 760      6E746F69 
- 760      6E652F44 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 16
+ 754      6720696E 
+ 754      7400
+ 755              	.LASF19:
+ 756 022d 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
+ 756      72732F61 
+ 756      6E746F69 
+ 756      6E652F44 
+ 756      65736B74 
+ 757 0260 65742D64 		.ascii	"et-de-Robotique/projet\000"
+ 757      652D526F 
+ 757      626F7469 
+ 757      7175652F 
+ 757      70726F6A 
+ 758              	.LASF2:
+ 759 0277 73686F72 		.ascii	"short int\000"
+ 759      7420696E 
+ 759      7400
+ 760              	.LASF11:
+ 761 0281 73656E73 		.ascii	"sensor_number\000"
+ 761      6F725F6E 
+ 761      756D6265 
+ 761      7200
+ 762              	.LASF4:
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 16
 
 
- 760      65736B74 
- 761 02e3 65742D64 		.ascii	"et-de-Robotique/projet\000"
- 761      652D526F 
- 761      626F7469 
- 761      7175652F 
- 761      70726F6A 
- 762              	.LASF2:
- 763 02fa 73686F72 		.ascii	"short int\000"
- 763      7420696E 
- 763      7400
- 764              	.LASF11:
- 765 0304 73656E73 		.ascii	"sensor_number\000"
- 765      6F725F6E 
- 765      756D6265 
- 765      7200
- 766              	.LASF4:
- 767 0312 6C6F6E67 		.ascii	"long int\000"
- 767      20696E74 
- 767      00
- 768              	.LASF0:
- 769 031b 7369676E 		.ascii	"signed char\000"
- 769      65642063 
- 769      68617200 
- 770              	.LASF16:
- 771 0327 63616C69 		.ascii	"calibrate_ir\000"
- 771      62726174 
- 771      655F6972 
- 771      00
- 772              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s 			page 17
+ 763 028f 6C6F6E67 		.ascii	"long int\000"
+ 763      20696E74 
+ 763      00
+ 764              	.LASF0:
+ 765 0298 7369676E 		.ascii	"signed char\000"
+ 765      65642063 
+ 765      68617200 
+ 766              	.LASF18:
+ 767 02a4 2E2E2F65 		.ascii	"../e-puck2_main-processor/src/epuck1x/a_d/advance_a"
+ 767      2D707563 
+ 767      6B325F6D 
+ 767      61696E2D 
+ 767      70726F63 
+ 768 02d7 645F7363 		.ascii	"d_scan/e_prox.c\000"
+ 768      616E2F65 
+ 768      5F70726F 
+ 768      782E6300 
+ 769              	.LASF16:
+ 770 02e7 63616C69 		.ascii	"calibrate_ir\000"
+ 770      62726174 
+ 770      655F6972 
+ 770      00
+ 771              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 e_prox.c
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:18     .text.e_calibrate_ir:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:26     .text.e_calibrate_ir:0000000000000000 e_calibrate_ir
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:65     .text.e_calibrate_ir:0000000000000020 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:70     .text.e_get_prox:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:78     .text.e_get_prox:0000000000000000 e_get_prox
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:136    .text.e_get_prox:0000000000000034 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:141    .text.e_get_calibrated_prox:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:149    .text.e_get_calibrated_prox:0000000000000000 e_get_calibrated_prox
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:207    .text.e_get_calibrated_prox:0000000000000034 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:212    .text.e_get_ambient_light:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:220    .text.e_get_ambient_light:0000000000000000 e_get_ambient_light
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccy4XjP1.s:278    .text.e_get_ambient_light:0000000000000034 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:18     .text.e_calibrate_ir:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:26     .text.e_calibrate_ir:0000000000000000 e_calibrate_ir
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:65     .text.e_calibrate_ir:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:70     .text.e_get_prox:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:78     .text.e_get_prox:0000000000000000 e_get_prox
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:136    .text.e_get_prox:0000000000000034 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:141    .text.e_get_calibrated_prox:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:149    .text.e_get_calibrated_prox:0000000000000000 e_get_calibrated_prox
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:207    .text.e_get_calibrated_prox:0000000000000034 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:212    .text.e_get_ambient_light:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:220    .text.e_get_ambient_light:0000000000000000 e_get_ambient_light
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:278    .text.e_get_ambient_light:0000000000000034 $d
 
 UNDEFINED SYMBOLS
 calibrate_ir

@@ -15,11 +15,12 @@
 #define KI						0.1f
 #define KD						2
 #define D_T				10   // dt of derivativ term. correspond to PI clock
-#define CORNER_DIST  6 	// 6cm = distance between what epuck see and epuck
-#define NB_MOTOR_STEP
-#define WHEEL_DIAMETER
-#define NB_STEPS_TO_DO    9
-#define NB_STEPS_TO_TURN    9
+//#define CORNER_DIST  6 	// 6cm = distance between what epuck see and epuck
+//#define NB_MOTOR_STEP	1000 //Nb step for 1 trun of the motor
+//#define WHEEL_PERIMETER	 13
+#define NB_STEPS_TO_DO      461  //(CORNER_DIST/WHEEL_PERIMETER)*NB_MOTOR_STEP
+#define NB_STEPS_TO_TURN  730
+#define LINE_WIDTH_TRESH 240
 
 enum side {RIGHT, LEFT};
 
@@ -27,7 +28,8 @@ enum side {RIGHT, LEFT};
 //start the PI regulator thread
 void pid_regulator_start(void);
 
-
+//test
+void corner_approch(void);
 
 #endif /* MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_ */
 

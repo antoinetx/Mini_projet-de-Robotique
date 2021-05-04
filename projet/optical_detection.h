@@ -28,6 +28,7 @@
 int16_t get_begin(void);
 int16_t get_end(void);
 int16_t get_error_line(void);
+int16_t get_line_width(void);
 
 void process_image_start(void);
 //void suivre_ligne(void);
