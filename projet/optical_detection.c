@@ -12,7 +12,6 @@
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
 
-static uint16_t begin = 0, end = 0;
 static int16_t last_err_pos = 0;
 
 
@@ -26,7 +25,7 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	uint8_t stop = 0, wrong_line = 0, line_not_found = 0;
 	uint32_t mean = 0;
 	int16_t new_err_pos = 0;
-
+	uint16_t begin = 0, end = 0;
 
 	//performs an average
 	for(uint16_t j = 0 ; j < IMAGE_BUFFER_SIZE ; j++){
@@ -117,8 +116,6 @@ static THD_FUNCTION(CaptureImage, arg) {
 	//Takes pixels 0 to IMAGE_BUFFER_SIZE of the line 10 + 11 (minimum 2 lines because reasons)
 	po8030_advanced_config(FORMAT_RGB565, 0, 475, IMAGE_BUFFER_SIZE, 2, SUBSAMPLING_X1, SUBSAMPLING_X1);
 
-	///code blanchte pour derniere igne, essaye
-    //po8030_advanced_config(FORMAT_RGB565, 0, 2, IMAGE_BUFFER_SIZE, 2, SUBSAMPLING_X1, SUBSAMPLING_X1);
 
 	dcmi_enable_double_buffering();
 	dcmi_set_capture_mode(CAPTURE_ONE_SHOT);
@@ -184,35 +181,5 @@ void process_image_start(void){
 int16_t get_extract_error_line_position(void){
 	return last_err_pos;
 }
-
-int16_t get_begin(void){
-	return begin;
-
-}int16_t get_end(void){
-	return end;
-}
-
-/*
-void suivre_ligne(void){
-
-	int coef = last_err_pos*0.5;
-	int speed = 400;
-
-
-	if(get_extract_error_line_position() > 2){
-		right_motor_set_speed(200 - speed);
-		left_motor_set_speed(200 + speed);
-	}
-	else if(get_extract_error_line_position() < 2){
-		right_motor_set_speed(200 + speed);
-		left_motor_set_speed(200 - speed);
-	}
-	else{
-		right_motor_set_speed(200);
-		left_motor_set_speed(200);
-	}
-
-
-}*/
 
 

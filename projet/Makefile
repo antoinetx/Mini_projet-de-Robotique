@@ -15,7 +15,7 @@ CSRC += ./main.c \
 		./audio_processing.c \
 		./communications.c \
 		./fft.c \
-		./distance_detection.c\
+		./animation.c\
 
 		
 
