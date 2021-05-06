@@ -99,7 +99,8 @@ int main(void)
         //chprintf((BaseSequentialStream *)&SDU1, " \n end %d", get_end());
         //chprintf((BaseSequentialStream *)&SDU1, " \n corner %d", get_corner());
         //chprintf((BaseSequentialStream *)&SDU1, " \n distance %d",(VL53L0X_get_dist_mm()-40));
-        chprintf((BaseSequentialStream *)&SDU1, " \n line width %d", get_line_width());
+        //chprintf((BaseSequentialStream *)&SDU1, " \n line width %d", get_line_width());
+        chprintf((BaseSequentialStream *)&SDU1, " \n amplitude du son :  %f", get_amp());
     }
 
 }
