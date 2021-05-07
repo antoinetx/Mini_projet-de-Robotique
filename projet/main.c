@@ -3,6 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <motors.h>
+#include <leds.h>
 
 #include "ch.h"
 #include "hal.h"
@@ -77,20 +78,26 @@ int main(void)
 	//starts ToF sensor
 	VL53L0X_start();
 
+	//start leds rgb
+	spi_comm_start();
+
 
    //stars the threads for the pi regulator and the processing of the image
 
-   process_image_start();
-
+   //process_image_start();
+   led_animation_start();
 
 	 //starts the microphones processing thread.
 	 //it calls the callback given in parameter when samples are ready
 	 mic_start(&processAudioData);
 
+
+
     /* Infinite loop. */
     while (1) {
     	//waits 0.1 second
         chThdSleepMilliseconds(1000);
+
     }
 
 }
