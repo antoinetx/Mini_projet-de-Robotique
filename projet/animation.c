@@ -6,6 +6,8 @@
 #include <chprintf.h>
 #include <leds.h>
 #include <animation.h>
+#include "audio/play_melody.h"
+
 
 
 static int8_t i = 0;
@@ -173,8 +175,47 @@ static THD_FUNCTION(LedAnimation, arg) {
 
 }
 
+
+static THD_WORKING_AREA(waSoundAnimation, 1024);
+static THD_FUNCTION(SoundAnimation, arg) {
+
+	chRegSetThreadName(__FUNCTION__);
+	(void)arg;
+
+	//ajouter la ligne en fonction du nom de la fonction ici :
+	// uint8_t states = get_states();
+
+	while (1){
+		switch (states)
+		{
+			case STRAIGHT:
+				playMelody(SANDSTORMS,ML_FORCE_CHANGE,NULL);
+			break;
+			case TURN_BACK:
+				playMelody(RUSSIA,ML_FORCE_CHANGE,NULL);
+			break;
+			case STOP:
+				playMelody(WE_ARE_THE_CHAMPIONS,ML_FORCE_CHANGE,NULL);
+			break;
+			case OBSTACLE:
+				playMelody(MARIO_DEATH,ML_FORCE_CHANGE,NULL);
+			break;
+		}
+
+
+
+		//do some stuff and sleep for 250ms
+		chThdSleepMilliseconds(250);
+
+	}
+}
+
+
+
 void led_animation_start(void){
 	chThdCreateStatic(waLedAnimation, sizeof(waLedAnimation), NORMALPRIO, LedAnimation, NULL);
 }
 
-
+void sound_animation_start(void){
+	chThdCreateStatic(waSoundAnimation, sizeof(waSoundAnimation), NORMALPRIO, SoundAnimation, NULL);
+}

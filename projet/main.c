@@ -85,7 +85,8 @@ int main(void)
    //stars the threads for the pi regulator and the processing of the image
 
    //process_image_start();
-   led_animation_start();
+	led_animation_start();
+	sound_animation_start();
 
 	 //starts the microphones processing thread.
 	 //it calls the callback given in parameter when samples are ready
