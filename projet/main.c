@@ -88,8 +88,8 @@ int main(void)
    //it calls the callback given in parameter when samples are ready
    mic_start(&processAudioData);
 
-   //PID regulator start
-   pid_regulator_start();
+   //Thread mouvment regulator start
+   mouvment_start();
 
     /* Infinite loop. */
     while (1) {
@@ -100,7 +100,9 @@ int main(void)
         //chprintf((BaseSequentialStream *)&SDU1, " \n corner %d", get_corner());
         //chprintf((BaseSequentialStream *)&SDU1, " \n distance %d",(VL53L0X_get_dist_mm()-40));
         //chprintf((BaseSequentialStream *)&SDU1, " \n line width %d", get_line_width());
-        chprintf((BaseSequentialStream *)&SDU1, " \n amplitude du son :  %f", get_amp());
+        //chprintf((BaseSequentialStream *)&SDU1, " \n amplitude du son :  %f", get_amp());
+        //chprintf((BaseSequentialStream *)&SDU1, " \n line found? :  %d",  get_line_found());
+
     }
 
 }

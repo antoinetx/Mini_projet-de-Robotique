@@ -14,7 +14,7 @@ static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
 static float distance_cm = 0;
 static uint16_t begin = 0, end = 0;
-static int16_t last_err_pos = 0;
+static int16_t last_err_pos = 0, line_found = 0;
 
 
 /*
@@ -95,6 +95,7 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	}else{
 		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFER_MIDDLE; // gives the error from the center of the picture
 	}
+	line_found = !line_not_found;
 	return new_err_pos;
 }
 
@@ -194,6 +195,10 @@ int16_t get_end(void){
 }
 int16_t get_line_width(void){
 	return (end - begin);
+}
+
+int16_t get_line_found(void){
+	return (line_found);
 }
 
 

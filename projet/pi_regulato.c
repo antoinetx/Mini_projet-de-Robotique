@@ -13,14 +13,11 @@
 #include <sensors/VL53L0X/VL53L0X.h>
 
 
-// Make a choice to turn
-int8_t turn_choice(void){
-	float angle = get_angle();
-	if( angle>PI/4 && angle<(3*PI/4)) return LEFT;
-	if( angle>(3*PI/4) || angle<-(3*PI/4)) return TURN_BACK;
-	if( angle< (-PI/4) && angle > (-3*PI/4)) return RIGHT;
-	if( angle<PI/4 && angle>-(PI/4)) return STRAIGHT;
-	else return STOP;
+void delay(unsigned int n)
+{
+	while (n--) {
+		__asm__ volatile ("nop");
+	}
 }
 
 // When epuck approch a corner he avance to it with continuous comande because the camera see too far away.
@@ -58,26 +55,25 @@ void motor_turn(int16_t speed_left, int16_t speed_right, int16_t nb_steps_to_do)
 	left_motor_set_speed(0);
 }
 
-
 void corner_turn(int8_t side){
 	int16_t nb_steps_to_do = 0;
 	switch (side)
 	{
 	case RIGHT:
 		nb_steps_to_do = NB_STEPS_TO_TURN;
-		motor_turn(SYS_SPEED, 50, nb_steps_to_do);
+		motor_turn(SYS_SPEED/2, -SYS_SPEED/2, nb_steps_to_do);
 		break;
 	case LEFT:
 		nb_steps_to_do = NB_STEPS_TO_TURN;
-		motor_turn(50, SYS_SPEED, nb_steps_to_do);
+		motor_turn(-SYS_SPEED/2, SYS_SPEED/2, nb_steps_to_do);
 		break;
 	case STRAIGHT:
 		nb_steps_to_do = NB_STEPS_TO_GO_STRAIGHT;
-		motor_turn(SYS_SPEED, -SYS_SPEED, nb_steps_to_do);
+		motor_turn(SYS_SPEED/2, SYS_SPEED/2, nb_steps_to_do);
 		break;
 	case TURN_BACK:
 		nb_steps_to_do = NB_STEPS_TO_TURN_BACK;
-		motor_turn(SYS_SPEED, 0, nb_steps_to_do);
+		motor_turn(SYS_SPEED/2, -SYS_SPEED/2, nb_steps_to_do);
 		break;
 	case STOP:
 		nb_steps_to_do = 0;
@@ -87,6 +83,52 @@ void corner_turn(int8_t side){
 	}
 }
 
+// Make a choice to turn
+void turn_choice(void){
+	float angle = get_angle();
+
+	while (get_amp() < DETECTION_AMP){
+		corner_turn(STOP);
+	}
+
+	if(angle>PI/4 && angle<(3*PI/4)){
+		chprintf((BaseSequentialStream *)&SDU1, " \n Turn LEFT" );
+		corner_turn(LEFT);
+		delay(SystemCoreClock/20);
+		if(!get_line_found()){
+			if(get_angle()>0) corner_turn(LEFT);
+			else corner_turn(RIGHT);
+		}
+	}
+	else if( angle>(3*PI/4) || angle<-(3*PI/4)){
+		chprintf((BaseSequentialStream *)&SDU1, " \n Turn BACK" );
+		corner_turn(TURN_BACK);
+		delay(SystemCoreClock/20);
+		if(!get_line_found()){
+			chprintf((BaseSequentialStream *)&SDU1, " \n NOOOO");
+			if(get_angle()>0) corner_turn(LEFT);
+			else corner_turn(RIGHT);
+		}
+	}
+	else if( angle< (-PI/4) && angle > (-3*PI/4)){
+		chprintf((BaseSequentialStream *)&SDU1, " \n Turn RIGHT" );
+		corner_turn(RIGHT);
+		delay(SystemCoreClock/20);
+		if(!get_line_found()){
+			if(get_angle()>0) corner_turn(LEFT);
+			else corner_turn(RIGHT);
+		}
+	}
+	else if(angle<PI/4 && angle>-(PI/4)){
+		if(!get_line_found()){
+			if(get_angle()>0) corner_turn(LEFT);
+			else corner_turn(RIGHT);
+		}
+		else corner_turn(STRAIGHT);
+	}
+}
+
+//PID IMPLEMENTATION
 // PI regulator implementation for the distance collision sensor
 int16_t pi_collision_regulator(int16_t distance){
 
@@ -122,7 +164,6 @@ int16_t pi_collision_regulator(int16_t distance){
 }
 
 
-
 // PD regulator for the rotational line follower
 int16_t pd_regulator(float error){
 
@@ -140,44 +181,38 @@ int16_t pd_regulator(float error){
 	return (int16_t)rot_speed;
 }
 
-static THD_WORKING_AREA(waPidRegulator, 256);
-static THD_FUNCTION(PidRegulator, arg) {
+
+static THD_WORKING_AREA(waMouvment, 1024);
+static THD_FUNCTION(Mouvment, arg) {
 
 	chRegSetThreadName(__FUNCTION__);
 	(void)arg;
 
 	systime_t time;
 	int16_t rotation_speed = 0, dist_colision = 0;
-
+	bool corner = FALSE;  //no_line = FALSE,
 
 	while(1){
 		time = chVTGetSystemTime();
 
 		// CALCUL DES VITESSES
-
-		//computes the speed to give to the motors
-		//distance_cm is modified by the image processing thread
 		rotation_speed = pd_regulator(get_error_line());
 
 		// Récupère la distance avec l'obstacle.
 		dist_colision = VL53L0X_get_dist_mm() - TOF_OFFSET;
 
 		// CONDITIONS DE MVNT
+		if((get_line_width() > LINE_WIDTH_TRESH)) corner = TRUE;
+		else corner = FALSE;
 
 		//Vérifie si il y a un corner
-		if(get_line_width() > LINE_WIDTH_TRESH ){
+		if(corner){
+			chprintf((BaseSequentialStream *)&SDU1, " \n CORNER");
 			corner_approch();
-			while (get_amp() < DETECTION_AMP) corner_turn(STOP);
-			if (turn_choice() == LEFT) corner_turn(LEFT);
-			if (turn_choice() == RIGHT) corner_turn(RIGHT);
-			if (turn_choice() == TURN_BACK) corner_turn(TURN_BACK);
-			if (turn_choice() == STRAIGHT) corner_turn(STRAIGHT);
-
-
-			//if (get_angle()>0 && (get_amp() > DETECTION_AMP)) corner_turn(LEFT);
-			//if (get_angle()<0 && (get_amp() > DETECTION_AMP)) corner_turn(RIGHT);
+			turn_choice();
 		}
 		else{
+
 			//applies the speed from the PI regulator and the correction for the rotation
 			if(dist_colision < MAX_DETECTION_DIST){
 				right_motor_set_speed(pi_collision_regulator(dist_colision));
@@ -188,13 +223,13 @@ static THD_FUNCTION(PidRegulator, arg) {
 				left_motor_set_speed(SYS_SPEED + rotation_speed);
 			}
 		}
-		//100Hz
-		chThdSleepUntilWindowed(time, time + MS2ST(10));
+	//100Hz
+	chThdSleepUntilWindowed(time, time + MS2ST(10));
 	}
 }
 
 
-void pid_regulator_start(void){
-	chThdCreateStatic(waPidRegulator, sizeof(waPidRegulator), NORMALPRIO, PidRegulator, NULL);
+void mouvment_start(void){
+	chThdCreateStatic(waMouvment, sizeof(waMouvment), NORMALPRIO, Mouvment, NULL);
 }
 
