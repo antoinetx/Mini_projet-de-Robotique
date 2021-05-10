@@ -6,14 +6,18 @@
 #include <chprintf.h>
 #include <leds.h>
 #include <animation.h>
+
+#include "audio/audio_thread.h"
 #include "audio/play_melody.h"
+#include "audio/play_sound_file.h"
+#include "audio/microphone.h"
 
 
 
 static int8_t i = 0;
 
 // a enlever d ici apres
-static uint8_t states = 4;
+static uint8_t states = 5;
 
 
 static THD_WORKING_AREA(waLedAnimation, 1024);
@@ -28,6 +32,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 	while (1){
 		switch (states)
 		{
+			// actionner le clignotant droit
 			case RIGHT:
 				if (i == ETEIND){
 					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY,0);
@@ -71,7 +76,6 @@ static THD_FUNCTION(LedAnimation, arg) {
 					clear_leds();
 					set_rgb_led(LED4,INTENSITY,0,INTENSITY);
 					set_rgb_led(LED6,INTENSITY,0,INTENSITY);
-					set_led(LED5,ON);
 					i = ETEIND_BIS;
 				}
 				else if (i == ETEIND_BIS){
@@ -84,7 +88,6 @@ static THD_FUNCTION(LedAnimation, arg) {
 					clear_leds();
 					set_rgb_led(LED2,INTENSITY,0,INTENSITY);
 					set_rgb_led(LED8,INTENSITY,0,INTENSITY);
-					set_led(LED1,ON);
 					i = ALLUMEE_BIS;
 				}
 				else {
@@ -192,23 +195,25 @@ static THD_FUNCTION(SoundAnimation, arg) {
 				playMelody(SANDSTORMS,ML_FORCE_CHANGE,NULL);
 			break;
 			case TURN_BACK:
-				playMelody(RUSSIA,ML_FORCE_CHANGE,NULL);
+				playMelody(STARWARS,ML_FORCE_CHANGE,NULL);
 			break;
 			case STOP:
-				playMelody(WE_ARE_THE_CHAMPIONS,ML_FORCE_CHANGE,NULL);
+				playMelody(MARIO_FLAG,ML_FORCE_CHANGE,NULL);
 			break;
 			case OBSTACLE:
-				playMelody(MARIO_DEATH,ML_FORCE_CHANGE,NULL);
+				playMelody(SEVEN_NATION_ARMY,ML_FORCE_CHANGE,NULL);
 			break;
 		}
 
 
 
 		//do some stuff and sleep for 250ms
-		chThdSleepMilliseconds(250);
+		chThdSleepMilliseconds(4000);
 
 	}
 }
+
+
 
 
 
