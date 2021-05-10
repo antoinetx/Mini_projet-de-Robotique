@@ -13,13 +13,6 @@
 #include <camera/po8030.h>
 #include "memory_protection.h"
 #include <main.h>
-#include <audio/microphone.h>
-#include <audio/play_melody.h>
-
-#include "audio/audio_thread.h"
-#include "audio/play_melody.h"
-#include "audio/play_sound_file.h"
-#include "audio/microphone.h"
 
 #include <audio_processing.h>
 #include <fft.h>
@@ -97,7 +90,7 @@ int main(void)
    //stars the threads for the pi regulator and the processing of the image
 
 
-	 //process_image_start();
+	process_image_start();
 	led_animation_start();
 	sound_animation_start();
 
@@ -105,8 +98,6 @@ int main(void)
 
     /* Infinite loop. */
     while (1) {
-
-
 
     	//waits 1 second
         chThdSleepMilliseconds(1000);
