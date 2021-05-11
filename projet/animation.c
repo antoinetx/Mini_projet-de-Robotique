@@ -17,7 +17,7 @@
 static int8_t i = 0;
 
 // a enlever d ici apres
-static uint8_t states = 5;
+static uint8_t states = 4;
 
 
 static THD_WORKING_AREA(waLedAnimation, 1024);
@@ -146,12 +146,12 @@ static THD_FUNCTION(LedAnimation, arg) {
 			//activate the hazard warning lights
 			case OBSTACLE:
 				if (i == ETEIND){
-					set_rgb_led(LED2,INTENSITY,0,INTENSITY);
-					set_rgb_led(LED4,INTENSITY,0,INTENSITY);
-					set_rgb_led(LED6,INTENSITY,0,INTENSITY);
-					set_rgb_led(LED8,INTENSITY,0,INTENSITY);
-					set_led(LED3,ON);
-					set_led(LED7,ON);
+					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY,0);
+					set_rgb_led(LED4,INTENSITY_MOY,INTENSITY,0);
+					set_rgb_led(LED6,INTENSITY_MOY,INTENSITY,0);
+					set_rgb_led(LED8,INTENSITY_MOY,INTENSITY,0);
+					//set_led(LED3,ON);
+					//set_led(LED7,ON);
 					i = ETEIND_BIS;
 				}
 				else if (i == ETEIND_BIS){
@@ -196,32 +196,23 @@ static THD_FUNCTION(SoundAnimation, arg) {
 	while (1){
 		switch (states)
 		{
-			// activate the straight way music
-			case STRAIGHT:
-				playMelody(SANDSTORMS,ML_FORCE_CHANGE,NULL);
-			break;
-			// activate the turn back music
-			case TURN_BACK:
-				playMelody(STARWARS,ML_FORCE_CHANGE,NULL);
-			break;
 			// activate the arrival music
 			case STOP:
 				playMelody(MARIO_FLAG,ML_FORCE_CHANGE,NULL);
 			break;
 			// activate the obstacle way music
 			case OBSTACLE:
-				playMelody(SEVEN_NATION_ARMY,ML_FORCE_CHANGE,NULL);
+				playMelody(MARIO_START,ML_FORCE_CHANGE,NULL);
 			break;
 		}
 
 
 
 		//do some stuff and sleep for 4s
-		chThdSleepMilliseconds(4000);
+		chThdSleepMilliseconds(1000);
 
 	}
 }
-
 
 
 
