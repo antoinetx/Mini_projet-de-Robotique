@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 1
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -62,11 +58,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
   55              		.cfi_restore 14
   56              		.cfi_def_cfa_offset 0
   57              		.loc 1 7 0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 2
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 2
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 2
 
 
   58 0018 FFF7FEBF 		b	chMtxLock
@@ -126,11 +118,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  112              	.LVL6:
  113              	.L13:
  114              		.cfi_restore_state
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 3
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 3
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 3
 
 
  115 001c FFF7FEFF 		bl	__stack_chk_fail
@@ -190,11 +178,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  169              	.LVL11:
  170              	.L22:
  171              		.align	2
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 4
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 4
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 4
 
 
  172              	.L21:
@@ -254,35 +238,12 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  226 0020 00000000 		.word	__stack_chk_guard
  227              		.cfi_endproc
  228              	.LFE222:
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 5
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 5
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 5
 
 
  229              		.size	messagebus_condvar_wait, .-messagebus_condvar_wait
  230              		.text
  231              	.Letext0:
-<<<<<<< HEAD
- 232              		.file 2 "c:\\users\\laral\\desktop\\eclipse_e-puck2_win32_29_jan_2020\\eclipse_e-puck2\\tools\\gcc
- 233              		.file 3 "c:\\users\\laral\\desktop\\eclipse_e-puck2_win32_29_jan_2020\\eclipse_e-puck2\\tools\\gcc
- 234              		.file 4 "../projet/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h"
- 235              		.file 5 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chsystypes.h"
- 236              		.file 6 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chschd.h"
- 237              		.file 7 "../projet/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/include/core_cm4.h"
- 238              		.file 8 "../projet/e-puck2_main-processor/ChibiOS//os/ext/CMSIS/ST/system_stm32f4xx.h"
- 239              		.file 9 "../projet/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/chcore.h"
- 240              		.file 10 "../projet/e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/chcore_v7m.h"
- 241              		.file 11 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chdebug.h"
- 242              		.file 12 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chtm.h"
- 243              		.file 13 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chstats.h"
- 244              		.file 14 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chsem.h"
- 245              		.file 15 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chmtx.h"
- 246              		.file 16 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chregistry.h"
- 247              		.file 17 "../projet/e-puck2_main-processor/ChibiOS//os/rt/include/chcond.h"
- 248              		.file 18 "c:\\users\\laral\\desktop\\eclipse_e-puck2_win32_29_jan_2020\\eclipse_e-puck2\\tools\\gc
-=======
  232              		.file 2 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
  233              		.file 3 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-2017
  234              		.file 4 "../e-puck2_main-processor/ChibiOS//os/rt/ports/ARMCMx/compilers/GCC/chtypes.h"
@@ -300,7 +261,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  246              		.file 16 "../e-puck2_main-processor/ChibiOS//os/rt/include/chregistry.h"
  247              		.file 17 "../e-puck2_main-processor/ChibiOS//os/rt/include/chcond.h"
  248              		.file 18 "/Applications/Eclipse_e-puck2.app/Contents/Eclipse_e-puck2/Tools/gcc-arm-none-eabi-7-201
->>>>>>> PID-implementation
  249              		.section	.debug_info,"",%progbits
  250              	.Ldebug_info0:
  251 0000 DD0B0000 		.4byte	0xbdd
@@ -310,13 +270,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  255 000b 01       		.uleb128 0x1
  256 000c DD020000 		.4byte	.LASF176
  257 0010 0C       		.byte	0xc
-<<<<<<< HEAD
- 258 0011 C3040000 		.4byte	.LASF177
- 259 0015 49080000 		.4byte	.LASF178
-=======
  258 0011 37000000 		.4byte	.LASF177
  259 0015 A1060000 		.4byte	.LASF178
->>>>>>> PID-implementation
  260 0019 00000000 		.4byte	.Ldebug_ranges0+0
  261 001d 00000000 		.4byte	0
  262 0021 00000000 		.4byte	.Ldebug_line0
@@ -343,11 +298,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  283 0048 04       		.uleb128 0x4
  284 0049 91000000 		.4byte	.LASF6
  285 004d 02       		.byte	0x2
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 6
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 6
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 6
 
 
  286 004e 2B       		.byte	0x2b
@@ -361,11 +312,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  294 005c 05       		.byte	0x5
  295 005d 85060000 		.4byte	.LASF5
  296 0061 04       		.uleb128 0x4
-<<<<<<< HEAD
- 297 0062 95070000 		.4byte	.LASF7
-=======
  297 0062 D8070000 		.4byte	.LASF7
->>>>>>> PID-implementation
  298 0066 02       		.byte	0x2
  299 0067 39       		.byte	0x39
  300 0068 6C000000 		.4byte	0x6c
@@ -383,22 +330,14 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  312 0080 05       		.byte	0x5
  313 0081 04020000 		.4byte	.LASF10
  314 0085 04       		.uleb128 0x4
-<<<<<<< HEAD
- 315 0086 D3070000 		.4byte	.LASF11
-=======
  315 0086 16080000 		.4byte	.LASF11
->>>>>>> PID-implementation
  316 008a 02       		.byte	0x2
  317 008b 4F       		.byte	0x4f
  318 008c 90000000 		.4byte	0x90
  319 0090 03       		.uleb128 0x3
  320 0091 04       		.byte	0x4
  321 0092 07       		.byte	0x7
-<<<<<<< HEAD
- 322 0093 77070000 		.4byte	.LASF12
-=======
  322 0093 BA070000 		.4byte	.LASF12
->>>>>>> PID-implementation
  323 0097 04       		.uleb128 0x4
  324 0098 E7050000 		.4byte	.LASF13
  325 009c 02       		.byte	0x2
@@ -409,11 +348,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  330 00a4 07       		.byte	0x7
  331 00a5 E0000000 		.4byte	.LASF14
  332 00a9 04       		.uleb128 0x4
-<<<<<<< HEAD
- 333 00aa 41080000 		.4byte	.LASF15
-=======
  333 00aa 84080000 		.4byte	.LASF15
->>>>>>> PID-implementation
  334 00ae 03       		.byte	0x3
  335 00af 18       		.byte	0x18
  336 00b0 48000000 		.4byte	0x48
@@ -423,11 +358,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  340 00ba 24       		.byte	0x24
  341 00bb 61000000 		.4byte	0x61
  342 00bf 04       		.uleb128 0x4
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 7
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 7
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 7
 
 
  343 00c0 65060000 		.4byte	.LASF17
@@ -437,11 +368,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  347 00ca 05       		.uleb128 0x5
  348 00cb BF000000 		.4byte	0xbf
  349 00cf 04       		.uleb128 0x4
-<<<<<<< HEAD
- 350 00d0 42070000 		.4byte	.LASF18
-=======
  350 00d0 85070000 		.4byte	.LASF18
->>>>>>> PID-implementation
  351 00d4 03       		.byte	0x3
  352 00d5 30       		.byte	0x30
  353 00d6 85000000 		.4byte	0x85
@@ -461,11 +388,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  367 00f6 46       		.byte	0x46
  368 00f7 DA000000 		.4byte	0xda
  369 00fb 04       		.uleb128 0x4
-<<<<<<< HEAD
- 370 00fc BD060000 		.4byte	.LASF22
-=======
  370 00fc 00070000 		.4byte	.LASF22
->>>>>>> PID-implementation
  371 0100 04       		.byte	0x4
  372 0101 48       		.byte	0x48
  373 0102 A9000000 		.4byte	0xa9
@@ -495,11 +418,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  397 0138 4D       		.byte	0x4d
  398 0139 BF000000 		.4byte	0xbf
  399 013d 04       		.uleb128 0x4
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 8
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 8
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 8
 
 
  400 013e F4040000 		.4byte	.LASF28
@@ -517,22 +436,14 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  412 0159 52       		.byte	0x52
  413 015a CF000000 		.4byte	0xcf
  414 015e 04       		.uleb128 0x4
-<<<<<<< HEAD
- 415 015f B5070000 		.4byte	.LASF31
-=======
  415 015f F8070000 		.4byte	.LASF31
->>>>>>> PID-implementation
  416 0163 05       		.byte	0x5
  417 0164 33       		.byte	0x33
  418 0165 CF000000 		.4byte	0xcf
  419 0169 05       		.uleb128 0x5
  420 016a 5E010000 		.4byte	0x15e
  421 016e 04       		.uleb128 0x4
-<<<<<<< HEAD
- 422 016f A0070000 		.4byte	.LASF32
-=======
  422 016f E3070000 		.4byte	.LASF32
->>>>>>> PID-implementation
  423 0173 05       		.byte	0x5
  424 0174 3F       		.byte	0x3f
  425 0175 79010000 		.4byte	0x179
@@ -543,11 +454,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  430 0180 C2       		.byte	0xc2
  431 0181 97020000 		.4byte	0x297
  432 0185 07       		.uleb128 0x7
-<<<<<<< HEAD
- 433 0186 B6060000 		.4byte	.LASF33
-=======
  433 0186 F9060000 		.4byte	.LASF33
->>>>>>> PID-implementation
  434 018a 06       		.byte	0x6
  435 018b C3       		.byte	0xc3
  436 018c A2020000 		.4byte	0x2a2
@@ -571,11 +478,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  454 01b0 1B050000 		.4byte	0x51b
  455 01b4 0C       		.byte	0xc
  456 01b5 07       		.uleb128 0x7
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 9
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 9
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 9
 
 
  457 01b6 3E020000 		.4byte	.LASF37
@@ -590,11 +493,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  466 01c8 A2020000 		.4byte	0x2a2
  467 01cc 14       		.byte	0x14
  468 01cd 07       		.uleb128 0x7
-<<<<<<< HEAD
- 469 01ce C2080000 		.4byte	.LASF39
-=======
  469 01ce A6080000 		.4byte	.LASF39
->>>>>>> PID-implementation
  470 01d2 06       		.byte	0x6
  471 01d3 D2       		.byte	0xd2
  472 01d4 91080000 		.4byte	0x891
@@ -612,21 +511,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  484 01ec 06010000 		.4byte	0x106
  485 01f0 20       		.byte	0x20
  486 01f1 07       		.uleb128 0x7
-<<<<<<< HEAD
- 487 01f2 D4060000 		.4byte	.LASF42
-=======
  487 01f2 17070000 		.4byte	.LASF42
->>>>>>> PID-implementation
  488 01f6 06       		.byte	0x6
  489 01f7 E1       		.byte	0xe1
  490 01f8 FB000000 		.4byte	0xfb
  491 01fc 21       		.byte	0x21
  492 01fd 07       		.uleb128 0x7
-<<<<<<< HEAD
- 493 01fe 23080000 		.4byte	.LASF43
-=======
  493 01fe 66080000 		.4byte	.LASF43
->>>>>>> PID-implementation
  494 0202 06       		.byte	0x6
  495 0203 E6       		.byte	0xe6
  496 0204 11010000 		.4byte	0x111
@@ -647,11 +538,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  511 0222 705F7500 		.ascii	"p_u\000"
  512 0226 06       		.byte	0x6
  513 0227 3101     		.2byte	0x131
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 10
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 10
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 10
 
 
  514 0229 C0070000 		.4byte	0x7c0
@@ -669,21 +556,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  526 0243 CC020000 		.4byte	0x2cc
  527 0247 30       		.byte	0x30
  528 0248 09       		.uleb128 0x9
-<<<<<<< HEAD
- 529 0249 F7070000 		.4byte	.LASF48
-=======
  529 0249 3A080000 		.4byte	.LASF48
->>>>>>> PID-implementation
  530 024d 06       		.byte	0x6
  531 024e 4001     		.2byte	0x140
  532 0250 32010000 		.4byte	0x132
  533 0254 38       		.byte	0x38
  534 0255 09       		.uleb128 0x9
-<<<<<<< HEAD
- 535 0256 30070000 		.4byte	.LASF49
-=======
  535 0256 73070000 		.4byte	.LASF49
->>>>>>> PID-implementation
  536 025a 06       		.byte	0x6
  537 025b 4601     		.2byte	0x146
  538 025d 3D010000 		.4byte	0x13d
@@ -695,11 +574,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  544 026a 8B080000 		.4byte	0x88b
  545 026e 40       		.byte	0x40
  546 026f 09       		.uleb128 0x9
-<<<<<<< HEAD
- 547 0270 BF070000 		.4byte	.LASF51
-=======
  547 0270 02080000 		.4byte	.LASF51
->>>>>>> PID-implementation
  548 0274 06       		.byte	0x6
  549 0275 5101     		.2byte	0x151
  550 0277 27010000 		.4byte	0x127
@@ -711,31 +586,19 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  556 0284 7F030000 		.4byte	0x37f
  557 0288 48       		.byte	0x48
  558 0289 09       		.uleb128 0x9
-<<<<<<< HEAD
- 559 028a DC060000 		.4byte	.LASF53
-=======
  559 028a 1F070000 		.4byte	.LASF53
->>>>>>> PID-implementation
  560 028e 06       		.byte	0x6
  561 028f 5E01     		.2byte	0x15e
  562 0291 71070000 		.4byte	0x771
  563 0295 50       		.byte	0x50
  564 0296 00       		.byte	0
  565 0297 04       		.uleb128 0x4
-<<<<<<< HEAD
- 566 0298 A8080000 		.4byte	.LASF54
-=======
  566 0298 8C080000 		.4byte	.LASF54
->>>>>>> PID-implementation
  567 029c 05       		.byte	0x5
  568 029d 44       		.byte	0x44
  569 029e A2020000 		.4byte	0x2a2
  570 02a2 0A       		.uleb128 0xa
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 11
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 11
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 11
 
 
  571 02a3 04       		.byte	0x4
@@ -746,32 +609,20 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  576 02ae 49       		.byte	0x49
  577 02af B3020000 		.4byte	0x2b3
  578 02b3 06       		.uleb128 0x6
-<<<<<<< HEAD
- 579 02b4 5F070000 		.4byte	.LASF57
-=======
  579 02b4 A2070000 		.4byte	.LASF57
->>>>>>> PID-implementation
  580 02b8 04       		.byte	0x4
  581 02b9 06       		.byte	0x6
  582 02ba B0       		.byte	0xb0
  583 02bb CC020000 		.4byte	0x2cc
  584 02bf 07       		.uleb128 0x7
-<<<<<<< HEAD
- 585 02c0 B6060000 		.4byte	.LASF33
-=======
  585 02c0 F9060000 		.4byte	.LASF33
->>>>>>> PID-implementation
  586 02c4 06       		.byte	0x6
  587 02c5 B1       		.byte	0xb1
  588 02c6 A2020000 		.4byte	0x2a2
  589 02ca 00       		.byte	0
  590 02cb 00       		.byte	0
  591 02cc 04       		.uleb128 0x4
-<<<<<<< HEAD
- 592 02cd E4060000 		.4byte	.LASF58
-=======
  592 02cd 27070000 		.4byte	.LASF58
->>>>>>> PID-implementation
  593 02d1 05       		.byte	0x5
  594 02d2 50       		.byte	0x50
  595 02d3 D7020000 		.4byte	0x2d7
@@ -782,11 +633,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  600 02de B7       		.byte	0xb7
  601 02df FC020000 		.4byte	0x2fc
  602 02e3 07       		.uleb128 0x7
-<<<<<<< HEAD
- 603 02e4 B6060000 		.4byte	.LASF33
-=======
  603 02e4 F9060000 		.4byte	.LASF33
->>>>>>> PID-implementation
  604 02e8 06       		.byte	0x6
  605 02e9 B8       		.byte	0xb8
  606 02ea A2020000 		.4byte	0x2a2
@@ -810,13 +657,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  624 030e 9001     		.2byte	0x190
  625 0310 63030000 		.4byte	0x363
  626 0314 09       		.uleb128 0x9
-<<<<<<< HEAD
- 627 0315 57070000 		.4byte	.LASF62
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 12
-=======
  627 0315 9A070000 		.4byte	.LASF62
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 12
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 12
 
 
  628 0319 06       		.byte	0x6
@@ -824,11 +666,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  630 031c CC020000 		.4byte	0x2cc
  631 0320 00       		.byte	0
  632 0321 09       		.uleb128 0x9
-<<<<<<< HEAD
- 633 0322 A8060000 		.4byte	.LASF63
-=======
  633 0322 EB060000 		.4byte	.LASF63
->>>>>>> PID-implementation
  634 0326 06       		.byte	0x6
  635 0327 9201     		.2byte	0x192
  636 0329 27010000 		.4byte	0x127
@@ -859,11 +697,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  661 0361 18       		.byte	0x18
  662 0362 00       		.byte	0
  663 0363 04       		.uleb128 0x4
-<<<<<<< HEAD
- 664 0364 CA070000 		.4byte	.LASF68
-=======
  664 0364 0D080000 		.4byte	.LASF68
->>>>>>> PID-implementation
  665 0368 05       		.byte	0x5
  666 0369 5C       		.byte	0x5c
  667 036a 6E030000 		.4byte	0x36e
@@ -883,13 +717,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  681 0387 61       		.byte	0x61
  682 0388 8C030000 		.4byte	0x38c
  683 038c 0B       		.uleb128 0xb
-<<<<<<< HEAD
- 684 038d F4060000 		.4byte	.LASF70
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 13
-=======
  684 038d 37070000 		.4byte	.LASF70
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 13
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 13
 
 
  685 0391 14       		.byte	0x14
@@ -915,21 +744,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  705 03bb 5E010000 		.4byte	0x15e
  706 03bf 08       		.byte	0x8
  707 03c0 09       		.uleb128 0x9
-<<<<<<< HEAD
- 708 03c1 4C090000 		.4byte	.LASF74
-=======
  708 03c1 30090000 		.4byte	.LASF74
->>>>>>> PID-implementation
  709 03c5 06       		.byte	0x6
  710 03c6 6F01     		.2byte	0x16f
  711 03c8 63030000 		.4byte	0x363
  712 03cc 0C       		.byte	0xc
  713 03cd 09       		.uleb128 0x9
-<<<<<<< HEAD
- 714 03ce 08080000 		.4byte	.LASF75
-=======
  714 03ce 4B080000 		.4byte	.LASF75
->>>>>>> PID-implementation
  715 03d2 06       		.byte	0x6
  716 03d3 7101     		.2byte	0x171
  717 03d5 7F030000 		.4byte	0x37f
@@ -957,11 +778,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  739 0405 06       		.byte	0x6
  740 0406 7E01     		.2byte	0x17e
  741 0408 AE080000 		.4byte	0x8ae
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 14
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 14
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 14
 
 
  742 040c 04       		.byte	0x4
@@ -972,11 +789,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  747 0415 5E010000 		.4byte	0x15e
  748 0419 08       		.byte	0x8
  749 041a 09       		.uleb128 0x9
-<<<<<<< HEAD
- 750 041b E1080000 		.4byte	.LASF78
-=======
  750 041b C5080000 		.4byte	.LASF78
->>>>>>> PID-implementation
  751 041f 06       		.byte	0x6
  752 0420 8201     		.2byte	0x182
  753 0422 69010000 		.4byte	0x169
@@ -994,21 +807,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  765 043b A201     		.2byte	0x1a2
  766 043d 76040000 		.4byte	0x476
  767 0441 09       		.uleb128 0x9
-<<<<<<< HEAD
- 768 0442 DE070000 		.4byte	.LASF81
-=======
  768 0442 21080000 		.4byte	.LASF81
->>>>>>> PID-implementation
  769 0446 06       		.byte	0x6
  770 0447 AA01     		.2byte	0x1aa
  771 0449 97080000 		.4byte	0x897
  772 044d 00       		.byte	0
  773 044e 09       		.uleb128 0x9
-<<<<<<< HEAD
- 774 044f 2A080000 		.4byte	.LASF82
-=======
  774 044f 6D080000 		.4byte	.LASF82
->>>>>>> PID-implementation
  775 0453 06       		.byte	0x6
  776 0454 AF01     		.2byte	0x1af
  777 0456 48010000 		.4byte	0x148
@@ -1020,11 +825,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  783 0463 48010000 		.4byte	0x148
  784 0467 08       		.byte	0x8
  785 0468 09       		.uleb128 0x9
-<<<<<<< HEAD
- 786 0469 EC080000 		.4byte	.LASF84
-=======
  786 0469 D0080000 		.4byte	.LASF84
->>>>>>> PID-implementation
  787 046d 06       		.byte	0x6
  788 046e B901     		.2byte	0x1b9
  789 0470 03070000 		.4byte	0x703
@@ -1036,13 +837,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  795 047c 70       		.byte	0x70
  796 047d 81040000 		.4byte	0x481
  797 0481 0F       		.uleb128 0xf
-<<<<<<< HEAD
- 798 0482 BD010000 		.4byte	.LASF86
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 15
-=======
  798 0482 FA010000 		.4byte	.LASF86
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 15
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 15
 
 
  799 0486 7006     		.2byte	0x670
@@ -1050,11 +846,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  801 0489 C201     		.2byte	0x1c2
  802 048b EE040000 		.4byte	0x4ee
  803 048f 09       		.uleb128 0x9
-<<<<<<< HEAD
- 804 0490 3B080000 		.4byte	.LASF87
-=======
  804 0490 7E080000 		.4byte	.LASF87
->>>>>>> PID-implementation
  805 0494 06       		.byte	0x6
  806 0495 C601     		.2byte	0x1c6
  807 0497 FC020000 		.4byte	0x2fc
@@ -1106,11 +898,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  853 04ff 08       		.byte	0x8
  854 0500 4C       		.byte	0x4c
  855 0501 CF000000 		.4byte	0xcf
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 16
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 16
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 16
 
 
  856 0505 04       		.uleb128 0x4
@@ -1124,11 +912,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  864 0516 6D       		.byte	0x6d
  865 0517 DA000000 		.4byte	0xda
  866 051b 06       		.uleb128 0x6
-<<<<<<< HEAD
- 867 051c EF070000 		.4byte	.LASF96
-=======
  867 051c 32080000 		.4byte	.LASF96
->>>>>>> PID-implementation
  868 0520 04       		.byte	0x4
  869 0521 09       		.byte	0x9
  870 0522 89       		.byte	0x89
@@ -1174,11 +958,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  910 0571 73323000 		.ascii	"s20\000"
  911 0575 0A       		.byte	0xa
  912 0576 FA       		.byte	0xfa
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 17
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 17
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 17
 
 
  913 0577 05050000 		.4byte	0x505
@@ -1238,11 +1018,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  967 05e7 05050000 		.4byte	0x505
  968 05eb 34       		.byte	0x34
  969 05ec 08       		.uleb128 0x8
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 18
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 18
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 18
 
 
  970 05ed 73333000 		.ascii	"s30\000"
@@ -1302,11 +1078,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1024 065c 72313100 		.ascii	"r11\000"
  1025 0660 0A       		.byte	0xa
  1026 0661 0E01     		.2byte	0x10e
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 19
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 19
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 19
 
 
  1027 0663 05050000 		.4byte	0x505
@@ -1339,21 +1111,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1054 0696 A2020000 		.4byte	0x2a2
  1055 069a 04       		.byte	0x4
  1056 069b 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1057 069c 34090000 		.4byte	.LASF100
-=======
  1057 069c 18090000 		.4byte	.LASF100
->>>>>>> PID-implementation
  1058 06a0 0B       		.byte	0xb
  1059 06a1 5D       		.byte	0x5d
  1060 06a2 7F030000 		.4byte	0x37f
  1061 06a6 08       		.byte	0x8
  1062 06a7 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1063 06a8 32080000 		.4byte	.LASF101
-=======
  1063 06a8 75080000 		.4byte	.LASF101
->>>>>>> PID-implementation
  1064 06ac 0B       		.byte	0xb
  1065 06ad 61       		.byte	0x61
  1066 06ae A9000000 		.4byte	0xa9
@@ -1374,11 +1138,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1081 06cd 0B       		.byte	0xb
  1082 06ce 6B       		.byte	0x6b
  1083 06cf 2C000000 		.4byte	0x2c
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 20
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 20
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 20
 
 
  1084 06d3 00       		.byte	0
@@ -1416,11 +1176,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1116 0711 38       		.byte	0x38
  1117 0712 23070000 		.4byte	0x723
  1118 0716 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1119 0717 E8070000 		.4byte	.LASF107
-=======
  1119 0717 2B080000 		.4byte	.LASF107
->>>>>>> PID-implementation
  1120 071b 0C       		.byte	0xc
  1121 071c 3C       		.byte	0x3c
  1122 071d E5000000 		.4byte	0xe5
@@ -1437,20 +1193,12 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1133 0731 48       		.byte	0x48
  1134 0732 71070000 		.4byte	0x771
  1135 0736 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1136 0737 A9070000 		.4byte	.LASF109
-=======
  1136 0737 EC070000 		.4byte	.LASF109
->>>>>>> PID-implementation
  1137 073b 0C       		.byte	0xc
  1138 073c 49       		.byte	0x49
  1139 073d E5000000 		.4byte	0xe5
  1140 0741 00       		.byte	0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 21
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 21
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 21
 
 
  1141 0742 07       		.uleb128 0x7
@@ -1501,11 +1249,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1186 0797 53010000 		.4byte	0x153
  1187 079b 04       		.byte	0x4
  1188 079c 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1189 079d 21090000 		.4byte	.LASF116
-=======
  1189 079d 05090000 		.4byte	.LASF116
->>>>>>> PID-implementation
  1190 07a1 0D       		.byte	0xd
  1191 07a2 3B       		.byte	0x3b
  1192 07a3 71070000 		.4byte	0x771
@@ -1514,11 +1258,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1195 07a9 DB040000 		.4byte	.LASF117
  1196 07ad 0D       		.byte	0xd
  1197 07ae 3D       		.byte	0x3d
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 22
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 22
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 22
 
 
  1198 07af 71070000 		.4byte	0x771
@@ -1545,11 +1285,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1219 07da 0801     		.2byte	0x108
  1220 07dc 32010000 		.4byte	0x132
  1221 07e0 1A       		.uleb128 0x1a
-<<<<<<< HEAD
- 1222 07e1 BB080000 		.4byte	.LASF121
-=======
  1222 07e1 9F080000 		.4byte	.LASF121
->>>>>>> PID-implementation
  1223 07e5 06       		.byte	0x6
  1224 07e6 0F01     		.2byte	0x10f
  1225 07e8 7F030000 		.4byte	0x37f
@@ -1564,20 +1300,12 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1234 07fe 1E01     		.2byte	0x11e
  1235 0800 48080000 		.4byte	0x848
  1236 0804 1A       		.uleb128 0x1a
-<<<<<<< HEAD
- 1237 0805 8E070000 		.4byte	.LASF124
-=======
  1237 0805 D1070000 		.4byte	.LASF124
->>>>>>> PID-implementation
  1238 0809 06       		.byte	0x6
  1239 080a 2701     		.2byte	0x127
  1240 080c 8B080000 		.4byte	0x88b
  1241 0810 1A       		.uleb128 0x1a
-<<<<<<< HEAD
- 1242 0811 AF060000 		.4byte	.LASF125
-=======
  1242 0811 F2060000 		.4byte	.LASF125
->>>>>>> PID-implementation
  1243 0815 06       		.byte	0x6
  1244 0816 2F01     		.2byte	0x12f
  1245 0818 3D010000 		.4byte	0x13d
@@ -1586,19 +1314,11 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1248 081e 04       		.byte	0x4
  1249 081f 97020000 		.4byte	0x297
  1250 0823 06       		.uleb128 0x6
-<<<<<<< HEAD
- 1251 0824 23070000 		.4byte	.LASF126
- 1252 0828 0C       		.byte	0xc
- 1253 0829 0E       		.byte	0xe
- 1254 082a 34       		.byte	0x34
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 23
-=======
  1251 0824 66070000 		.4byte	.LASF126
  1252 0828 0C       		.byte	0xc
  1253 0829 0E       		.byte	0xe
  1254 082a 34       		.byte	0x34
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 23
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 23
 
 
  1255 082b 48080000 		.4byte	0x848
@@ -1619,11 +1339,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1270 0849 04       		.byte	0x4
  1271 084a 23080000 		.4byte	0x823
  1272 084e 06       		.uleb128 0x6
-<<<<<<< HEAD
- 1273 084f 1A080000 		.4byte	.LASF129
-=======
  1273 084f 5D080000 		.4byte	.LASF129
->>>>>>> PID-implementation
  1274 0853 14       		.byte	0x14
  1275 0854 0F       		.byte	0xf
  1276 0855 39       		.byte	0x39
@@ -1635,21 +1351,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1282 0861 CC020000 		.4byte	0x2cc
  1283 0865 00       		.byte	0
  1284 0866 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1285 0867 2C090000 		.4byte	.LASF131
-=======
  1285 0867 10090000 		.4byte	.LASF131
->>>>>>> PID-implementation
  1286 086b 0F       		.byte	0xf
  1287 086c 3C       		.byte	0x3c
  1288 086d A2020000 		.4byte	0x2a2
  1289 0871 08       		.byte	0x8
  1290 0872 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1291 0873 AE070000 		.4byte	.LASF132
-=======
  1291 0873 F1070000 		.4byte	.LASF132
->>>>>>> PID-implementation
  1292 0877 0F       		.byte	0xf
  1293 0878 3E       		.byte	0x3e
  1294 0879 E6090000 		.4byte	0x9e6
@@ -1670,20 +1378,12 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1309 0897 05       		.uleb128 0x5
  1310 0898 91080000 		.4byte	0x891
  1311 089c 03       		.uleb128 0x3
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 24
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 24
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 24
 
 
  1312 089d 01       		.byte	0x1
  1313 089e 08       		.byte	0x8
-<<<<<<< HEAD
- 1314 089f 89070000 		.4byte	.LASF134
-=======
  1314 089f CC070000 		.4byte	.LASF134
->>>>>>> PID-implementation
  1315 08a3 1B       		.uleb128 0x1b
  1316 08a4 9C080000 		.4byte	0x89c
  1317 08a8 0A       		.uleb128 0xa
@@ -1710,11 +1410,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1338 08d2 34       		.byte	0x34
  1339 08d3 B0090000 		.4byte	0x9b0
  1340 08d7 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1341 08d8 3E090000 		.4byte	.LASF135
-=======
  1341 08d8 22090000 		.4byte	.LASF135
->>>>>>> PID-implementation
  1342 08dc 10       		.byte	0x10
  1343 08dd 35       		.byte	0x35
  1344 08de B0090000 		.4byte	0x9b0
@@ -1726,21 +1422,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1350 08ea A9000000 		.4byte	0xa9
  1351 08ee 04       		.byte	0x4
  1352 08ef 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1353 08f0 6F070000 		.4byte	.LASF137
-=======
  1353 08f0 B2070000 		.4byte	.LASF137
->>>>>>> PID-implementation
  1354 08f4 10       		.byte	0x10
  1355 08f5 37       		.byte	0x37
  1356 08f6 A9000000 		.4byte	0xa9
  1357 08fa 05       		.byte	0x5
  1358 08fb 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1359 08fc F9080000 		.4byte	.LASF138
-=======
  1359 08fc DD080000 		.4byte	.LASF138
->>>>>>> PID-implementation
  1360 0900 10       		.byte	0x10
  1361 0901 38       		.byte	0x38
  1362 0902 B4000000 		.4byte	0xb4
@@ -1750,11 +1438,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1366 090c 10       		.byte	0x10
  1367 090d 39       		.byte	0x39
  1368 090e A9000000 		.4byte	0xa9
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 25
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 25
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 25
 
 
  1369 0912 08       		.byte	0x8
@@ -1771,31 +1455,19 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1380 0926 A9000000 		.4byte	0xa9
  1381 092a 0A       		.byte	0xa
  1382 092b 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1383 092c 4B070000 		.4byte	.LASF142
-=======
  1383 092c 8E070000 		.4byte	.LASF142
->>>>>>> PID-implementation
  1384 0930 10       		.byte	0x10
  1385 0931 3C       		.byte	0x3c
  1386 0932 A9000000 		.4byte	0xa9
  1387 0936 0B       		.byte	0xb
  1388 0937 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1389 0938 0F080000 		.4byte	.LASF143
-=======
  1389 0938 52080000 		.4byte	.LASF143
->>>>>>> PID-implementation
  1390 093c 10       		.byte	0x10
  1391 093d 3D       		.byte	0x3d
  1392 093e A9000000 		.4byte	0xa9
  1393 0942 0C       		.byte	0xc
  1394 0943 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1395 0944 05070000 		.4byte	.LASF144
-=======
  1395 0944 48070000 		.4byte	.LASF144
->>>>>>> PID-implementation
  1396 0948 10       		.byte	0x10
  1397 0949 3E       		.byte	0x3e
  1398 094a A9000000 		.4byte	0xa9
@@ -1825,13 +1497,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1422 097a A9000000 		.4byte	0xa9
  1423 097e 11       		.byte	0x11
  1424 097f 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1425 0980 8A010000 		.4byte	.LASF149
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 26
-=======
  1425 0980 C7010000 		.4byte	.LASF149
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 26
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 26
 
 
  1426 0984 10       		.byte	0x10
@@ -1845,11 +1512,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1434 0992 A9000000 		.4byte	0xa9
  1435 0996 13       		.byte	0x13
  1436 0997 07       		.uleb128 0x7
-<<<<<<< HEAD
- 1437 0998 C5060000 		.4byte	.LASF151
-=======
  1437 0998 08070000 		.4byte	.LASF151
->>>>>>> PID-implementation
  1438 099c 10       		.byte	0x10
  1439 099d 46       		.byte	0x46
  1440 099e A9000000 		.4byte	0xa9
@@ -1895,11 +1558,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1480 09f3 3B       		.byte	0x3b
  1481 09f4 050A0000 		.4byte	0xa05
  1482 09f8 07       		.uleb128 0x7
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 27
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 27
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 27
 
 
  1483 09f9 1E050000 		.4byte	.LASF157
@@ -1940,11 +1599,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1518 0a43 E9       		.byte	0xe9
  1519 0a44 25000000 		.4byte	0x25
  1520 0a48 13       		.uleb128 0x13
-<<<<<<< HEAD
- 1521 0a49 3B070000 		.4byte	.LASF163
-=======
  1521 0a49 7E070000 		.4byte	.LASF163
->>>>>>> PID-implementation
  1522 0a4d 12       		.byte	0x12
  1523 0a4e E9       		.byte	0xe9
  1524 0a4f 25000000 		.4byte	0x25
@@ -1963,11 +1618,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1537 0a6b 16       		.byte	0x16
  1538 0a6c 00000000 		.4byte	.LFB222
  1539 0a70 24000000 		.4byte	.LFE222-.LFB222
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 28
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 28
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 28
 
 
  1540 0a74 01       		.uleb128 0x1
@@ -2027,11 +1678,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1594 0ae8 AE000000 		.4byte	.LLST5
  1595 0aec 20       		.uleb128 0x20
  1596 0aed 1C000000 		.4byte	.LVL10
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 29
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 29
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 29
 
 
  1597 0af1 BF0B0000 		.4byte	0xbbf
@@ -2049,11 +1696,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1609 0b06 B60B0000 		.4byte	0xbb6
  1610 0b0a 00       		.byte	0
  1611 0b0b 1D       		.uleb128 0x1d
-<<<<<<< HEAD
- 1612 0b0c C9080000 		.4byte	.LASF169
-=======
  1612 0b0c AD080000 		.4byte	.LASF169
->>>>>>> PID-implementation
  1613 0b10 01       		.byte	0x1
  1614 0b11 0A       		.byte	0xa
  1615 0b12 00000000 		.4byte	.LFB220
@@ -2068,11 +1711,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1624 0b25 7F030000 		.4byte	0x37f
  1625 0b29 E8000000 		.4byte	.LLST2
  1626 0b2d 1F       		.uleb128 0x1f
-<<<<<<< HEAD
- 1627 0b2e 1C090000 		.4byte	.LASF170
-=======
  1627 0b2e 00090000 		.4byte	.LASF170
->>>>>>> PID-implementation
  1628 0b32 01       		.byte	0x1
  1629 0b33 0C       		.byte	0xc
  1630 0b34 E6090000 		.4byte	0x9e6
@@ -2094,20 +1733,12 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1646 0b56 B60B0000 		.4byte	0xbb6
  1647 0b5a 00       		.byte	0
  1648 0b5b 1D       		.uleb128 0x1d
-<<<<<<< HEAD
- 1649 0b5c 04090000 		.4byte	.LASF171
-=======
  1649 0b5c E8080000 		.4byte	.LASF171
->>>>>>> PID-implementation
  1650 0b60 01       		.byte	0x1
  1651 0b61 04       		.byte	0x4
  1652 0b62 00000000 		.4byte	.LFB219
  1653 0b66 24000000 		.4byte	.LFE219-.LFB219
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 30
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 30
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 30
 
 
  1654 0b6a 01       		.uleb128 0x1
@@ -2120,11 +1751,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1661 0b75 7F030000 		.4byte	0x37f
  1662 0b79 5C010000 		.4byte	.LLST0
  1663 0b7d 1F       		.uleb128 0x1f
-<<<<<<< HEAD
- 1664 0b7e 1C090000 		.4byte	.LASF170
-=======
  1664 0b7e 00090000 		.4byte	.LASF170
->>>>>>> PID-implementation
  1665 0b82 01       		.byte	0x1
  1666 0b83 06       		.byte	0x6
  1667 0b84 E6090000 		.4byte	0x9e6
@@ -2146,15 +1773,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1683 0ba6 B60B0000 		.4byte	0xbb6
  1684 0baa 00       		.byte	0
  1685 0bab 23       		.uleb128 0x23
-<<<<<<< HEAD
- 1686 0bac FD070000 		.4byte	.LASF172
- 1687 0bb0 FD070000 		.4byte	.LASF172
- 1688 0bb4 11       		.byte	0x11
- 1689 0bb5 62       		.byte	0x62
- 1690 0bb6 24       		.uleb128 0x24
- 1691 0bb7 12070000 		.4byte	.LASF179
- 1692 0bbb 12070000 		.4byte	.LASF179
-=======
  1686 0bac 40080000 		.4byte	.LASF172
  1687 0bb0 40080000 		.4byte	.LASF172
  1688 0bb4 11       		.byte	0x11
@@ -2162,7 +1780,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1690 0bb6 24       		.uleb128 0x24
  1691 0bb7 55070000 		.4byte	.LASF179
  1692 0bbb 55070000 		.4byte	.LASF179
->>>>>>> PID-implementation
  1693 0bbf 23       		.uleb128 0x23
  1694 0bc0 09010000 		.4byte	.LASF173
  1695 0bc4 09010000 		.4byte	.LASF173
@@ -2181,11 +1798,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1708 0be0 00       		.byte	0
  1709              		.section	.debug_abbrev,"",%progbits
  1710              	.Ldebug_abbrev0:
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 31
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 31
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 31
 
 
  1711 0000 01       		.uleb128 0x1
@@ -2245,11 +1858,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1765 0036 05       		.uleb128 0x5
  1766 0037 35       		.uleb128 0x35
  1767 0038 00       		.byte	0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 32
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 32
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 32
 
 
  1768 0039 49       		.uleb128 0x49
@@ -2309,11 +1918,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1822 006f 3A       		.uleb128 0x3a
  1823 0070 0B       		.uleb128 0xb
  1824 0071 3B       		.uleb128 0x3b
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 33
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 33
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 33
 
 
  1825 0072 05       		.uleb128 0x5
@@ -2373,11 +1978,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1879 00a8 0F       		.uleb128 0xf
  1880 00a9 13       		.uleb128 0x13
  1881 00aa 01       		.byte	0x1
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 34
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 34
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 34
 
 
  1882 00ab 03       		.uleb128 0x3
@@ -2437,11 +2038,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1936 00e1 19       		.uleb128 0x19
  1937 00e2 3C       		.uleb128 0x3c
  1938 00e3 19       		.uleb128 0x19
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 35
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 35
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 35
 
 
  1939 00e4 00       		.byte	0
@@ -2501,11 +2098,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  1993 011a 3B       		.uleb128 0x3b
  1994 011b 0B       		.uleb128 0xb
  1995 011c 01       		.uleb128 0x1
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 36
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 36
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 36
 
 
  1996 011d 13       		.uleb128 0x13
@@ -2565,11 +2158,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2050 0153 1C       		.uleb128 0x1c
  2051 0154 34       		.uleb128 0x34
  2052 0155 00       		.byte	0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 37
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 37
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 37
 
 
  2053 0156 03       		.uleb128 0x3
@@ -2629,11 +2218,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2107 018d 1F       		.uleb128 0x1f
  2108 018e 34       		.uleb128 0x34
  2109 018f 00       		.byte	0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 38
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 38
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 38
 
 
  2110 0190 03       		.uleb128 0x3
@@ -2693,11 +2278,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2164 01ce 3A       		.uleb128 0x3a
  2165 01cf 0B       		.uleb128 0xb
  2166 01d0 3B       		.uleb128 0x3b
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 39
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 39
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 39
 
 
  2167 01d1 0B       		.uleb128 0xb
@@ -2757,11 +2338,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2221 0051 50       		.byte	0x50
  2222 0052 9F       		.byte	0x9f
  2223 0053 1C000000 		.4byte	.LVL14
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 40
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 40
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 40
 
 
  2224 0057 1F000000 		.4byte	.LVL15-1
@@ -2821,11 +2398,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2278 00d6 24000000 		.4byte	.LFE221
  2279 00da 0400     		.2byte	0x4
  2280 00dc F3       		.byte	0xf3
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 41
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 41
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 41
 
 
  2281 00dd 01       		.uleb128 0x1
@@ -2885,11 +2458,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2335 0158 00000000 		.4byte	0
  2336              	.LLST0:
  2337 015c 00000000 		.4byte	.LVL0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 42
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 42
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 42
 
 
  2338 0160 1B000000 		.4byte	.LVL2-1
@@ -2949,11 +2518,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2392 000c 0000     		.2byte	0
  2393 000e 0000     		.2byte	0
  2394 0010 00000000 		.4byte	.LFB219
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 43
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 43
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 43
 
 
  2395 0014 24000000 		.4byte	.LFE219-.LFB219
@@ -2979,13 +2544,8 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2415 0024 00000000 		.4byte	0
  2416              		.section	.debug_line,"",%progbits
  2417              	.Ldebug_line0:
-<<<<<<< HEAD
- 2418 0000 F5030000 		.section	.debug_str,"MS",%progbits,1
- 2418      0200A503 
-=======
  2418 0000 A3030000 		.section	.debug_str,"MS",%progbits,1
  2418      02005303 
->>>>>>> PID-implementation
  2418      00000201 
  2418      FB0E0D00 
  2418      01010101 
@@ -3010,385 +2570,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2427              	.LASF122:
  2428 0031 77747472 		.ascii	"wttrp\000"
  2428      7000
-<<<<<<< HEAD
- 2429              	.LASF119:
- 2430 0037 7264796D 		.ascii	"rdymsg\000"
- 2430      736700
- 2431              	.LASF19:
- 2432 003e 75696E74 		.ascii	"uint64_t\000"
- 2432      36345F74 
- 2432      00
- 2433              	.LASF90:
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 44
-
-
- 2434 0047 6B65726E 		.ascii	"kernel_stats\000"
- 2434      656C5F73 
- 2434      74617473 
- 2434      00
- 2435              	.LASF6:
- 2436 0054 5F5F7569 		.ascii	"__uint8_t\000"
- 2436      6E74385F 
- 2436      7400
- 2437              	.LASF97:
- 2438 005e 706F7274 		.ascii	"port_intctx\000"
- 2438      5F696E74 
- 2438      63747800 
- 2439              	.LASF59:
- 2440 006a 63685F74 		.ascii	"ch_threads_queue\000"
- 2440      68726561 
- 2440      64735F71 
- 2440      75657565 
- 2440      00
- 2441              	.LASF79:
- 2442 007b 73797374 		.ascii	"system_debug_t\000"
- 2442      656D5F64 
- 2442      65627567 
- 2442      5F7400
- 2443              	.LASF110:
- 2444 008a 776F7273 		.ascii	"worst\000"
- 2444      7400
- 2445              	.LASF113:
- 2446 0090 74696D65 		.ascii	"time_measurement_t\000"
- 2446      5F6D6561 
- 2446      73757265 
- 2446      6D656E74 
- 2446      5F7400
- 2447              	.LASF14:
- 2448 00a3 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2448      206C6F6E 
- 2448      6720756E 
- 2448      7369676E 
- 2448      65642069 
- 2449              	.LASF106:
- 2450 00ba 63685F74 		.ascii	"ch_trace_buffer_t\000"
- 2450      72616365 
- 2450      5F627566 
- 2450      6665725F 
- 2450      7400
- 2451              	.LASF173:
- 2452 00cc 6368436F 		.ascii	"chCondBroadcast\000"
- 2452      6E644272 
- 2452      6F616463 
- 2452      61737400 
- 2453              	.LASF141:
- 2454 00dc 63685F74 		.ascii	"ch_threadsize\000"
- 2454      68726561 
- 2454      6473697A 
- 2454      6500
- 2455              	.LASF120:
- 2456 00ea 65786974 		.ascii	"exitcode\000"
- 2456      636F6465 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 45
-
-
- 2456      00
- 2457              	.LASF89:
- 2458 00f3 6D61696E 		.ascii	"mainthread\000"
- 2458      74687265 
- 2458      616400
- 2459              	.LASF76:
- 2460 00fe 76697274 		.ascii	"virtual_timers_list_t\000"
- 2460      75616C5F 
- 2460      74696D65 
- 2460      72735F6C 
- 2460      6973745F 
- 2461              	.LASF92:
- 2462 0114 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2462      52784275 
- 2462      66666572 
- 2462      00
- 2463              	.LASF21:
- 2464 0121 72747469 		.ascii	"rttime_t\000"
- 2464      6D655F74 
- 2464      00
- 2465              	.LASF162:
- 2466 012a 6F707465 		.ascii	"opterr\000"
- 2466      727200
- 2467              	.LASF35:
- 2468 0131 705F7072 		.ascii	"p_prio\000"
- 2468      696F00
- 2469              	.LASF148:
- 2470 0138 63665F6F 		.ascii	"cf_off_state\000"
- 2470      66665F73 
- 2470      74617465 
- 2470      00
- 2471              	.LASF155:
- 2472 0145 6D757465 		.ascii	"mutex_t\000"
- 2472      785F7400 
- 2473              	.LASF174:
- 2474 014d 63684D74 		.ascii	"chMtxUnlock\000"
- 2474      78556E6C 
- 2474      6F636B00 
- 2475              	.LASF3:
- 2476 0159 7369676E 		.ascii	"signed char\000"
- 2476      65642063 
- 2476      68617200 
- 2477              	.LASF158:
- 2478 0165 636F6E64 		.ascii	"condition_variable_t\000"
- 2478      6974696F 
- 2478      6E5F7661 
- 2478      72696162 
- 2478      6C655F74 
- 2479              	.LASF147:
- 2480 017a 63665F6F 		.ascii	"cf_off_stklimit\000"
- 2480      66665F73 
- 2480      746B6C69 
- 2480      6D697400 
- 2481              	.LASF149:
- 2482 018a 63665F6F 		.ascii	"cf_off_flags\000"
- 2482      66665F66 
- 2482      6C616773 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 46
-
-
- 2482      00
- 2483              	.LASF52:
- 2484 0197 705F6D70 		.ascii	"p_mpool\000"
- 2484      6F6F6C00 
- 2485              	.LASF130:
- 2486 019f 6D5F7175 		.ascii	"m_queue\000"
- 2486      65756500 
- 2487              	.LASF88:
- 2488 01a7 76746C69 		.ascii	"vtlist\000"
- 2488      737400
- 2489              	.LASF168:
- 2490 01ae 636F6E64 		.ascii	"cond\000"
- 2490      00
- 2491              	.LASF25:
- 2492 01b3 74736C69 		.ascii	"tslices_t\000"
- 2492      6365735F 
- 2492      7400
- 2493              	.LASF86:
- 2494 01bd 63685F73 		.ascii	"ch_system\000"
- 2494      79737465 
- 2494      6D00
- 2495              	.LASF10:
- 2496 01c7 6C6F6E67 		.ascii	"long int\000"
- 2496      20696E74 
- 2496      00
- 2497              	.LASF166:
- 2498 01d0 6D657373 		.ascii	"messagebus_condvar_wait\000"
- 2498      61676562 
- 2498      75735F63 
- 2498      6F6E6476 
- 2498      61725F77 
- 2499              	.LASF23:
- 2500 01e8 74737461 		.ascii	"tstate_t\000"
- 2500      74655F74 
- 2500      00
- 2501              	.LASF99:
- 2502 01f1 73655F74 		.ascii	"se_tp\000"
- 2502      7000
- 2503              	.LASF153:
- 2504 01f7 63686465 		.ascii	"chdebug_t\000"
- 2504      6275675F 
- 2504      7400
- 2505              	.LASF37:
- 2506 0201 705F6E65 		.ascii	"p_newer\000"
- 2506      77657200 
- 2507              	.LASF127:
- 2508 0209 735F7175 		.ascii	"s_queue\000"
- 2508      65756500 
- 2509              	.LASF2:
- 2510 0211 6C6F6E67 		.ascii	"long double\000"
- 2510      20646F75 
- 2510      626C6500 
- 2511              	.LASF103:
- 2512 021d 74625F73 		.ascii	"tb_size\000"
- 2512      697A6500 
- 2513              	.LASF65:
- 2514 0225 725F6E65 		.ascii	"r_newer\000"
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 47
-
-
- 2514      77657200 
- 2515              	.LASF94:
- 2516 022d 72656761 		.ascii	"regarm_t\000"
- 2516      726D5F74 
- 2516      00
- 2517              	.LASF72:
- 2518 0236 76745F70 		.ascii	"vt_prev\000"
- 2518      72657600 
- 2519              	.LASF71:
- 2520 023e 76745F6E 		.ascii	"vt_next\000"
- 2520      65787400 
- 2521              	.LASF80:
- 2522 0246 63685F73 		.ascii	"ch_system_debug\000"
- 2522      79737465 
- 2522      6D5F6465 
- 2522      62756700 
- 2523              	.LASF133:
- 2524 0256 6D5F636E 		.ascii	"m_cnt\000"
- 2524      7400
- 2525              	.LASF1:
- 2526 025c 6C6F6E67 		.ascii	"long long int\000"
- 2526      206C6F6E 
- 2526      6720696E 
- 2526      7400
- 2527              	.LASF83:
- 2528 026a 6C6F636B 		.ascii	"lock_cnt\000"
- 2528      5F636E74 
- 2528      00
- 2529              	.LASF91:
- 2530 0273 69646C65 		.ascii	"idle_thread_wa\000"
- 2530      5F746872 
- 2530      6561645F 
- 2530      776100
- 2531              	.LASF29:
- 2532 0282 636E745F 		.ascii	"cnt_t\000"
- 2532      7400
- 2533              	.LASF40:
- 2534 0288 705F7374 		.ascii	"p_stklimit\000"
- 2534      6B6C696D 
- 2534      697400
- 2535              	.LASF0:
- 2536 0293 756E7369 		.ascii	"unsigned int\000"
- 2536      676E6564 
- 2536      20696E74 
- 2536      00
- 2537              	.LASF176:
- 2538 02a0 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 2538      43313120 
- 2538      372E322E 
- 2538      31203230 
- 2538      31373039 
- 2539 02d3 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 2539      20726576 
- 2539      6973696F 
- 2539      6E203235 
- 2539      35323034 
- 2540 0306 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 48
-
-
- 2540      2D6D6670 
- 2540      753D6670 
- 2540      76342D73 
- 2540      702D6431 
- 2541 0339 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 2541      62202D4F 
- 2541      32202D66 
- 2541      6F6D6974 
- 2541      2D667261 
- 2542 036c 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 2542      6F2D7374 
- 2542      72696374 
- 2542      2D616C69 
- 2542      6173696E 
- 2543 039f 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 2543      73656374 
- 2543      696F6E73 
- 2543      202D6664 
- 2543      6174612D 
- 2544 03d2 72656369 		.ascii	"recision-constant\000"
- 2544      73696F6E 
- 2544      2D636F6E 
- 2544      7374616E 
- 2544      7400
- 2545              	.LASF16:
- 2546 03e4 75696E74 		.ascii	"uint16_t\000"
- 2546      31365F74 
- 2546      00
- 2547              	.LASF93:
- 2548 03ed 53797374 		.ascii	"SystemCoreClock\000"
- 2548      656D436F 
- 2548      7265436C 
- 2548      6F636B00 
- 2549              	.LASF45:
- 2550 03fd 705F7469 		.ascii	"p_time\000"
- 2550      6D6500
- 2551              	.LASF123:
- 2552 0404 77747365 		.ascii	"wtsemp\000"
- 2552      6D7000
- 2553              	.LASF73:
- 2554 040b 76745F64 		.ascii	"vt_delta\000"
- 2554      656C7461 
- 2554      00
- 2555              	.LASF47:
- 2556 0414 705F6D73 		.ascii	"p_msgqueue\000"
- 2556      67717565 
- 2556      756500
- 2557              	.LASF154:
- 2558 041f 63685F64 		.ascii	"ch_debug\000"
- 2558      65627567 
- 2558      00
- 2559              	.LASF140:
- 2560 0428 63685F74 		.ascii	"ch_timesize\000"
- 2560      696D6573 
- 2560      697A6500 
- 2561              	.LASF114:
- 2562 0434 6E5F6972 		.ascii	"n_irq\000"
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 49
-
-
- 2562      7100
- 2563              	.LASF128:
- 2564 043a 735F636E 		.ascii	"s_cnt\000"
- 2564      7400
- 2565              	.LASF8:
- 2566 0440 73686F72 		.ascii	"short unsigned int\000"
- 2566      7420756E 
- 2566      7369676E 
- 2566      65642069 
- 2566      6E7400
- 2567              	.LASF118:
- 2568 0453 6B65726E 		.ascii	"kernel_stats_t\000"
- 2568      656C5F73 
- 2568      74617473 
- 2568      5F7400
- 2569              	.LASF56:
- 2570 0462 63685F74 		.ascii	"ch_thread\000"
- 2570      68726561 
- 2570      6400
- 2571              	.LASF27:
- 2572 046c 6D73675F 		.ascii	"msg_t\000"
- 2572      7400
- 2573              	.LASF111:
- 2574 0472 6C617374 		.ascii	"last\000"
- 2574      00
- 2575              	.LASF30:
- 2576 0477 75636E74 		.ascii	"ucnt_t\000"
- 2576      5F7400
- 2577              	.LASF85:
- 2578 047e 63685F73 		.ascii	"ch_system_t\000"
- 2578      79737465 
- 2578      6D5F7400 
- 2579              	.LASF159:
- 2580 048a 656E7669 		.ascii	"environ\000"
- 2580      726F6E00 
- 2581              	.LASF152:
- 2582 0492 63665F6F 		.ascii	"cf_off_time\000"
- 2582      66665F74 
- 2582      696D6500 
- 2583              	.LASF117:
- 2584 049e 6D5F6372 		.ascii	"m_crit_isr\000"
- 2584      69745F69 
- 2584      737200
- 2585              	.LASF61:
- 2586 04a9 63685F72 		.ascii	"ch_ready_list\000"
- 2586      65616479 
- 2586      5F6C6973 
- 2586      7400
- 2587              	.LASF28:
- 2588 04b7 6576656E 		.ascii	"eventmask_t\000"
- 2588      746D6173 
- 2588      6B5F7400 
- 2589              	.LASF177:
- 2590 04c3 2E2E2F70 		.ascii	"../projet/e-puck2_main-processor/src/msgbus/example"
- 2590      726F6A65 
- 2590      742F652D 
- 2590      7075636B 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 50
-
-
- 2590      325F6D61 
- 2591 04f6 732F6368 		.ascii	"s/chibios/port.c\000"
- 2591      6962696F 
- 2591      732F706F 
- 2591      72742E63 
- 2591      00
-=======
  2429              	.LASF177:
  2430 0037 2E2E2F65 		.ascii	"../e-puck2_main-processor/src/msgbus/examples/chibi"
  2430      2D707563 
@@ -3397,7 +2578,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2430      70726F63 
  2431 006a 6F732F70 		.ascii	"os/port.c\000"
  2431      6F72742E 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 44
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 44
 
 
  2431      6300
@@ -3457,7 +2638,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2455 0109 6368436F 		.ascii	"chCondBroadcast\000"
  2455      6E644272 
  2455      6F616463 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 45
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 45
 
 
  2455      61737400 
@@ -3517,7 +2698,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2481      6E5F7661 
  2481      72696162 
  2481      6C655F74 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 46
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 46
 
 
  2482              	.LASF147:
@@ -3577,7 +2758,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2510              	.LASF127:
  2511 0246 735F7175 		.ascii	"s_queue\000"
  2511      65756500 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 47
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 47
 
 
  2512              	.LASF2:
@@ -3637,7 +2818,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2540              	.LASF176:
  2541 02dd 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
  2541      43313120 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 48
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 48
 
 
  2541      372E322E 
@@ -3697,7 +2878,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2559      67717565 
  2559      756500
  2560              	.LASF154:
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 49
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 49
 
 
  2561 045c 63685F64 		.ascii	"ch_debug\000"
@@ -3757,14 +2938,13 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2589      65616479 
  2589      5F6C6973 
  2589      7400
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 50
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 50
 
 
  2590              	.LASF28:
  2591 04f4 6576656E 		.ascii	"eventmask_t\000"
  2591      746D6173 
  2591      6B5F7400 
->>>>>>> PID-implementation
  2592              	.LASF9:
  2593 0500 5F5F696E 		.ascii	"__int32_t\000"
  2593      7433325F 
@@ -3816,13 +2996,9 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2617 0584 74625F70 		.ascii	"tb_ptr\000"
  2617      747200
  2618              	.LASF102:
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 51
-=======
  2619 058b 63685F73 		.ascii	"ch_swc_event_t\000"
  2619      77635F65 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 51
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 51
 
 
  2619      76656E74 
@@ -3880,15 +3056,9 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2647 061a 6D657373 		.ascii	"messagebus_condvar_broadcast\000"
  2647      61676562 
  2647      75735F63 
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 52
-
-
-=======
->>>>>>> PID-implementation
  2647      6F6E6476 
  2647      61725F62 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 52
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 52
 
 
  2648              	.LASF69:
@@ -3932,271 +3102,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 1
  2669 0697 705F7072 		.ascii	"p_preempt\000"
  2669      65656D70 
  2669      7400
-<<<<<<< HEAD
- 2670              	.LASF63:
- 2671 06a8 725F7072 		.ascii	"r_prio\000"
- 2671      696F00
- 2672              	.LASF125:
- 2673 06af 65776D61 		.ascii	"ewmask\000"
- 2673      736B00
- 2674              	.LASF33:
- 2675 06b6 705F6E65 		.ascii	"p_next\000"
- 2675      787400
- 2676              	.LASF22:
- 2677 06bd 746D6F64 		.ascii	"tmode_t\000"
- 2677      655F7400 
- 2678              	.LASF151:
- 2679 06c5 63665F6F 		.ascii	"cf_off_preempt\000"
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 53
-
-
- 2679      66665F70 
- 2679      7265656D 
- 2679      707400
- 2680              	.LASF42:
- 2681 06d4 705F666C 		.ascii	"p_flags\000"
- 2681      61677300 
- 2682              	.LASF53:
- 2683 06dc 705F7374 		.ascii	"p_stats\000"
- 2683      61747300 
- 2684              	.LASF58:
- 2685 06e4 74687265 		.ascii	"threads_queue_t\000"
- 2685      6164735F 
- 2685      71756575 
- 2685      655F7400 
- 2686              	.LASF70:
- 2687 06f4 63685F76 		.ascii	"ch_virtual_timer\000"
- 2687      69727475 
- 2687      616C5F74 
- 2687      696D6572 
- 2687      00
- 2688              	.LASF144:
- 2689 0705 63665F6F 		.ascii	"cf_off_newer\000"
- 2689      66665F6E 
- 2689      65776572 
- 2689      00
- 2690              	.LASF179:
- 2691 0712 5F5F7374 		.ascii	"__stack_chk_fail\000"
- 2691      61636B5F 
- 2691      63686B5F 
- 2691      6661696C 
- 2691      00
- 2692              	.LASF126:
- 2693 0723 63685F73 		.ascii	"ch_semaphore\000"
- 2693      656D6170 
- 2693      686F7265 
- 2693      00
- 2694              	.LASF49:
- 2695 0730 705F6570 		.ascii	"p_epending\000"
- 2695      656E6469 
- 2695      6E6700
- 2696              	.LASF163:
- 2697 073b 6F70746F 		.ascii	"optopt\000"
- 2697      707400
- 2698              	.LASF18:
- 2699 0742 75696E74 		.ascii	"uint32_t\000"
- 2699      33325F74 
- 2699      00
- 2700              	.LASF142:
- 2701 074b 63665F6F 		.ascii	"cf_off_prio\000"
- 2701      66665F70 
- 2701      72696F00 
- 2702              	.LASF62:
- 2703 0757 725F7175 		.ascii	"r_queue\000"
- 2703      65756500 
- 2704              	.LASF57:
- 2705 075f 63685F74 		.ascii	"ch_threads_list\000"
- 2705      68726561 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 54
-
-
- 2705      64735F6C 
- 2705      69737400 
- 2706              	.LASF137:
- 2707 076f 63685F73 		.ascii	"ch_size\000"
- 2707      697A6500 
- 2708              	.LASF12:
- 2709 0777 6C6F6E67 		.ascii	"long unsigned int\000"
- 2709      20756E73 
- 2709      69676E65 
- 2709      6420696E 
- 2709      7400
- 2710              	.LASF134:
- 2711 0789 63686172 		.ascii	"char\000"
- 2711      00
- 2712              	.LASF124:
- 2713 078e 77746D74 		.ascii	"wtmtxp\000"
- 2713      787000
- 2714              	.LASF7:
- 2715 0795 5F5F7569 		.ascii	"__uint16_t\000"
- 2715      6E743136 
- 2715      5F7400
- 2716              	.LASF32:
- 2717 07a0 74687265 		.ascii	"thread_t\000"
- 2717      61645F74 
- 2717      00
- 2718              	.LASF109:
- 2719 07a9 62657374 		.ascii	"best\000"
- 2719      00
- 2720              	.LASF132:
- 2721 07ae 6D5F6E65 		.ascii	"m_next\000"
- 2721      787400
- 2722              	.LASF31:
- 2723 07b5 73797374 		.ascii	"systime_t\000"
- 2723      696D655F 
- 2723      7400
- 2724              	.LASF51:
- 2725 07bf 705F7265 		.ascii	"p_realprio\000"
- 2725      616C7072 
- 2725      696F00
- 2726              	.LASF68:
- 2727 07ca 76746675 		.ascii	"vtfunc_t\000"
- 2727      6E635F74 
- 2727      00
- 2728              	.LASF11:
- 2729 07d3 5F5F7569 		.ascii	"__uint32_t\000"
- 2729      6E743332 
- 2729      5F7400
- 2730              	.LASF81:
- 2731 07de 70616E69 		.ascii	"panic_msg\000"
- 2731      635F6D73 
- 2731      6700
- 2732              	.LASF107:
- 2733 07e8 6F666673 		.ascii	"offset\000"
- 2733      657400
- 2734              	.LASF96:
- 2735 07ef 636F6E74 		.ascii	"context\000"
- 2735      65787400 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 55
-
-
- 2736              	.LASF48:
- 2737 07f7 705F6D73 		.ascii	"p_msg\000"
- 2737      6700
- 2738              	.LASF172:
- 2739 07fd 6368436F 		.ascii	"chCondWait\000"
- 2739      6E645761 
- 2739      697400
- 2740              	.LASF75:
- 2741 0808 76745F70 		.ascii	"vt_par\000"
- 2741      617200
- 2742              	.LASF143:
- 2743 080f 63665F6F 		.ascii	"cf_off_ctx\000"
- 2743      66665F63 
- 2743      747800
- 2744              	.LASF129:
- 2745 081a 63685F6D 		.ascii	"ch_mutex\000"
- 2745      75746578 
- 2745      00
- 2746              	.LASF43:
- 2747 0823 705F7265 		.ascii	"p_refs\000"
- 2747      667300
- 2748              	.LASF82:
- 2749 082a 6973725F 		.ascii	"isr_cnt\000"
- 2749      636E7400 
- 2750              	.LASF101:
- 2751 0832 73655F73 		.ascii	"se_state\000"
- 2751      74617465 
- 2751      00
- 2752              	.LASF87:
- 2753 083b 726C6973 		.ascii	"rlist\000"
- 2753      7400
- 2754              	.LASF15:
- 2755 0841 75696E74 		.ascii	"uint8_t\000"
- 2755      385F7400 
- 2756              	.LASF178:
- 2757 0849 433A5C55 		.ascii	"C:\\Users\\laral\\Documents\\Epfl\\BA6\\robotique\\"
- 2757      73657273 
- 2757      5C6C6172 
- 2757      616C5C44 
- 2757      6F63756D 
- 2758 0875 4D696E69 		.ascii	"Mini_projet_Robotique\\Mini_projet_Robotique\\proje"
- 2758      5F70726F 
- 2758      6A65745F 
- 2758      526F626F 
- 2758      74697175 
- 2759 08a6 7400     		.ascii	"t\000"
- 2760              	.LASF54:
- 2761 08a8 74687265 		.ascii	"thread_reference_t\000"
- 2761      61645F72 
- 2761      65666572 
- 2761      656E6365 
- 2761      5F7400
- 2762              	.LASF121:
- 2763 08bb 77746F62 		.ascii	"wtobjp\000"
- 2763      6A7000
- 2764              	.LASF39:
- 2765 08c2 705F6E61 		.ascii	"p_name\000"
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 56
-
-
- 2765      6D6500
- 2766              	.LASF169:
- 2767 08c9 6D657373 		.ascii	"messagebus_lock_release\000"
- 2767      61676562 
- 2767      75735F6C 
- 2767      6F636B5F 
- 2767      72656C65 
- 2768              	.LASF78:
- 2769 08e1 76745F73 		.ascii	"vt_systime\000"
- 2769      79737469 
- 2769      6D6500
- 2770              	.LASF84:
- 2771 08ec 74726163 		.ascii	"trace_buffer\000"
- 2771      655F6275 
- 2771      66666572 
- 2771      00
- 2772              	.LASF138:
- 2773 08f9 63685F76 		.ascii	"ch_version\000"
- 2773      65727369 
- 2773      6F6E00
- 2774              	.LASF171:
- 2775 0904 6D657373 		.ascii	"messagebus_lock_acquire\000"
- 2775      61676562 
- 2775      75735F6C 
- 2775      6F636B5F 
- 2775      61637175 
- 2776              	.LASF170:
- 2777 091c 6C6F636B 		.ascii	"lock\000"
- 2777      00
- 2778              	.LASF116:
- 2779 0921 6D5F6372 		.ascii	"m_crit_thd\000"
- 2779      69745F74 
- 2779      686400
- 2780              	.LASF131:
- 2781 092c 6D5F6F77 		.ascii	"m_owner\000"
- 2781      6E657200 
- 2782              	.LASF100:
- 2783 0934 73655F77 		.ascii	"se_wtobjp\000"
- 2783      746F626A 
- 2783      7000
- 2784              	.LASF135:
- 2785 093e 63685F69 		.ascii	"ch_identifier\000"
- 2785      64656E74 
- 2785      69666965 
- 2785      7200
- 2786              	.LASF74:
- 2787 094c 76745F66 		.ascii	"vt_func\000"
- 2787      756E6300 
- 2788              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc51HkLI.s 			page 57
-
-
-DEFINED SYMBOLS
-                            *ABS*:00000000 port.c
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:18     .text.messagebus_lock_acquire:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:26     .text.messagebus_lock_acquire:00000000 messagebus_lock_acquire
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:67     .text.messagebus_lock_acquire:00000020 $d
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:72     .text.messagebus_lock_release:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:80     .text.messagebus_lock_release:00000000 messagebus_lock_release
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:120    .text.messagebus_lock_release:00000020 $d
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:125    .text.messagebus_condvar_broadcast:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:133    .text.messagebus_condvar_broadcast:00000000 messagebus_condvar_broadcast
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:173    .text.messagebus_condvar_broadcast:00000020 $d
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:178    .text.messagebus_condvar_wait:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:186    .text.messagebus_condvar_wait:00000000 messagebus_condvar_wait
-C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:226    .text.messagebus_condvar_wait:00000020 $d
-=======
  2670              	.LASF178:
  2671 06a1 2F557365 		.ascii	"/Users/antoine/Desktop/EPFL/Ba6/robotique/Mini_proj"
  2671      72732F61 
@@ -4213,7 +3118,7 @@ C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:226    .text.messagebus_condvar_wai
  2674      696F00
  2675              	.LASF125:
  2676 06f2 65776D61 		.ascii	"ewmask\000"
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 53
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 53
 
 
  2676      736B00
@@ -4273,7 +3178,7 @@ C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:226    .text.messagebus_condvar_wai
  2702      33325F74 
  2702      00
  2703              	.LASF142:
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 54
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 54
 
 
  2704 078e 63665F6F 		.ascii	"cf_off_prio\000"
@@ -4333,7 +3238,7 @@ C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:226    .text.messagebus_condvar_wai
  2732      6E743332 
  2732      5F7400
  2733              	.LASF81:
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 55
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 55
 
 
  2734 0821 70616E69 		.ascii	"panic_msg\000"
@@ -4393,7 +3298,7 @@ C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:226    .text.messagebus_condvar_wai
  2764      6D6500
  2765              	.LASF169:
  2766 08ad 6D657373 		.ascii	"messagebus_lock_release\000"
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 56
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 56
 
 
  2766      61676562 
@@ -4442,24 +3347,23 @@ C:\Users\laral\AppData\Local\Temp\cc51HkLI.s:226    .text.messagebus_condvar_wai
  2786 0930 76745F66 		.ascii	"vt_func\000"
  2786      756E6300 
  2787              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s 			page 57
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s 			page 57
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 port.c
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:18     .text.messagebus_lock_acquire:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:26     .text.messagebus_lock_acquire:0000000000000000 messagebus_lock_acquire
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:67     .text.messagebus_lock_acquire:0000000000000020 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:72     .text.messagebus_lock_release:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:80     .text.messagebus_lock_release:0000000000000000 messagebus_lock_release
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:120    .text.messagebus_lock_release:0000000000000020 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:125    .text.messagebus_condvar_broadcast:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:133    .text.messagebus_condvar_broadcast:0000000000000000 messagebus_condvar_broadcast
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:173    .text.messagebus_condvar_broadcast:0000000000000020 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:178    .text.messagebus_condvar_wait:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:186    .text.messagebus_condvar_wait:0000000000000000 messagebus_condvar_wait
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccJcXW3j.s:226    .text.messagebus_condvar_wait:0000000000000020 $d
->>>>>>> PID-implementation
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:18     .text.messagebus_lock_acquire:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:26     .text.messagebus_lock_acquire:0000000000000000 messagebus_lock_acquire
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:67     .text.messagebus_lock_acquire:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:72     .text.messagebus_lock_release:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:80     .text.messagebus_lock_release:0000000000000000 messagebus_lock_release
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:120    .text.messagebus_lock_release:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:125    .text.messagebus_condvar_broadcast:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:133    .text.messagebus_condvar_broadcast:0000000000000000 messagebus_condvar_broadcast
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:173    .text.messagebus_condvar_broadcast:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:178    .text.messagebus_condvar_wait:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:186    .text.messagebus_condvar_wait:0000000000000000 messagebus_condvar_wait
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccihZfJg.s:226    .text.messagebus_condvar_wait:0000000000000020 $d
 
 UNDEFINED SYMBOLS
 chMtxLock

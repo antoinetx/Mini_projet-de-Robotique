@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 1
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -62,11 +58,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
   55              		.loc 1 6 0
   56 0018 FFF7FEBF 		b	calibrate_ir
   57              	.LVL0:
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 2
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 2
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 2
 
 
   58              	.L6:
@@ -126,11 +118,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  112              	.L15:
  113              		.cfi_restore_state
  114              		.loc 1 14 0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 3
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 3
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 3
 
 
  115 0020 9A42     		cmp	r2, r3
@@ -190,11 +178,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  169 000e 1B68     		ldr	r3, [r3]
  170              		.loc 1 20 0
  171 0010 06D9     		bls	.L24
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 4
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 4
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 4
 
 
  172              		.loc 1 25 0
@@ -254,11 +238,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  226              	.LVL12:
  227 0000 00B5     		push	{lr}
  228              		.cfi_def_cfa_offset 4
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 5
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 5
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 5
 
 
  229              		.cfi_offset 14, -4
@@ -318,11 +298,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  283              	.Letext0:
  284              		.file 2 "../e-puck2_main-processor/src/epuck1x/../sensors/proximity.h"
  285              		.section	.debug_info,"",%progbits
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 6
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 6
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 6
 
 
  286              	.Ldebug_info0:
@@ -333,24 +309,15 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  291 000b 01       		.uleb128 0x1
  292 000c AE000000 		.4byte	.LASF17
  293 0010 0C       		.byte	0xc
-<<<<<<< HEAD
- 294 0011 14000000 		.4byte	.LASF18
- 295 0015 60020000 		.4byte	.LASF19
-=======
  294 0011 A4020000 		.4byte	.LASF18
  295 0015 2D020000 		.4byte	.LASF19
->>>>>>> PID-implementation
  296 0019 00000000 		.4byte	.Ldebug_ranges0+0
  297 001d 00000000 		.4byte	0
  298 0021 00000000 		.4byte	.Ldebug_line0
  299 0025 02       		.uleb128 0x2
  300 0026 01       		.byte	0x1
  301 0027 06       		.byte	0x6
-<<<<<<< HEAD
- 302 0028 F7020000 		.4byte	.LASF0
-=======
  302 0028 98020000 		.4byte	.LASF0
->>>>>>> PID-implementation
  303 002c 02       		.uleb128 0x2
  304 002d 01       		.byte	0x1
  305 002e 08       		.byte	0x8
@@ -358,11 +325,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  307 0033 02       		.uleb128 0x2
  308 0034 02       		.byte	0x2
  309 0035 05       		.byte	0x5
-<<<<<<< HEAD
- 310 0036 D6020000 		.4byte	.LASF2
-=======
  310 0036 77020000 		.4byte	.LASF2
->>>>>>> PID-implementation
  311 003a 02       		.uleb128 0x2
  312 003b 02       		.byte	0x2
  313 003c 07       		.byte	0x7
@@ -370,11 +333,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  315 0041 02       		.uleb128 0x2
  316 0042 04       		.byte	0x4
  317 0043 05       		.byte	0x5
-<<<<<<< HEAD
- 318 0044 EE020000 		.4byte	.LASF4
-=======
  318 0044 8F020000 		.4byte	.LASF4
->>>>>>> PID-implementation
  319 0048 02       		.uleb128 0x2
  320 0049 04       		.byte	0x4
  321 004a 07       		.byte	0x7
@@ -382,11 +341,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  323 004f 02       		.uleb128 0x2
  324 0050 08       		.byte	0x8
  325 0051 05       		.byte	0x5
-<<<<<<< HEAD
- 326 0052 C8020000 		.4byte	.LASF6
-=======
  326 0052 1F020000 		.4byte	.LASF6
->>>>>>> PID-implementation
  327 0056 02       		.uleb128 0x2
  328 0057 08       		.byte	0x8
  329 0058 07       		.byte	0x7
@@ -403,11 +358,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  340 006c 00000000 		.4byte	.LASF9
  341 0070 01       		.byte	0x1
  342 0071 1B       		.byte	0x1b
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 7
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 7
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 7
 
 
  343 0072 5D000000 		.4byte	0x5d
@@ -417,11 +368,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  347 007f 9C       		.byte	0x9c
  348 0080 A6000000 		.4byte	0xa6
  349 0084 05       		.uleb128 0x5
-<<<<<<< HEAD
- 350 0085 E0020000 		.4byte	.LASF11
-=======
  350 0085 81020000 		.4byte	.LASF11
->>>>>>> PID-implementation
  351 0089 01       		.byte	0x1
  352 008a 1B       		.byte	0x1b
  353 008b 64000000 		.4byte	0x64
@@ -444,11 +391,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  370 00ba 9C       		.byte	0x9c
  371 00bb E1000000 		.4byte	0xe1
  372 00bf 05       		.uleb128 0x5
-<<<<<<< HEAD
- 373 00c0 E0020000 		.4byte	.LASF11
-=======
  373 00c0 81020000 		.4byte	.LASF11
->>>>>>> PID-implementation
  374 00c4 01       		.byte	0x1
  375 00c5 12       		.byte	0x12
  376 00c6 64000000 		.4byte	0x64
@@ -471,19 +414,11 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  393 00f5 9C       		.byte	0x9c
  394 00f6 1C010000 		.4byte	0x11c
  395 00fa 05       		.uleb128 0x5
-<<<<<<< HEAD
- 396 00fb E0020000 		.4byte	.LASF11
- 397 00ff 01       		.byte	0x1
- 398 0100 09       		.byte	0x9
- 399 0101 64000000 		.4byte	0x64
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 8
-=======
  396 00fb 81020000 		.4byte	.LASF11
  397 00ff 01       		.byte	0x1
  398 0100 09       		.byte	0x9
  399 0101 64000000 		.4byte	0x64
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 8
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 8
 
 
  400 0105 74000000 		.4byte	.LLST0
@@ -524,15 +459,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  435 0161 02       		.byte	0x2
  436 0162 37       		.byte	0x37
  437 0163 09       		.uleb128 0x9
-<<<<<<< HEAD
- 438 0164 BF020000 		.4byte	.LASF15
- 439 0168 BF020000 		.4byte	.LASF15
- 440 016c 02       		.byte	0x2
- 441 016d 2E       		.byte	0x2e
- 442 016e 09       		.uleb128 0x9
- 443 016f 03030000 		.4byte	.LASF16
- 444 0173 03030000 		.4byte	.LASF16
-=======
  438 0164 16020000 		.4byte	.LASF15
  439 0168 16020000 		.4byte	.LASF15
  440 016c 02       		.byte	0x2
@@ -540,7 +466,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  442 016e 09       		.uleb128 0x9
  443 016f E7020000 		.4byte	.LASF16
  444 0173 E7020000 		.4byte	.LASF16
->>>>>>> PID-implementation
  445 0177 02       		.byte	0x2
  446 0178 25       		.byte	0x25
  447 0179 00       		.byte	0
@@ -553,11 +478,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  454 0004 0E       		.uleb128 0xe
  455 0005 13       		.uleb128 0x13
  456 0006 0B       		.uleb128 0xb
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 9
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 9
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 9
 
 
  457 0007 03       		.uleb128 0x3
@@ -617,11 +538,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  511 003d 18       		.uleb128 0x18
  512 003e 9742     		.uleb128 0x2117
  513 0040 19       		.uleb128 0x19
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 10
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 10
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 10
 
 
  514 0041 01       		.uleb128 0x1
@@ -681,11 +598,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  568 007c 12       		.uleb128 0x12
  569 007d 06       		.uleb128 0x6
  570 007e 40       		.uleb128 0x40
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 11
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 11
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 11
 
 
  571 007f 18       		.uleb128 0x18
@@ -745,11 +658,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  625 0021 0100     		.2byte	0x1
  626 0023 50       		.byte	0x50
  627 0024 2D000000 		.4byte	.LVL15-1
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 12
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 12
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 12
 
 
  628 0028 38000000 		.4byte	.LFE3
@@ -809,11 +718,7 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  682 00a4 50       		.byte	0x50
  683 00a5 9F       		.byte	0x9f
  684 00a6 00000000 		.4byte	0
-<<<<<<< HEAD
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 13
-=======
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 13
->>>>>>> PID-implementation
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 13
 
 
  685 00aa 00000000 		.4byte	0
@@ -860,186 +765,6 @@ ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 1
  720      6269656E 
  720      745F6C69 
  720      67687400 
-<<<<<<< HEAD
- 721              	.LASF18:
- 722 0014 2E2E2F70 		.ascii	"../projet/e-puck2_main-processor/src/epuck1x/a_d/ad"
- 722      726F6A65 
- 722      742F652D 
- 722      7075636B 
- 722      325F6D61 
- 723 0047 76616E63 		.ascii	"vance_ad_scan/e_prox.c\000"
- 723      655F6164 
- 723      5F736361 
- 723      6E2F655F 
- 723      70726F78 
- 724              	.LASF1:
- 725 005e 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 14
-
-
- 725      676E6564 
- 725      20636861 
- 725      7200
- 726              	.LASF20:
- 727 006c 655F6361 		.ascii	"e_calibrate_ir\000"
- 727      6C696272 
- 727      6174655F 
- 727      697200
- 728              	.LASF5:
- 729 007b 6C6F6E67 		.ascii	"long unsigned int\000"
- 729      20756E73 
- 729      69676E65 
- 729      6420696E 
- 729      7400
- 730              	.LASF14:
- 731 008d 6765745F 		.ascii	"get_calibrated_prox\000"
- 731      63616C69 
- 731      62726174 
- 731      65645F70 
- 731      726F7800 
- 732              	.LASF3:
- 733 00a1 73686F72 		.ascii	"short unsigned int\000"
- 733      7420756E 
- 733      7369676E 
- 733      65642069 
- 733      6E7400
- 734              	.LASF12:
- 735 00b4 655F6765 		.ascii	"e_get_prox\000"
- 735      745F7072 
- 735      6F7800
- 736              	.LASF21:
- 737 00bf 5F5F7374 		.ascii	"__stack_chk_fail\000"
- 737      61636B5F 
- 737      63686B5F 
- 737      6661696C 
- 737      00
- 738              	.LASF10:
- 739 00d0 655F6765 		.ascii	"e_get_calibrated_prox\000"
- 739      745F6361 
- 739      6C696272 
- 739      61746564 
- 739      5F70726F 
- 740              	.LASF13:
- 741 00e6 6765745F 		.ascii	"get_ambient_light\000"
- 741      616D6269 
- 741      656E745F 
- 741      6C696768 
- 741      7400
- 742              	.LASF17:
- 743 00f8 474E5520 		.ascii	"GNU C11 7.2.1 20170904 (release) [ARM/embedded-7-br"
- 743      43313120 
- 743      372E322E 
- 743      31203230 
- 743      31373039 
- 744 012b 616E6368 		.ascii	"anch revision 255204] -mcpu=cortex-m4 -mfloat-abi=h"
- 744      20726576 
- 744      6973696F 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 15
-
-
- 744      6E203235 
- 744      35323034 
- 745 015e 61726420 		.ascii	"ard -mfpu=fpv4-sp-d16 -mno-thumb-interwork -mthumb "
- 745      2D6D6670 
- 745      753D6670 
- 745      76342D73 
- 745      702D6431 
- 746 0191 2D676764 		.ascii	"-ggdb -O2 -fomit-frame-pointer -falign-functions=16"
- 746      62202D4F 
- 746      32202D66 
- 746      6F6D6974 
- 746      2D667261 
- 747 01c4 202D666E 		.ascii	" -fno-strict-aliasing -fstack-protector-all -ffunct"
- 747      6F2D7374 
- 747      72696374 
- 747      2D616C69 
- 747      6173696E 
- 748 01f7 696F6E2D 		.ascii	"ion-sections -fdata-sections -fno-common -fsingle-p"
- 748      73656374 
- 748      696F6E73 
- 748      202D6664 
- 748      6174612D 
- 749 022a 72656369 		.ascii	"recision-constant\000"
- 749      73696F6E 
- 749      2D636F6E 
- 749      7374616E 
- 749      7400
- 750              	.LASF8:
- 751 023c 756E7369 		.ascii	"unsigned int\000"
- 751      676E6564 
- 751      20696E74 
- 751      00
- 752              	.LASF7:
- 753 0249 6C6F6E67 		.ascii	"long long unsigned int\000"
- 753      206C6F6E 
- 753      6720756E 
- 753      7369676E 
- 753      65642069 
- 754              	.LASF19:
- 755 0260 433A5C55 		.ascii	"C:\\Users\\laral\\Documents\\Epfl\\BA6\\robotique\\"
- 755      73657273 
- 755      5C6C6172 
- 755      616C5C44 
- 755      6F63756D 
- 756 028c 4D696E69 		.ascii	"Mini_projet_Robotique\\Mini_projet_Robotique\\proje"
- 756      5F70726F 
- 756      6A65745F 
- 756      526F626F 
- 756      74697175 
- 757 02bd 7400     		.ascii	"t\000"
- 758              	.LASF15:
- 759 02bf 6765745F 		.ascii	"get_prox\000"
- 759      70726F78 
- 759      00
- 760              	.LASF6:
- 761 02c8 6C6F6E67 		.ascii	"long long int\000"
- 761      206C6F6E 
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 16
-
-
- 761      6720696E 
- 761      7400
- 762              	.LASF2:
- 763 02d6 73686F72 		.ascii	"short int\000"
- 763      7420696E 
- 763      7400
- 764              	.LASF11:
- 765 02e0 73656E73 		.ascii	"sensor_number\000"
- 765      6F725F6E 
- 765      756D6265 
- 765      7200
- 766              	.LASF4:
- 767 02ee 6C6F6E67 		.ascii	"long int\000"
- 767      20696E74 
- 767      00
- 768              	.LASF0:
- 769 02f7 7369676E 		.ascii	"signed char\000"
- 769      65642063 
- 769      68617200 
- 770              	.LASF16:
- 771 0303 63616C69 		.ascii	"calibrate_ir\000"
- 771      62726174 
- 771      655F6972 
- 771      00
- 772              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s 			page 17
-
-
-DEFINED SYMBOLS
-                            *ABS*:00000000 e_prox.c
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:18     .text.e_calibrate_ir:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:26     .text.e_calibrate_ir:00000000 e_calibrate_ir
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:65     .text.e_calibrate_ir:00000020 $d
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:70     .text.e_get_prox:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:78     .text.e_get_prox:00000000 e_get_prox
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:136    .text.e_get_prox:00000034 $d
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:141    .text.e_get_calibrated_prox:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:149    .text.e_get_calibrated_prox:00000000 e_get_calibrated_prox
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:207    .text.e_get_calibrated_prox:00000034 $d
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:212    .text.e_get_ambient_light:00000000 $t
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:220    .text.e_get_ambient_light:00000000 e_get_ambient_light
-C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:278    .text.e_get_ambient_light:00000034 $d
-=======
  721              	.LASF1:
  722 0014 756E7369 		.ascii	"unsigned char\000"
  722      676E6564 
@@ -1053,7 +778,7 @@ C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:278    .text.e_get_ambient_light:00
  725              	.LASF5:
  726 0031 6C6F6E67 		.ascii	"long unsigned int\000"
  726      20756E73 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 14
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 14
 
 
  726      69676E65 
@@ -1113,7 +838,7 @@ C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:278    .text.e_get_ambient_light:00
  743      62202D4F 
  743      32202D66 
  743      6F6D6974 
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 15
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 15
 
 
  743      2D667261 
@@ -1173,7 +898,7 @@ C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:278    .text.e_get_ambient_light:00
  761      756D6265 
  761      7200
  762              	.LASF4:
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 16
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 16
 
 
  763 028f 6C6F6E67 		.ascii	"long int\000"
@@ -1199,24 +924,23 @@ C:\Users\laral\AppData\Local\Temp\cc1rWTkd.s:278    .text.e_get_ambient_light:00
  770      655F6972 
  770      00
  771              		.ident	"GCC: (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM
-ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s 			page 17
+ARM GAS  /var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s 			page 17
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 e_prox.c
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:18     .text.e_calibrate_ir:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:26     .text.e_calibrate_ir:0000000000000000 e_calibrate_ir
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:65     .text.e_calibrate_ir:0000000000000020 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:70     .text.e_get_prox:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:78     .text.e_get_prox:0000000000000000 e_get_prox
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:136    .text.e_get_prox:0000000000000034 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:141    .text.e_get_calibrated_prox:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:149    .text.e_get_calibrated_prox:0000000000000000 e_get_calibrated_prox
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:207    .text.e_get_calibrated_prox:0000000000000034 $d
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:212    .text.e_get_ambient_light:0000000000000000 $t
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:220    .text.e_get_ambient_light:0000000000000000 e_get_ambient_light
-/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//cc40eolk.s:278    .text.e_get_ambient_light:0000000000000034 $d
->>>>>>> PID-implementation
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:18     .text.e_calibrate_ir:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:26     .text.e_calibrate_ir:0000000000000000 e_calibrate_ir
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:65     .text.e_calibrate_ir:0000000000000020 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:70     .text.e_get_prox:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:78     .text.e_get_prox:0000000000000000 e_get_prox
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:136    .text.e_get_prox:0000000000000034 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:141    .text.e_get_calibrated_prox:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:149    .text.e_get_calibrated_prox:0000000000000000 e_get_calibrated_prox
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:207    .text.e_get_calibrated_prox:0000000000000034 $d
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:212    .text.e_get_ambient_light:0000000000000000 $t
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:220    .text.e_get_ambient_light:0000000000000000 e_get_ambient_light
+/var/folders/r3/l17pxy9j13749mq5h96642rc0000gn/T//ccyXANG4.s:278    .text.e_get_ambient_light:0000000000000034 $d
 
 UNDEFINED SYMBOLS
 calibrate_ir

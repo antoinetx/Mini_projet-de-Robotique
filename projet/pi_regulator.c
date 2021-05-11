@@ -5,10 +5,9 @@
 #include <chprintf.h>
 #include <motors.h>
 
-#include <main.h>
-#include <pi_regulato.h>
 #include <optical_detection.h>
 #include <audio_processing.h>
+#include <pi_regulator.h>
 #include <sensors/VL53L0X/VL53L0X.h>
 
 

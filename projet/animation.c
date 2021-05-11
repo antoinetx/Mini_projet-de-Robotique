@@ -1,7 +1,7 @@
 #include "ch.h"
 #include "hal.h"
 #include <math.h>
-#include <main.h>
+//#include <main.h>
 #include <usbcfg.h>
 #include <chprintf.h>
 #include <leds.h>
@@ -33,7 +33,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 		switch (states)
 		{
 			// activate the right turn signal
-			case RIGHT:
+			case RIGHT_1:
 				if (i == ETEIND){
 					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY,0);
 					set_rgb_led(LED4,INTENSITY_MOY,INTENSITY,0);
@@ -53,7 +53,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the left turn signal
-			case LEFT:
+			case LEFT_1:
 				if (i == ETEIND){
 					set_rgb_led(LED6,INTENSITY_MOY,INTENSITY,0);
 					set_rgb_led(LED8,INTENSITY_MOY,INTENSITY,0);
@@ -73,7 +73,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the high beams
-			case STRAIGHT:
+			case STRAIGHT_1:
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED4,INTENSITY,0,INTENSITY);
@@ -98,7 +98,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the turn back signals
-			case TURN_BACK:
+			case TURN_BACK_1:
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED2,INTENSITY,0,INTENSITY);
@@ -125,7 +125,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the arrival lights
-			case STOP:
+			case STOP_1:
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED2,INTENSITY_MOY,0,INTENSITY);
@@ -144,7 +144,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			//activate the hazard warning lights
-			case OBSTACLE:
+			case OBSTACLE_1:
 				if (i == ETEIND){
 					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY,0);
 					set_rgb_led(LED4,INTENSITY_MOY,INTENSITY,0);
@@ -197,11 +197,11 @@ static THD_FUNCTION(SoundAnimation, arg) {
 		switch (states)
 		{
 			// activate the arrival music
-			case STOP:
+			case STOP_1:
 				playMelody(MARIO_FLAG,ML_FORCE_CHANGE,NULL);
 			break;
 			// activate the obstacle way music
-			case OBSTACLE:
+			case OBSTACLE_1:
 				playMelody(MARIO_START,ML_FORCE_CHANGE,NULL);
 			break;
 		}

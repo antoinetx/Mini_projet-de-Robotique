@@ -6,18 +6,13 @@
 #include <optical_detection.h>
 
 #include <camera/po8030.h>
-
+#include "memory_protection.h"
 
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
-<<<<<<< HEAD
-
-static int16_t last_err_pos = 0;
-=======
 static uint16_t begin = 0, end = 0;
 static int16_t last_err_pos = 0, line_found = 0;
->>>>>>> PID-implementation
 
 
 /*
@@ -29,13 +24,9 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	uint16_t i = 0;
 	uint8_t stop = 0, wrong_line = 0;
 	int16_t new_err_pos = 0;
-<<<<<<< HEAD
-	uint16_t begin = 0, end = 0;
-=======
 	uint32_t mean = 0;
 	uint8_t line_not_found = 0;
 
->>>>>>> PID-implementation
 
 	//performs an average
 	for(uint16_t j = 0 ; j < IMAGE_BUFFER_SIZE ; j++){
@@ -191,9 +182,6 @@ void process_image_start(void){
 int16_t get_error_line(void){
 	return last_err_pos;
 }
-
-<<<<<<< HEAD
-=======
 int16_t get_begin(void){
 	return begin;
 }
@@ -203,12 +191,6 @@ int16_t get_end(void){
 int16_t get_line_width(void){
 	return (end - begin);
 }
-
 int16_t get_line_found(void){
 	return (line_found);
 }
-
-
-
->>>>>>> PID-implementation
-

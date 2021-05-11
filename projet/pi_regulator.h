@@ -1,12 +1,12 @@
 /*
- * pi_regulato.h
+ * pi_regulator.h
  *
  *  Created on: 20 avr. 2021
  *      Author: laral
  */
 
-#ifndef MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_
-#define MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_
+#ifndef MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATOR_H_
+#define MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATOR_H_
 
 #define PI 3.14
 #define SYS_SPEED 400

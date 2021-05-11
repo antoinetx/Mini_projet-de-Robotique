@@ -18,9 +18,14 @@
 
 
 
-enum states{RIGHT, LEFT, STRAIGHT, TURN_BACK, STOP, OBSTACLE};
+enum states{RIGHT_1, LEFT_1, STRAIGHT_1, TURN_BACK_1, STOP_1, OBSTACLE_1};
 enum etat {ETEIND, ETEIND_BIS, ALLUMEE, ALLUMEE_BIS};
 
 
+
+
+void led_animation_start(void);
+
+void sound_animation_start(void);
 
 #endif /* MINI_PROJET_ROBOTIQUE_PROJET_ANIMATION_H_ */
