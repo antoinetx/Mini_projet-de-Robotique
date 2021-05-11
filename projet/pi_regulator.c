@@ -10,6 +10,7 @@
 #include <pi_regulator.h>
 #include <sensors/VL53L0X/VL53L0X.h>
 
+static int8_t state = STRAIGHT;
 
 void delay(unsigned int n)
 {
@@ -199,13 +200,13 @@ static THD_FUNCTION(Mouvment, arg) {
 	while(1){
 		time = chVTGetSystemTime();
 
+		// Récupère la distance avec l'obstacle.
+		dist_colision = VL53L0X_get_dist_mm() - TOF_OFFSET;
+
 		if (get_amp() > DETECTION_AMP){
 			//chprintf((BaseSequentialStream *)&SDU1, " \n GO");
 			// CALCUL DES VITESSES
 			rotation_speed = pd_regulator(get_error_line());
-
-			// Récupère la distance avec l'obstacle.
-			dist_colision = VL53L0X_get_dist_mm() - TOF_OFFSET;
 
 			// CONDITIONS DE MVNT
 			if((get_line_width() > LINE_WIDTH_TRESH)) corner = TRUE;
@@ -223,6 +224,7 @@ static THD_FUNCTION(Mouvment, arg) {
 				if(dist_colision < MAX_DETECTION_DIST){
 					right_motor_set_speed(pi_collision_regulator(dist_colision));
 					left_motor_set_speed(pi_collision_regulator(dist_colision));
+					state = OBSTACLE;
 				}
 				else{
 					right_motor_set_speed(SYS_SPEED - rotation_speed);
@@ -234,6 +236,7 @@ static THD_FUNCTION(Mouvment, arg) {
 			//chprintf((BaseSequentialStream *)&SDU1, " \n STOP");
 			right_motor_set_speed(0);
 			left_motor_set_speed(0);
+			if(dist_colision < MIN_COLLISION_DIST) state = ARRIVED;
 		}
 
 
@@ -247,3 +250,6 @@ void mouvment_start(void){
 	chThdCreateStatic(waMouvment, sizeof(waMouvment), NORMALPRIO, Mouvment, NULL);
 }
 
+int8_t get_state(void){
+	return state;
+}

@@ -1,7 +1,6 @@
 #include "ch.h"
 #include "hal.h"
 #include <math.h>
-//#include <main.h>
 #include <usbcfg.h>
 #include <chprintf.h>
 #include <leds.h>
@@ -11,7 +10,7 @@
 #include "audio/play_melody.h"
 #include "audio/play_sound_file.h"
 #include "audio/microphone.h"
-
+#include <pi_regulator.h>
 
 
 static int8_t i = 0;
@@ -29,11 +28,14 @@ static THD_FUNCTION(LedAnimation, arg) {
 	//ajouter la ligne en fonction du nom de la fonction ici :
 	// uint8_t states = get_states();
 
+	uint8_t states = STOP;
+
 	while (1){
+		states = get_state();
 		switch (states)
 		{
 			// activate the right turn signal
-			case RIGHT_1:
+			case RIGHT:
 				if (i == ETEIND){
 					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY,0);
 					set_rgb_led(LED4,INTENSITY_MOY,INTENSITY,0);
@@ -53,7 +55,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the left turn signal
-			case LEFT_1:
+			case LEFT:
 				if (i == ETEIND){
 					set_rgb_led(LED6,INTENSITY_MOY,INTENSITY,0);
 					set_rgb_led(LED8,INTENSITY_MOY,INTENSITY,0);
@@ -73,7 +75,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the high beams
-			case STRAIGHT_1:
+			case STRAIGHT:
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED4,INTENSITY,0,INTENSITY);
@@ -98,7 +100,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the turn back signals
-			case TURN_BACK_1:
+			case TURN_BACK:
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED2,INTENSITY,0,INTENSITY);
@@ -125,7 +127,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			// activate the arrival lights
-			case STOP_1:
+			case ARRIVED:
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED2,INTENSITY_MOY,0,INTENSITY);
@@ -144,7 +146,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 			//activate the hazard warning lights
-			case OBSTACLE_1:
+			case OBSTACLE:
 				if (i == ETEIND){
 					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY,0);
 					set_rgb_led(LED4,INTENSITY_MOY,INTENSITY,0);
@@ -167,20 +169,12 @@ static THD_FUNCTION(LedAnimation, arg) {
 				}
 			break;
 		}
-
-
-
-
 		//chprintf((BaseSequentialStream *)&SDU1, " \n AVANCE");
 
 		//do some stuff and sleep for 250ms
 		chThdSleepMilliseconds(250);
 
 	}
-
-
-
-
 }
 
 
@@ -193,15 +187,16 @@ static THD_FUNCTION(SoundAnimation, arg) {
 	//ajouter la ligne en fonction du nom de la fonction ici :
 	// uint8_t states = get_states();
 
+
 	while (1){
 		switch (states)
 		{
 			// activate the arrival music
-			case STOP_1:
+			case ARRIVED:
 				playMelody(MARIO_FLAG,ML_FORCE_CHANGE,NULL);
 			break;
 			// activate the obstacle way music
-			case OBSTACLE_1:
+			case OBSTACLE:
 				playMelody(MARIO_START,ML_FORCE_CHANGE,NULL);
 			break;
 		}

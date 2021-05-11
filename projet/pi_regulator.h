@@ -38,11 +38,14 @@
 
 #define DETECTION_AMP 3000
 
-enum side {RIGHT, LEFT, STRAIGHT, TURN_BACK, STOP, OBSTACLE};
+enum side {RIGHT, LEFT, STRAIGHT, TURN_BACK, ARRIVED, OBSTACLE, STOP};
 
 
 //start the PI regulator thread
 void mouvment_start(void);
+
+int8_t get_state(void);
+
 
 #endif /* MINI_PROJET_ROBOTIQUE_PROJET_PI_REGULATO_H_ */
 
