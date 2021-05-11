@@ -5,7 +5,6 @@
 #include <chprintf.h>
 #include <motors.h>
 
-
 #include <main.h>
 #include <pi_regulato.h>
 #include <optical_detection.h>
@@ -18,6 +17,16 @@ void delay(unsigned int n)
 	while (n--) {
 		__asm__ volatile ("nop");
 	}
+}
+
+bool line_found(void){
+	bool line_found = FALSE;
+	for(int8_t i=0 ; i < NB_SAMPLES ; i++){
+		if(get_line_found()){
+			line_found = TRUE;
+		}
+	}
+	return line_found;
 }
 
 // When epuck approch a corner he avance to it with continuous comande because the camera see too far away.
@@ -69,7 +78,7 @@ void corner_turn(int8_t side){
 		break;
 	case STRAIGHT:
 		nb_steps_to_do = NB_STEPS_TO_GO_STRAIGHT;
-		motor_turn(SYS_SPEED/2, SYS_SPEED/2, nb_steps_to_do);
+		motor_turn(SYS_SPEED, SYS_SPEED, nb_steps_to_do);
 		break;
 	case TURN_BACK:
 		nb_steps_to_do = NB_STEPS_TO_TURN_BACK;
@@ -92,35 +101,31 @@ void turn_choice(void){
 	}
 
 	if(angle>PI/4 && angle<(3*PI/4)){
-		chprintf((BaseSequentialStream *)&SDU1, " \n Turn LEFT" );
 		corner_turn(LEFT);
-		delay(SystemCoreClock/20);
-		if(!get_line_found()){
+		delay(SystemCoreClock/5);
+		if(!line_found()){
 			if(get_angle()>0) corner_turn(LEFT);
 			else corner_turn(RIGHT);
 		}
 	}
 	else if( angle>(3*PI/4) || angle<-(3*PI/4)){
-		chprintf((BaseSequentialStream *)&SDU1, " \n Turn BACK" );
 		corner_turn(TURN_BACK);
-		delay(SystemCoreClock/20);
-		if(!get_line_found()){
-			chprintf((BaseSequentialStream *)&SDU1, " \n NOOOO");
+		delay(SystemCoreClock/5);
+		if(!line_found()){
 			if(get_angle()>0) corner_turn(LEFT);
 			else corner_turn(RIGHT);
 		}
 	}
 	else if( angle< (-PI/4) && angle > (-3*PI/4)){
-		chprintf((BaseSequentialStream *)&SDU1, " \n Turn RIGHT" );
 		corner_turn(RIGHT);
-		delay(SystemCoreClock/20);
-		if(!get_line_found()){
+		delay(SystemCoreClock/5);
+		if(!line_found()){
 			if(get_angle()>0) corner_turn(LEFT);
 			else corner_turn(RIGHT);
 		}
 	}
 	else if(angle<PI/4 && angle>-(PI/4)){
-		if(!get_line_found()){
+		if(!line_found()){
 			if(get_angle()>0) corner_turn(LEFT);
 			else corner_turn(RIGHT);
 		}
@@ -195,34 +200,44 @@ static THD_FUNCTION(Mouvment, arg) {
 	while(1){
 		time = chVTGetSystemTime();
 
-		// CALCUL DES VITESSES
-		rotation_speed = pd_regulator(get_error_line());
+		if (get_amp() > DETECTION_AMP){
+			//chprintf((BaseSequentialStream *)&SDU1, " \n GO");
+			// CALCUL DES VITESSES
+			rotation_speed = pd_regulator(get_error_line());
 
-		// Récupère la distance avec l'obstacle.
-		dist_colision = VL53L0X_get_dist_mm() - TOF_OFFSET;
+			// Récupère la distance avec l'obstacle.
+			dist_colision = VL53L0X_get_dist_mm() - TOF_OFFSET;
 
-		// CONDITIONS DE MVNT
-		if((get_line_width() > LINE_WIDTH_TRESH)) corner = TRUE;
-		else corner = FALSE;
+			// CONDITIONS DE MVNT
+			if((get_line_width() > LINE_WIDTH_TRESH)) corner = TRUE;
+			else corner = FALSE;
 
-		//Vérifie si il y a un corner
-		if(corner){
-			chprintf((BaseSequentialStream *)&SDU1, " \n CORNER");
-			corner_approch();
-			turn_choice();
-		}
-		else{
-
-			//applies the speed from the PI regulator and the correction for the rotation
-			if(dist_colision < MAX_DETECTION_DIST){
-				right_motor_set_speed(pi_collision_regulator(dist_colision));
-				left_motor_set_speed(pi_collision_regulator(dist_colision));
+			//Vérifie si il y a un corner
+			if(corner){
+				//chprintf((BaseSequentialStream *)&SDU1, " \n CORNER");
+				corner_approch();
+				turn_choice();
 			}
 			else{
-				right_motor_set_speed(SYS_SPEED - rotation_speed);
-				left_motor_set_speed(SYS_SPEED + rotation_speed);
+
+				//applies the speed from the PI regulator and the correction for the rotation
+				if(dist_colision < MAX_DETECTION_DIST){
+					right_motor_set_speed(pi_collision_regulator(dist_colision));
+					left_motor_set_speed(pi_collision_regulator(dist_colision));
+				}
+				else{
+					right_motor_set_speed(SYS_SPEED - rotation_speed);
+					left_motor_set_speed(SYS_SPEED + rotation_speed);
+				}
 			}
 		}
+		else{
+			//chprintf((BaseSequentialStream *)&SDU1, " \n STOP");
+			right_motor_set_speed(0);
+			left_motor_set_speed(0);
+		}
+
+
 	//100Hz
 	chThdSleepUntilWindowed(time, time + MS2ST(10));
 	}
