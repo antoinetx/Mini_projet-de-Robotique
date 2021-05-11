@@ -11,8 +11,13 @@
 //semaphore
 static BSEMAPHORE_DECL(image_ready_sem, TRUE);
 
+<<<<<<< HEAD
 
 static int16_t last_err_pos = 0;
+=======
+static uint16_t begin = 0, end = 0;
+static int16_t last_err_pos = 0, line_found = 0;
+>>>>>>> PID-implementation
 
 
 /*
@@ -22,10 +27,15 @@ static int16_t last_err_pos = 0;
 int16_t extract_error_line_position(uint8_t *buffer){
 
 	uint16_t i = 0;
-	uint8_t stop = 0, wrong_line = 0, line_not_found = 0;
-	uint32_t mean = 0;
+	uint8_t stop = 0, wrong_line = 0;
 	int16_t new_err_pos = 0;
+<<<<<<< HEAD
 	uint16_t begin = 0, end = 0;
+=======
+	uint32_t mean = 0;
+	uint8_t line_not_found = 0;
+
+>>>>>>> PID-implementation
 
 	//performs an average
 	for(uint16_t j = 0 ; j < IMAGE_BUFFER_SIZE ; j++){
@@ -92,7 +102,7 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	}else{
 		new_err_pos = last_err_pos = (begin + end)/2 - IMAGE_BUFER_MIDDLE; // gives the error from the center of the picture
 	}
-
+	line_found = !line_not_found;
 	return new_err_pos;
 }
 
@@ -161,13 +171,13 @@ static THD_FUNCTION(ProcessImage, arg) {
 
 		if(send_to_computer){
 			//sends to the computer the image
-			SendUint8ToComputer(image, IMAGE_BUFFER_SIZE);
+			SendUint8ToComputer(image, IMAGE_BUFFER_SIZE); //Utile que pour voir l'image à l'ordi
 		}
 
 		//invert the bool
 		send_to_computer = !send_to_computer;
-		 chprintf((BaseSequentialStream *)&SDU1, " \n angle : %d" , last_err_pos);
 	    last_err_pos = extract_error_line_position(image);
+
     }
 }
 
@@ -178,8 +188,27 @@ void process_image_start(void){
 }
 
 
-int16_t get_extract_error_line_position(void){
+int16_t get_error_line(void){
 	return last_err_pos;
 }
 
+<<<<<<< HEAD
+=======
+int16_t get_begin(void){
+	return begin;
+}
+int16_t get_end(void){
+	return end;
+}
+int16_t get_line_width(void){
+	return (end - begin);
+}
+
+int16_t get_line_found(void){
+	return (line_found);
+}
+
+
+
+>>>>>>> PID-implementation
 

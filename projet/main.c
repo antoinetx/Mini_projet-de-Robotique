@@ -13,11 +13,19 @@
 #include <camera/po8030.h>
 #include "memory_protection.h"
 #include <main.h>
+<<<<<<< HEAD
+=======
+#include <audio/microphone.h>
+#include <pi_regulato.h>
+#include <optical_detection.h>
+>>>>>>> PID-implementation
 
 #include <audio_processing.h>
 #include <fft.h>
 #include <communications.h>
 #include <arm_math.h>
+
+#include <sensors/VL53L0X/VL53L0X.h>
 
 void SendUint8ToComputer(uint8_t* data, uint16_t size)
 {
@@ -77,6 +85,7 @@ int main(void)
 	//starts ToF sensor
 	VL53L0X_start();
 
+<<<<<<< HEAD
 	//start leds rgb
 	spi_comm_start();
 
@@ -93,15 +102,30 @@ int main(void)
 	process_image_start();
 	led_animation_start();
 	sound_animation_start();
+=======
+   //stars the threads for the pi regulator and the processing of the image
+   process_image_start();
+>>>>>>> PID-implementation
 
+   //starts the microphones processing thread.
+   //it calls the callback given in parameter when samples are ready
+   mic_start(&processAudioData);
 
+<<<<<<< HEAD
+=======
+   //Thread mouvment regulator start
+   mouvment_start();
+>>>>>>> PID-implementation
 
     /* Infinite loop. */
     while (1) {
 
     	//waits 1 second
         chThdSleepMilliseconds(1000);
+<<<<<<< HEAD
 
+=======
+>>>>>>> PID-implementation
     }
 
 }
