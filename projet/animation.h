@@ -12,6 +12,7 @@
 
 #define INTENSITY			255
 #define INTENSITY_MOY		125
+#define INTENSITY_NUL		0
 #define ON					1
 #define OFF					0
 

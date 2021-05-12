@@ -102,7 +102,7 @@ int main(void)
    //stars the threads for the pi regulator and the processing of the image
 
 	led_animation_start();
-	sound_animation_start();
+	//sound_animation_start();
     //stars the threads for the pi regulator and the processing of the image
     process_image_start();
 
