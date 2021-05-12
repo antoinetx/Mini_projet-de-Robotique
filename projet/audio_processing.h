@@ -2,9 +2,25 @@
 #define PROJET_AUDIO_PROCESSING_H_
 
 
-
-
 #define FFT_SIZE 	1024
+
+#define MIN_VALUE_THRESHOLD 10000
+
+// Garde pour tests
+#define MIN_FREQ 10 //we don’t analyze before this index to not use resources for nothing
+#define MAX_FREQ 30 //we don’t analyze after this index to not use resources for nothing
+
+//minimal intensity so that we don't compute the noise
+#define MIN_NORM_VALUE 10000
+
+// Mobile mean parameters : angle = a*angle +b*angle_buf
+#define mean_coeff_A					0.7f
+#define mean_coeff_B					0.3f
+
+// SIGNAL_CONST=v/(2*PI*lx), lx distance between 2 microphones. lx=6cm
+// SIGNAL_CONST=340/(2*PI*lx)
+#define SIGNAL_CONST			128.112
+
 
 typedef enum {
 	//2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)

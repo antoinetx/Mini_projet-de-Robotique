@@ -27,7 +27,6 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	uint32_t mean = 0;
 	uint8_t line_not_found = 0;
 
-
 	//performs an average
 	for(uint16_t j = 0 ; j < IMAGE_BUFFER_SIZE ; j++){
 		mean += buffer[j];
@@ -97,26 +96,16 @@ int16_t extract_error_line_position(uint8_t *buffer){
 	return new_err_pos;
 }
 
-/*
- * a faire : Listing 3: Call of the function in the thread ProcessImage
-...
-uint16_t lineWidth = 0;
-...
-//search for a line in the image and gets its width in pixels
-lineWidth = extract_line_width(image);
- *
- */
 
+//search for a line in the image and gets its width in pixels
 static THD_WORKING_AREA(waCaptureImage, 256);
 static THD_FUNCTION(CaptureImage, arg) {
 
     chRegSetThreadName(__FUNCTION__);
     (void)arg;
 
-
 	//Takes pixels 0 to IMAGE_BUFFER_SIZE of the line 10 + 11 (minimum 2 lines because reasons)
 	po8030_advanced_config(FORMAT_RGB565, 0, 475, IMAGE_BUFFER_SIZE, 2, SUBSAMPLING_X1, SUBSAMPLING_X1);
-
 
 	dcmi_enable_double_buffering();
 	dcmi_set_capture_mode(CAPTURE_ONE_SHOT);
@@ -146,13 +135,12 @@ static THD_FUNCTION(ProcessImage, arg) {
     while(1){
     	//waits until an image has been captured
         chBSemWait(&image_ready_sem);
+
 		//gets the pointer to the array filled with the last image in RGB565
 		img_buff_ptr = dcmi_get_last_image_ptr();
 
 		//Extracts only the red pixels
 		for(uint16_t i = 0 ; i < (2 * IMAGE_BUFFER_SIZE) ; i+=2){
-		//extracts first 5bits of the first byte
-
 
 		//takes nothing from the second byte
 		image[i/2] = (uint8_t)img_buff_ptr[i]&0xF8;
@@ -170,6 +158,7 @@ void process_image_start(void){
 }
 
 
+//Allow other folder to have access to those informations
 int16_t get_error_line(void){
 	return last_err_pos;
 }

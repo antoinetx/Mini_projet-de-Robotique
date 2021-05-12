@@ -53,3 +53,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+# Git project cleaning
+
+/build
+/e-puck2_main-processor
+.project
+.cproject
+.settings
