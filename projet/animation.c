@@ -22,10 +22,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 	chRegSetThreadName(__FUNCTION__);
 	(void)arg;
 
-	//ajouter la ligne en fonction du nom de la fonction ici :
 	uint8_t states = get_state();
-
-
 
 	while (1){
 		states = get_state();
@@ -193,7 +190,6 @@ static THD_FUNCTION(SoundAnimation, arg) {
 				//playMelody(MARIO_START,ML_FORCE_CHANGE,NULL);
 			break;
 		}
-
 
 		//run the music for 2s
 		chThdSleepMilliseconds(2000);

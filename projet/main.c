@@ -1,43 +1,34 @@
+// Standard includes
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <motors.h>
-#include <leds.h>
 
 #include "ch.h"
 #include "hal.h"
 #include <main.h>
-#include <usbcfg.h>
-#include <chprintf.h>
-#include <camera/po8030.h>
-#include "memory_protection.h"
 
+#include <usbcfg.h>
+#include <camera/po8030.h>
+#include <motors.h>
+#include <leds.h>
 #include <audio/microphone.h>
+#include <sensors/VL53L0X/VL53L0X.h>
+#include <spi_comm.h>
+
 #include "audio/audio_thread.h"
 #include "audio/play_melody.h"
 #include "audio/play_sound_file.h"
+#include "memory_protection.h"
 
 #include <pi_regulator.h>
 #include <optical_detection.h>
 #include <audio_processing.h>
 #include <fft.h>
-#include <communications.h>
-#include <arm_math.h>
 #include <animation.h>
-#include <sensors/VL53L0X/VL53L0X.h>
-#include <spi_comm.h>
 
-
-
-/*
-void SendUint8ToComputer(uint8_t* data, uint16_t size)
-{
-	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)"START", 5);
-	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)&size, sizeof(uint16_t));
-	chSequentialStreamWrite((BaseSequentialStream *)&SD3, (uint8_t*)data, size);
-}
-*/
+#include <arm_math.h>
+#include <chprintf.h>
 
 static void serial_start(void)
 {
@@ -69,49 +60,29 @@ static void timer12_start(void){
 
 int main(void)
 {
-
 	 halInit();
 	 chSysInit();
 	 mpu_init();
 
-     //starts the camera
+	 //Sensor initialization
      dcmi_start();
      po8030_start();
-
-	 //starts the serial communication
-	 serial_start();
-	 //start the USB communication
+     serial_start();
+     timer12_start();
 	 usb_start();
-	 timer12_start();
 	 motors_init();
+	 VL53L0X_start();
+	 spi_comm_start();
 
+	 // Threads start
+	 mic_start(&processAudioData);
+	 playMelodyStart();
+	 dac_start();
+	 led_animation_start();
+     process_image_start();
+     mouvement_start();
 
-	//starts ToF sensor
-	VL53L0X_start();
-
-	//start leds rgb
-	spi_comm_start();
-
-	//starts the microphones processing thread.
-	//it calls the callback given in parameter when samples are ready
-	mic_start(&processAudioData);
-	playMelodyStart();
-	dac_start();
-
-
-   //stars the threads for the pi regulator and the processing of the image
-
-	led_animation_start();
-	//sound_animation_start();
-    //stars the threads for the pi regulator and the processing of the image
-    process_image_start();
-
-    //Thread mouvment regulator start
-    mouvment_start();
-
-    /* Infinite loop. */
     while (1) {
-
     	//waits 1 second
         chThdSleepMilliseconds(1000);
     }

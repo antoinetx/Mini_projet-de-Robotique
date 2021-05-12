@@ -13,13 +13,10 @@ CSRC += ./main.c \
 		./optical_detection.c \
 		./pi_regulator.c \
 		./audio_processing.c \
-		./communications.c \
 		./fft.c \
 		./animation.c\
 
 		
-
-
 #Header folders to include
 INCDIR += 
 

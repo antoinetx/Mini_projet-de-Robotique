@@ -6,7 +6,6 @@
 
 #include <audio/microphone.h>
 #include <audio_processing.h>
-#include <communications.h>
 #include <fft.h>
 #include <arm_math.h>
 
@@ -26,23 +25,7 @@ static float micRight_output[FFT_SIZE];
 static float micFront_output[FFT_SIZE];
 static float micBack_output[FFT_SIZE];
 
-#define MIN_VALUE_THRESHOLD 10000
 
-// Garde pour tests
-#define MIN_FREQ 10 //we don’t analyze before this index to not use resources for nothing
-// 1 = 19,23 HZ
-#define MAX_FREQ 30 //we don’t analyze after this index to not use resources for nothing
-
-//minimal intensity so that we don't compute the noise
-#define MIN_NORM_VALUE 10000
-
-// Mobile mean parameters : angle = a*angle +b*angle_buf
-#define mean_coeff_A					0.7f
-#define mean_coeff_B					0.3f
-
-// SIGNAL_CONST=v/(2*PI*lx), lx distance between 2 microphones. lx=6cm
-// SIGNAL_CONST=340/(2*PI*lx)
-#define SIGNAL_CONST			128.112 // 59.21 avec résolution audio
 
 static float angle=0., amp=0., freq=0.;
 
@@ -148,15 +131,6 @@ void triangulation_data(void){
 	epuck_angle(angle_x,angle_y);
 }
 
-/*
-* Callback called when the demodulation of the four microphones is done.
-* We get 160 samples per mic every 10ms (16kHz)
-*
-* params :
-* int16_t *data Buffer containing 4 times 160 samples. the samples are sorted by micro
-* so we have [micRight1, micLeft1, micBack1, micFront1, micRight2, etc...]
-* uint16_t num_samples Tells how many data we get in total (should always be 640)
-*/
 
 void processAudioData(int16_t *data, uint16_t num_samples){
 /*
@@ -218,7 +192,7 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 
 		nb_samples = 0;
 		chBSemSignal(&triangulation);
-		triangulation_data();
+		//triangulation_data();
 
 	}
 }
@@ -228,6 +202,7 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 void wait_triangulation_data(void){
 	chBSemWait(&triangulation);
 }
+
 
 float get_angle(void){
 	return angle;
