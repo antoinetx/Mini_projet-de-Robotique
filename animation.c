@@ -22,7 +22,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 	chRegSetThreadName(__FUNCTION__);
 	(void)arg;
 
-	uint8_t states = get_state();
+	uint8_t states = 0;
 
 	while (1){
 		states = get_state();
@@ -122,6 +122,7 @@ static THD_FUNCTION(LedAnimation, arg) {
 			break;
 			// activate the arrival lights : sparkeling of the leds
 			case ARRIVED:
+				//playMelody(MARIO_FLAG,ML_FORCE_CHANGE,NULL);
 				if (i == ETEIND){
 					clear_leds();
 					set_rgb_led(LED2,INTENSITY_MOY,INTENSITY_NUL,INTENSITY);
@@ -175,28 +176,23 @@ static THD_FUNCTION(SoundAnimation, arg) {
 	chRegSetThreadName(__FUNCTION__);
 	(void)arg;
 
-	uint8_t states = get_state();
+	uint8_t states = 0;
 
 
 	while (1){
-		switch (states)
-		{
-			// activate the arrival music
-			case ARRIVED:
-				//playMelody(MARIO_FLAG,ML_FORCE_CHANGE,NULL);
-			break;
-			// activate the obstacle way music
-			case OBSTACLE:
-				//playMelody(MARIO_START,ML_FORCE_CHANGE,NULL);
-			break;
+		states = get_state();
+		//start arrival music
+		if (states == ARRIVED){
+			playMelody(MARIO_FLAG,ML_SIMPLE_PLAY,NULL);
+		}
+		else{
+			stopCurrentMelody();
 		}
 
-		//run the music for 2s
+		//checks the music each 2s
 		chThdSleepMilliseconds(2000);
-
 	}
 }
-
 
 
 
