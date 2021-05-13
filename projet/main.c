@@ -79,6 +79,7 @@ int main(void)
 	 playMelodyStart();
 	 dac_start();
 	 led_animation_start();
+	 sound_animation_start();
      process_image_start();
      mouvement_start();
 
