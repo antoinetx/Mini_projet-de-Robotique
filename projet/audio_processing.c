@@ -10,9 +10,6 @@
 #include <arm_math.h>
 
 
-//semaphore
-static BSEMAPHORE_DECL(triangulation, TRUE);
-
 //2 times FFT_SIZE because these arrays contain complex numbers (real + imaginary)
 static float micLeft_cmplx_input[2 * FFT_SIZE];
 static float micRight_cmplx_input[2 * FFT_SIZE];
@@ -191,18 +188,10 @@ void processAudioData(int16_t *data, uint16_t num_samples){
 		arm_cmplx_mag_f32(micBack_cmplx_input, micBack_output, FFT_SIZE);
 
 		nb_samples = 0;
-		chBSemSignal(&triangulation);
-		//triangulation_data();
+		triangulation_data();
 
 	}
 }
-
-
-
-void wait_triangulation_data(void){
-	chBSemWait(&triangulation);
-}
-
 
 float get_angle(void){
 	return angle;
