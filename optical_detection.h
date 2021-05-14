@@ -17,6 +17,7 @@
 #define WIDTH_SLOPE				5
 #define PXTOCM					1
 #define PI_CLOCK				10     // in ms
+#define BUTTOM_PICTURE			475
 
 int16_t get_begin(void);
 int16_t get_end(void);
