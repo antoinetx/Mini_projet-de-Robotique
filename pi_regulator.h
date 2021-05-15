@@ -3,7 +3,7 @@
 
 #define PI 							3.14f
 #define SYS_SPEED 					400
-#define ERROR_THRESHOLD				5   //[cm] because of the noise of the camera
+#define ERROR_THRESHOLD				5   // because of the noise of the camera
 #define	MAX_SUM_ERROR  				(SYS_SPEED/KI)
 #define KP_PD						2
 #define KD							2
